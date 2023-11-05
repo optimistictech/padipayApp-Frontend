@@ -30,7 +30,7 @@ Great!🎉 You have created and switched to a new branch.
 ### Run the Project
 You can now run the project on your local environment with the following command:
 
-``` npm run dev ```
+``` npm run start ```
 
 The server will start and be accessible at http://localhost:3000
 
