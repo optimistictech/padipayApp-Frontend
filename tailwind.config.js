@@ -4,8 +4,16 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // community page customixed colors
+         'clifford': '#da373d',
+         'navBlue':'#003399',
+      },
+      // backgroundImage: {
+      //   'hero-img': "url('../assets/CommunityPageImages/diversity.png')",
+      // },
   },
   plugins: [],
 }
-
+}
