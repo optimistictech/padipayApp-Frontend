@@ -9,6 +9,7 @@ module.exports = {
         // community page customixed colors
          'clifford': '#da373d',
          'navBlue':'#003399',
+         'primary': '#003399',
       },
       // backgroundImage: {
       //   'hero-img': "url('../assets/CommunityPageImages/diversity.png')",
