@@ -9,6 +9,7 @@ import Footer from './Components/Footer';
 import SignupPage from './Pages/SignupPage';
 import SigninPage from './Pages/SigninPage';
 import PadiLogo from './Components/PadiLogo';
+import LendersBorrowers from './Pages/LendersBorrowers';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         <Route path='/signin' element={<SigninPage />} />
         <Route path='/signup' element={<SignupPage />} />
         <Route path='/community' element={<CommunityPage />} />
-        <Route path='/' element={<LandingPage />} />
+        <Route path='/' element={<LendersBorrowers />} />
+        {/* <Route path='/' element={<LandingPage />} /> */}
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>

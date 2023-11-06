@@ -23,7 +23,7 @@ const LandingPage = () => {
             marketplace that connects borrowers seeking loans with investors
             looking to invest in loan opportunities.
           </p>
-          <button className='animate-bounce hover:animate-none ml-3 bg-primary text-whiteColor px-4 py-2 rounded-md'>
+          <button className=' ml-3 bg-primary text-whiteColor px-4 py-2 rounded-md'>
             <a href='./dist/logIn.html'>Get Started</a>
           </button>
         </div>

@@ -22,10 +22,10 @@ module.exports = {
       lowergrey: '#272626',
       whiteColor: '#fff',
     },
-    backgroundImage: {
-      'lender-borrower': "url('/assets/images/lb-bg.png')",
-      'dash-board-image': "url('/assets/images/dash-img.png')",
-    },
+    // backgroundImage: {
+    //   LendersBorrowers: "url('./landingImages/diversity.png')",
+    //   'dash-board-image': "url('./landingImages/diversity.png')",
+    // },
 
     extend: {
       colors: {
