@@ -7,7 +7,7 @@ To get started, you need to clone the project repository to your local machine.
 - Change to the directory where you want to clone the repository
 - Run the following command to clone the repository
 
-``` git clone git@github.com:bant095/PadiPayReact-General.git```
+``` git clone https://github.com/bant095/padipayApp-Frontend.git```
 - Once cloning is complete, change to the repository's directory using
   
 ```cd PadiPayReact-General```
