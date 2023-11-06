@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Navbar from '../Components/Navbar'
 import 'remixicon/fonts/remixicon.css'
 import img2 from '../assets/CommunityPageImages/Image1.png';
-// import img3 from '../assets/CommunityPageImages/PadiPay PNG.png';
 import img4 from '../assets/CommunityPageImages/abadge.png';
 import img5 from '../assets/CommunityPageImages/group1.png';
 import img6 from '../assets/CommunityPageImages/group2.png'; 
@@ -14,8 +14,9 @@ import img9 from '../assets/CommunityPageImages/image3.png';
 const CommunityPage = () => {
   return (
     <div>
-       {/* <img className='rounded-full h-[500px] object-cover' src={heroImg} alt="hero-image" /> */}
-       {/* HERO SECTION */}
+       {/* NAVBAR */}
+       <Navbar/>
+       {/* MAIN BODY - HERO SECTION */}
        <div id="hero-section" className=" text-center bg-blue-800 py-12 text-white">
             <h1 className="text-3xl font-bold my-4">Discover Our </h1>
             <h1 className="text-3xl font-bold my-2">Collaborative Community</h1>
@@ -153,6 +154,8 @@ const CommunityPage = () => {
           <button className="rounded-lg text-white h-11 w-40  bg-blue-900 mt-20 mb-20 hover:bg-blue-700 transition ease-in-out delay-150">Load More</button>
         </div>
     </div>
+
+    {/* FOOTER */}
     </div>
   )
 }
