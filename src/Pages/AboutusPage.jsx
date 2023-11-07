@@ -4,6 +4,7 @@ import img1 from '../assets/AboutPageImages/group.png'
 import img2 from '../assets/AboutPageImages/man2.jpg'
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
+import {Button} from '../Components/Button'
 
 const AboutusPage = () => {
   return (
@@ -82,11 +83,9 @@ const AboutusPage = () => {
           </p>
         </div>
         <div className="my-2 mx-auto block">
-          <button
-            className="hover:bg-blue-800 bg-primary text-white px-4 py-2 border-2 border-white rounded-md"
-          >
-            <Link to="/singup">Join us today</Link>
-          </button>
+            <Link to="/singup">
+            <Button className="my-10" text={"Join us today"}></Button>
+            </Link>
         </div>
       </div>
     </section>

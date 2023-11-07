@@ -41,12 +41,12 @@ const Navbar = () => {
         </div>
         <div className='flex gap-3'>
           <div>
-            <button className='text-white px-3 py-2'>
-              <Link to='login'>Login</Link>
-            </button>
+              <Link to='/login'>
+              <Button text={"Login"}></Button>
+              </Link>
           </div>
           <div>
-            <Button />
+            <Button text={"Register Now"}/>
           </div>
         </div>
       </div>
