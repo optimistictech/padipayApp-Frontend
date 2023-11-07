@@ -2,27 +2,27 @@ import './App.css';
 import 'remixicon/fonts/remixicon.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './Pages/LandingPage';
-import Navbar from './Components/Navbar';
-import AboutPage from './Pages/AboutPage';
+// import Navbar from './Components/Navbar';
+import AboutPage from './Pages/AboutusPage';
 import CommunityPage from './Pages/CommunityPage';
-import Footer from './Components/Footer';
+// import Footer from './Components/Footer';
 import SignupPage from './Pages/SignupPage';
-import SigninPage from './Pages/SigninPage';
 import PadiLogo from './Components/PadiLogo';
-import LendersBorrowers from './Pages/LendersBorrowers';
+import LendersBorrowers from './Pages/LendersBorrowers'
+import LoginPage from './Pages/LoginPage';
 
 function App() {
   return (
     <BrowserRouter>
       {/* <PadiLogo /> */}
-      {/* <Navbar /> */}
+      {/* <Navbar/> */}
       <Routes>
-        <Route path='/aboutus' element={<AboutPage />} />
-        <Route path='/signin' element={<SigninPage />} />
-        <Route path='/signup' element={<SignupPage />} />
-        <Route path='/community' element={<CommunityPage />} />
-        <Route path='/' element={<LendersBorrowers />} />
-        {/* <Route path='/' element={<LandingPage />} /> */}
+        <Route path='/aboutus' element={<AboutPage/>}/>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/signup' element={<SignupPage/>}/>
+        <Route path='/community' element={<CommunityPage/>}/>
+          <Route path='/' element={<LendersBorrowers />} />
+        <Route path='/' element={<LandingPage/>}/>
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>

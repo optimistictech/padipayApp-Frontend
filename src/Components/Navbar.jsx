@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import PadiLogo from './PadiLogo';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -12,40 +13,40 @@ const Navbar = () => {
         <div>
           <ul className='flex md:text-sm lg:text-base'>
             <li>
-              <a href='index.html' className='md:mx-2 lg:mx-8'>
+              <Link to='/' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/aboutus' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/blog' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Blog
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/community' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Community
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className='flex gap-3'>
           <div>
-            <button className='text-white px-3 py-2'>
-              <a href=''>Login</a>
-            </button>
+              <Link to='/login'>
+              <Button text={"Login"}></Button>
+              </Link>
           </div>
           <div>
-            <Button />
+            <Button text={"Register Now"}/>
           </div>
         </div>
       </div>
@@ -53,4 +54,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar

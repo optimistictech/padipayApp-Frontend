@@ -11,31 +11,10 @@ module.exports = {
     }),
     extend: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+        Work: ['Montserrat', 'sans-serif'],
       },
       height: {
         vh: '100vh',
-      },
-    },
-    colors: {
-      primary: '#003399',
-      lowergrey: '#272626',
-      whiteColor: '#fff',
-    },
-    // backgroundImage: {
-    //   LendersBorrowers: "url('./landingImages/diversity.png')",
-    //   'dash-board-image': "url('./landingImages/diversity.png')",
-    // },
-
-    extend: {
-      colors: {
-        clifford: '#da373d',
-        padiHead: '#039',
-        navColor: '#696A75',
-        grey: '#039',
-      },
-      fontFamily: {
-        Work: ['Montserrat', 'sans-serif'],
       },
       backgroundImage: {
         blogBanner: "url('Images/bg.jpeg')",
@@ -44,6 +23,20 @@ module.exports = {
       backgroundColor: {
         lightgray: 'lightgray',
       },
+      colors: {
+        primary: '#003399',
+        lowergrey: '#272626',
+        whiteColor: '#fff',
+        clifford: '#da373d',
+        padiHead: '#039',
+        navColor: '#696A75',
+        grey: '#039',
+      },
+    },
+    
+    backgroundImage: {
+      'lender-borrower': "url('/assets/images/lb-bg.png')",
+      'dash-board-image': "url('/assets/images/dash-img.png')",
     },
   },
   plugins: [],

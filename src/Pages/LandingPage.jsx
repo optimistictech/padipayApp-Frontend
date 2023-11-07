@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
+import { Link } from 'react-router-dom';
 
 const LandingPage = () => {
   return (
@@ -23,35 +24,35 @@ const LandingPage = () => {
             marketplace that connects borrowers seeking loans with investors
             looking to invest in loan opportunities.
           </p>
-          <button className=' ml-3 bg-primary text-whiteColor px-4 py-2 rounded-md'>
-            <a href='./dist/logIn.html'>Get Started</a>
+          <button className='animate-bounce hover:animate-none ml-3 bg-primary text-whiteColor px-4 py-2 rounded-md'>
+            <Link to ='/login'>Get Started</Link>
           </button>
         </div>
 
         {/* Hero Right */}
         <div className=' w-[50%] flex items-center justify-center  mt-10'>
           <img
-            className='w-[70%] bg-black '
+            className='w-[70%] '
             src='./landingImages/phoneMain.png'
             alt='phone'
           />
 
           {/* downloadIcons */}
           <div id='download-section' className='self-end mb-16 w-[100px]'>
-            <a href='http://' target='_blank' rel='noopener noreferrer'>
+            <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
                 src='./LandingImages/appStore.png'
                 alt='app store'
                 className='mb-2'
               />
-            </a>
-            <a href='http://' target='_blank' rel='noopener noreferrer'>
+            </Link>
+            <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
                 src='./landingImages/googlePlay.png'
                 alt='google play'
                 className=''
               />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -71,7 +72,7 @@ const LandingPage = () => {
             <span className='text-primary'>Community</span>
           </h2>
           <button className=' text-white m-5 bg-primary text-whiteColor px-4 py-2 rounded-md hover:bg-blue-800'>
-            <a href='./dist/communityPage.html'>Connect and Engage</a>
+            <Link to='/community'>Connect and Engage</Link>
           </button>
 
           <p className='text-lg w-[70%]  ml-5'>
@@ -187,20 +188,20 @@ const LandingPage = () => {
           </p>
           {/* downloadIcons */}
           <div id='download-section' className='self-end mt-10 '>
-            <a href='http://' target='_blank' rel='noopener noreferrer'>
+            <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
                 src='./LandingImages/appStore.png'
                 alt='app store'
                 className='mb-2'
               />
-            </a>
-            <a href='http://' target='_blank' rel='noopener noreferrer'>
+            </Link>
+            <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
                 src='./landingImages/googlePlay.png'
                 alt='google play'
                 className=''
               />
-            </a>
+            </Link>
           </div>
         </div>
         {/* Left */}
@@ -239,9 +240,9 @@ const LandingPage = () => {
           </h4>
           <div className='more flex mt-3 gap-36 align-center pb-12 px-4'>
             <p className='text-sm'>23/8/2023</p>
-            <a href='//' className='font-bold text-primary'>
+            <Link to='/blog' className='font-bold text-primary'>
               Read More
-            </a>
+            </Link>
           </div>
         </div>
         <div className='blog-section-two w-96 shadow-2xl'>
@@ -251,9 +252,9 @@ const LandingPage = () => {
           </h4>
           <div className='more flex gap-40 align-center px-4'>
             <p className='text-sm'>23/8/2023</p>
-            <a href='.//' className='text-primary font-bold'>
+            <Link to='.blog' className='text-primary font-bold'>
               Read More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
