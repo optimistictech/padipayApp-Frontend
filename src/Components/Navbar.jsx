@@ -46,7 +46,12 @@ const Navbar = () => {
               </Link>
           </div>
           <div>
-            <Button text={"Register Now"}/>
+          <div>
+              <Link to='/signup'>
+              <Button text={"Register Now"}/>
+              </Link>
+          </div>
+  
           </div>
         </div>
       </div>
