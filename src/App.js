@@ -7,9 +7,9 @@ import AboutPage from './Pages/AboutusPage';
 import CommunityPage from './Pages/CommunityPage';
 // import Footer from './Components/Footer';
 import SignupPage from './Pages/SignupPage';
+import PadiLogo from './Components/PadiLogo';
+import LendersBorrowers from './Pages/LendersBorrowers'
 import LoginPage from './Pages/LoginPage';
-// import PadiLogo from './Components/PadiLogo';
-
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
         <Route path='/login' element={<LoginPage/>}/>
         <Route path='/signup' element={<SignupPage/>}/>
         <Route path='/community' element={<CommunityPage/>}/>
+          <Route path='/' element={<LendersBorrowers />} />
         <Route path='/' element={<LandingPage/>}/>
       </Routes>
       {/* <Footer /> */}

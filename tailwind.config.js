@@ -11,7 +11,7 @@ module.exports = {
     }),
     extend: {
       fontFamily: {
-        sans: ['Montserrat', 'sans-serif'],
+        Work: ['Montserrat', 'sans-serif'],
       },
       height: {
         vh: '100vh',
@@ -28,9 +28,9 @@ module.exports = {
         lowergrey: '#272626',
         whiteColor: '#fff',
         clifford: '#da373d',
-          padiHead: '#039',
-          navColor: '#696A75',
-          grey: '#039',
+        padiHead: '#039',
+        navColor: '#696A75',
+        grey: '#039',
       },
     },
     
