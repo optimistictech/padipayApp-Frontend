@@ -2,13 +2,13 @@ import './App.css';
 import 'remixicon/fonts/remixicon.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './Pages/LandingPage';
-import Navbar from './Components/Navbar';
+// import Navbar from './Components/Navbar';
 import AboutPage from './Pages/AboutPage';
 import CommunityPage from './Pages/CommunityPage';
-import Footer from './Components/Footer';
+// import Footer from './Components/Footer';
 import SignupPage from './Pages/SignupPage';
-import SigninPage from './Pages/SigninPage';
-import PadiLogo from './Components/PadiLogo';
+import LoginPage from './Pages/LoginPageinPage';
+// import PadiLogo from './Components/PadiLogo';
 
 
 function App() {
