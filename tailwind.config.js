@@ -29,10 +29,14 @@ module.exports = {
 
     extend: {
       colors: {
+
         clifford: '#da373d',
         padiHead: '#039',
         navColor: '#696A75',
         grey: '#039',
+        // community page customixed colors
+         'navBlue':'#003399',
+         'primary': '#003399',
       },
       fontFamily: {
         Work: ['Montserrat', 'sans-serif'],

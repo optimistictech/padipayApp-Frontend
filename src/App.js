@@ -10,17 +10,18 @@ import SignupPage from './Pages/SignupPage';
 import SigninPage from './Pages/SigninPage';
 import PadiLogo from './Components/PadiLogo';
 
+
 function App() {
   return (
     <BrowserRouter>
       {/* <PadiLogo /> */}
-      {/* <Navbar /> */}
+      {/* <Navbar/> */}
       <Routes>
-        <Route path='/aboutus' element={<AboutPage />} />
-        <Route path='/signin' element={<SigninPage />} />
-        <Route path='/signup' element={<SignupPage />} />
-        <Route path='/community' element={<CommunityPage />} />
-        <Route path='/' element={<LandingPage />} />
+        <Route path='/aboutus' element={<AboutPage/>}/>
+        <Route path='/login' element={<LoginPage/>}/>
+        <Route path='/signup' element={<SignupPage/>}/>
+        <Route path='/community' element={<CommunityPage/>}/>
+        <Route path='/' element={<LandingPage/>}/>
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
