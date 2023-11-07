@@ -3,11 +3,11 @@ import 'remixicon/fonts/remixicon.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import LandingPage from './Pages/LandingPage';
 // import Navbar from './Components/Navbar';
-import AboutPage from './Pages/AboutPage';
+import AboutPage from './Pages/AboutusPage';
 import CommunityPage from './Pages/CommunityPage';
 // import Footer from './Components/Footer';
 import SignupPage from './Pages/SignupPage';
-import LoginPage from './Pages/LoginPageinPage';
+import LoginPage from './Pages/LoginPage';
 // import PadiLogo from './Components/PadiLogo';
 
 
