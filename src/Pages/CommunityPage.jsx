@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
+import {Button} from '../Components/Button'
 import 'remixicon/fonts/remixicon.css'
 import img2 from '../assets/CommunityPageImages/Image1.png';
 import img4 from '../assets/CommunityPageImages/abadge.png';
@@ -11,7 +12,6 @@ import img7 from '../assets/CommunityPageImages/group3.png';
 import img8 from '../assets/CommunityPageImages/image2.png';
 import img9 from '../assets/CommunityPageImages/image3.png';
 
-// import {Button} from '../components/Button.jsx' <Button text={"Get started"}></Button>
 const CommunityPage = () => {
   return (
     <div>
@@ -153,7 +153,7 @@ const CommunityPage = () => {
             {/* END */}
         </div>
         <div className="text-center">
-          <button className="rounded-lg text-white h-11 w-40  bg-blue-900 mt-10 mb-10 hover:bg-blue-700 transition ease-in-out delay-150">Load More</button>
+        <Button className="my-10" text={"Load More"}></Button>
         </div>
     </div>
 

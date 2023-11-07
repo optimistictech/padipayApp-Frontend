@@ -13,27 +13,27 @@ const Navbar = () => {
         <div>
           <ul className='flex md:text-sm lg:text-base'>
             <li>
-              <Link to='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Home
               </Link>
             </li>
             <li>
-              <Link to='/aboutus' className='md:mx-2 lg:mx-8'>
+              <Link to='/aboutus' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 About Us
               </Link>
             </li>
             <li>
-              <Link to='/blog' className='md:mx-2 lg:mx-8'>
+              <Link to='/blog' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Blog
               </Link>
             </li>
             <li>
-              <Link to='/community' className='md:mx-2 lg:mx-8'>
+              <Link to='/community' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Community
               </Link>
             </li>
             <li>
-              <Link to='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Contact Us
               </Link>
             </li>
@@ -41,12 +41,12 @@ const Navbar = () => {
         </div>
         <div className='flex gap-3'>
           <div>
-            <button className='text-white px-3 py-2'>
-              <Link to='login'>Login</Link>
-            </button>
+              <Link to='/login'>
+              <Button text={"Login"}></Button>
+              </Link>
           </div>
           <div>
-            <Button />
+            <Button text={"Register Now"}/>
           </div>
         </div>
       </div>

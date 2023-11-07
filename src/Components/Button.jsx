@@ -1,11 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Button = () => {
+export const Button = ({ text, className }) => {
   return (
     <div>
-      <button className=' bg-primary text-whiteColor px-4 py-2 border-[1px] border-whiteColor rounded-md hover:bg-whiteColor hover:text-primary'>
-        <Link to='/signup'>Register now</Link>
+      <button
+        className={`bg-primary text-whiteColor px-4 py-2 border-[1px] border-whiteColor rounded-md hover:bg-blue-700 transition ease-in-out delay-150 ${className}`}
+      >
+        {text}
       </button>
     </div>
   );

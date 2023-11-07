@@ -25,7 +25,7 @@ const LandingPage = () => {
             looking to invest in loan opportunities.
           </p>
           <button className='animate-bounce hover:animate-none ml-3 bg-primary text-whiteColor px-4 py-2 rounded-md'>
-            <Link to ='./dist/logIn.html'>Get Started</Link>
+            <Link to ='/login'>Get Started</Link>
           </button>
         </div>
 
@@ -72,7 +72,7 @@ const LandingPage = () => {
             <span className='text-primary'>Community</span>
           </h2>
           <button className=' text-white m-5 bg-primary text-whiteColor px-4 py-2 rounded-md hover:bg-blue-800'>
-            <Link to='./dist/communityPage.html'>Connect and Engage</Link>
+            <Link to='/community'>Connect and Engage</Link>
           </button>
 
           <p className='text-lg w-[70%]  ml-5'>
@@ -240,7 +240,7 @@ const LandingPage = () => {
           </h4>
           <div className='more flex mt-3 gap-36 align-center pb-12 px-4'>
             <p className='text-sm'>23/8/2023</p>
-            <Link to='//' className='font-bold text-primary'>
+            <Link to='/blog' className='font-bold text-primary'>
               Read More
             </Link>
           </div>
@@ -252,7 +252,7 @@ const LandingPage = () => {
           </h4>
           <div className='more flex gap-40 align-center px-4'>
             <p className='text-sm'>23/8/2023</p>
-            <Link to='.//' className='text-primary font-bold'>
+            <Link to='.blog' className='text-primary font-bold'>
               Read More
             </Link>
           </div>
