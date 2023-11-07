@@ -1,5 +1,6 @@
 import React from 'react';
 import PadiLogo from './PadiLogo';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -29,19 +30,19 @@ const Footer = () => {
           <p className='font-semibold pb-7'>Legal</p>
           <ul>
             <li>
-              <a href='/'>Terms and Conditions</a>
+              <Link to='/'>Terms and Conditions</Link>
             </li>
             <li>
-              <a href='/'>Policy Privacy</a>
+              <Link to='/'>Policy Privacy</Link>
             </li>
             <li>
-              <a href='/'>Lenders Agreement</a>
+              <Link to='/'>Lenders Agreement</Link>
             </li>
             <li>
-              <a href='/'>Borrowers Agreement</a>
+              <Link to='/'>Borrowers Agreement</Link>
             </li>
             <li>
-              <a href='/'>Gurantors Agreement</a>
+              <Link to='/'>Gurantors Agreement</Link>
             </li>
           </ul>
         </div>
@@ -52,11 +53,11 @@ const Footer = () => {
 
           <ul>
             <li>
-              <a href='/dist/whatWeDo.html'>What we do</a>
+              <Link to='/dist/whatWeDo.html'>What we do</Link>
             </li>
 
             <li>
-              <a href='/dist/ContactUs.html'>Contact us</a>
+              <Link to='/dist/ContactUs.html'>Contact us</Link>
             </li>
           </ul>
         </div>
@@ -65,15 +66,15 @@ const Footer = () => {
         <div>
           <p className='font-semibold pb-7'>Contact Us</p>
           <div className='flex items-center gap-3'>
-            <a href=''>
+            <Link to=''>
               <i className='fab fa-twitter'></i>
-            </a>
-            <a href=''>
+            </Link>
+            <Link to=''>
               <i className='fab fa-facebook'></i>
-            </a>
-            <a href=''>
+            </Link>
+            < Link to=''>
               <i className='fab fa-instagram'></i>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -82,12 +83,12 @@ const Footer = () => {
       <div className='flex items-center justify-center pt-8 text-[14px]'>
         <p>Copyright @2023 Geekforce Team | TIIDELab</p>
 
-        <a href='/'>
+        <Link to=''>
           <i
             className='fa fa-arrow-circle-up flex absolute scroll-smooth focus:scroll-auto right-0 mx-16 text-[#4EABE9] text-[40px] z-50 cursor-pointer '
             aria-hidden='true'
           ></i>
-        </a>
+        </Link>
       </div>
     </footer>
   );

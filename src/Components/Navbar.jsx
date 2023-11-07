@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import PadiLogo from './PadiLogo';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -12,36 +13,36 @@ const Navbar = () => {
         <div>
           <ul className='flex md:text-sm lg:text-base'>
             <li>
-              <a href='index.html' className='md:mx-2 lg:mx-8'>
+              <Link to='/' className='md:mx-2 lg:mx-8'>
                 Home
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/aboutus' className='md:mx-2 lg:mx-8'>
                 About Us
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/blog' className='md:mx-2 lg:mx-8'>
                 Blog
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/community' className='md:mx-2 lg:mx-8'>
                 Community
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/' className='md:mx-2 lg:mx-8'>
                 Contact Us
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
         <div className='flex gap-3'>
           <div>
             <button className='text-white px-3 py-2'>
-              <a href=''>Login</a>
+              <Link to='login'>Login</Link>
             </button>
           </div>
           <div>

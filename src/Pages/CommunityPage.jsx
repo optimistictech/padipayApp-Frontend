@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 import 'remixicon/fonts/remixicon.css'
 import img2 from '../assets/CommunityPageImages/Image1.png';
 import img4 from '../assets/CommunityPageImages/abadge.png';
@@ -16,8 +17,9 @@ const CommunityPage = () => {
     <div>
        {/* NAVBAR */}
        <Navbar/>
+
        {/* MAIN BODY - HERO SECTION */}
-       <div id="hero-section" className=" text-center bg-blue-800 py-12 text-white">
+       <div id="hero-section" className="pt-28 pb-10 text-center bg-blue-800 py-12 text-white">
             <h1 className="text-3xl font-bold my-4">Discover Our </h1>
             <h1 className="text-3xl font-bold my-2">Collaborative Community</h1>
             <p className="font-normal my-4 text-xl">Connect and Engage</p>
@@ -31,17 +33,17 @@ const CommunityPage = () => {
         <div className="trendingSection px-10">
             <h2 className="text-3xl mt-6 font-semibold">Trending</h2>
             <div className="trendingBoxSection flex gap-4 text-white mt-4">
-                <div className="trendingBoxOne w-1/3 bg-navBlue p-4 rounded-xl">
+                <div className="trendingBoxOne w-1/3 bg-primary p-4 rounded-xl">
                     <img src={img5} alt="Two men"/>
                     <img src={img4} alt="" className="mt-2 pt-2"/>
                     <p className="py-2">The Impact of Technology on the Workplace: How Technology is Changing</p>
                 </div>
-                <div className="trendingBoxOne w-1/3 bg-navBlue p-4 rounded-xl">
+                <div className="trendingBoxOne w-1/3 bg-primary p-4 rounded-xl">
                     <img src={img6} alt="Two men"/>
                     <img src={img4} alt="" className="mt-2 pt-2"/>
                     <p className="py-2">The Impact of Technology on the Workplace: How Technology is Changing</p>
                 </div>
-                <div className="trendingBoxOne w-1/3 bg-navBlue p-4 rounded-xl">
+                <div className="trendingBoxOne w-1/3 bg-primary p-4 rounded-xl">
                     <img src={img7} alt="Two men"/>
                     <img src={img4} alt="" className="mt-2 pt-2"/>
                     <p className="py-2">The Impact of Technology on the Workplace: How Technology is Changing</p>
@@ -151,11 +153,12 @@ const CommunityPage = () => {
             {/* END */}
         </div>
         <div className="text-center">
-          <button className="rounded-lg text-white h-11 w-40  bg-blue-900 mt-20 mb-20 hover:bg-blue-700 transition ease-in-out delay-150">Load More</button>
+          <button className="rounded-lg text-white h-11 w-40  bg-blue-900 mt-10 mb-10 hover:bg-blue-700 transition ease-in-out delay-150">Load More</button>
         </div>
     </div>
 
     {/* FOOTER */}
+    <Footer/>
     </div>
   )
 }

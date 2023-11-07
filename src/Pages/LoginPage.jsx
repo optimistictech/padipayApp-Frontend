@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer'
 import img1 from '../assets/SignupImages/padiphone.png'
 import img2 from '../assets/SignupImages/playstore.png';
 import img3 from '../assets/SignupImages/appstore.png'; 
@@ -8,8 +10,9 @@ import img4 from '../assets/SignupImages/google-logo.svg';
 
 const LoginPage = () => {
   return (
-    <div className="bg-[#003399] h-100vw py-6">
-            <div className="flex justify-around gap-2 small-screen">
+    <div className="bg-[#003399] h-100vw">
+      <Navbar/>
+            <div className="pt-28 flex justify-around gap-2 small-screen">
         {/* LEFT SIDE */}
         <div className="flex flex-col relative items-center justify-center text-white w-screen">
           <div className="text-center">
@@ -101,6 +104,7 @@ const LoginPage = () => {
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }
