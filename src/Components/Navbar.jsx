@@ -13,27 +13,27 @@ const Navbar = () => {
         <div>
           <ul className='flex md:text-sm lg:text-base'>
             <li>
-              <Link to='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Home
               </Link>
             </li>
             <li>
-              <Link to='/aboutus' className='md:mx-2 lg:mx-8'>
+              <Link to='/aboutus' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 About Us
               </Link>
             </li>
             <li>
-              <Link to='/blog' className='md:mx-2 lg:mx-8'>
+              <Link to='/blog' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Blog
               </Link>
             </li>
             <li>
-              <Link to='/community' className='md:mx-2 lg:mx-8'>
+              <Link to='/community' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Community
               </Link>
             </li>
             <li>
-              <Link to='/' className='md:mx-2 lg:mx-8'>
+              <Link to='/' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
                 Contact Us
               </Link>
             </li>
