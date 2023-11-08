@@ -10,9 +10,11 @@ const LendersAgreementPage = () => {
         <Navbar />
       </nav>
 
-      <main className='p-7'>
-        <h2 className='font-bold text-34xl text-primary'>Lenders Agreements</h2>
-        <div>
+      <main className='pt-[100px] px-10 '>
+        <h2 className='font-bold text-3xl pb-8 text-primary'>
+          Lenders Agreements
+        </h2>
+        <div className='flex flex-col gap-6'>
           <p>
             Welcome to PadiPay's lending community! By becoming a lender on our
             platform, you're contributing to financial inclusivity and

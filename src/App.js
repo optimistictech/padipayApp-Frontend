@@ -15,7 +15,7 @@ import terms from './Pages/TermsandConditionPage';
 import whatwedo from './Pages/WhatwedoPage';
 import privacy from './Pages/PrivacyPolicyPage';
 import guarantorsaggreement from './Pages/GuarantorsAgreementPage';
-import lendersagreement from './Pages/LendersAgreementPage';
+import Lendersagreement from './Pages/LendersAgreementPage';
 import Borrowersagreement from './Pages/BorrowersAgreementPage';
 import Blog from './Pages/BlogPage';
 
@@ -31,7 +31,7 @@ function App() {
         <Route path='/community' element={<CommunityPage />} />
         <Route path='/areyou' element={<LendersBorrowers />} />
         <Route path='/' element={<LandingPage />} />
-        <Route path='/lendersagree' element={<lendersagreement />} />
+        <Route path='/lendersagree' element={<Lendersagreement />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
