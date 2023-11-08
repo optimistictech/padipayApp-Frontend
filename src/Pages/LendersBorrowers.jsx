@@ -22,7 +22,8 @@ function LendersBorrowers() {
                 Lender
               </Link>
             </div>
-            <Link to='/dist/lenders.html '
+            <Link
+              to='/dist/lenders.html '
               className='font-normal text-base text-[red] mt-2 underline hover:text-[#0044ffc0]'
               target='_blank'
             >
@@ -35,7 +36,8 @@ function LendersBorrowers() {
                 Borrower
               </Link>
             </div>
-            <Link to='/'
+            <Link
+              to='/'
               className='font-normal text-base text-[red] mt-2 underline hover:text-[#0044ffc0]'
               target='_blank'
             >
