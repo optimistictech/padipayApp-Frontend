@@ -19,6 +19,9 @@ import lendersagreement from './Pages/LendersAgreementPage'
 import Borrowersagreement from './Pages/BorrowersAgreementPage'
 import BlogPage from './Pages/BlogPage'
 import PostForBlog from './Pages/PostForBlog';
+import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
+import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
+
 
 
 function App() {
@@ -33,7 +36,9 @@ function App() {
         <Route path='/community' element={<CommunityPage/>}/>
         <Route path='/blog' element={<BlogPage/>}/>
         <Route path='/postforblog' element={<PostForBlog/>}/>
-          <Route path='/areyou' element={<LendersBorrowers />} />
+        <Route path='/areyou' element={<LendersBorrowers />} />
+        <Route path='/privacy' element={<PrivacyPolicyPage />} />
+        <Route path='/guarantoragree' element={<GuarantorsAgreementPage />} />
         <Route path='/' element={<LandingPage/>}/>
       </Routes>
       {/* <Footer /> */}
