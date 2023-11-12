@@ -4,6 +4,19 @@ import Footer from '../Components/Footer';
 import { Link } from 'react-router-dom';
 import phone from '../assets/landingImages/PhoneMain.png'
 import apple from '../assets/landingImages/appStore.png'
+import manandgirl from '../assets/landingImages/manGirl.png'
+import googleplay from '../assets/landingImages/googlePlay.png'
+import girl from '../assets/landingImages/girl.png'
+import steps from '../assets/landingImages/STEPS.png'
+import vector2 from '../assets/landingImages/Vector2.png'
+import vector1 from '../assets/landingImages/Vector1.png'
+import womanlogo from '../assets/landingImages/woman-logo.png'
+import interest from '../assets/landingImages/iNTREST_Rate__1_-removebg-preview.png'
+import grouppeople from '../assets/landingImages/group-people.png'
+import loan from '../assets/landingImages/loan.png'
+import logo1 from '../assets/landingImages/logo1.png'
+import logo2 from '../assets/landingImages/logo2.png'
+import logo3 from '../assets/landingImages/logo3.png'
 
 const LandingPage = () => {
   return (
@@ -49,7 +62,7 @@ const LandingPage = () => {
             </Link>
             <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
-                src='./landingImages/googlePlay.png'
+                src={googleplay}
                 alt='google play'
                 className=''
               />
@@ -58,7 +71,7 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* <!-- COMMUNItY SECTION --> */}
+      {/* <!-- COMMUNITY SECTION --> */}
       <section
         id='section-one'
         className='w-full h-[500px]  bg-[#B1B1B1] flex items-center justify-between'
@@ -86,7 +99,7 @@ const LandingPage = () => {
         {/* right */}
         <div className='bg-[#B1B1B1] w-[40%] flex items-center justify-start '>
           <img
-            src='./landingImages/manGirl.png'
+            src={manandgirl}
             alt='man and a girl'
             className='w-[40%] absolute top-[600px] right-[160px] bottom-0'
           />
@@ -107,7 +120,7 @@ const LandingPage = () => {
         </p>
         {/* <!-- girl --> */}
         <div id='section-three' className='w-2/5 mx-auto mt-8'>
-          <img src='./landingImages/girl.png' alt='girl' />
+          <img src={girl} alt='girl' />
         </div>
       </section>
 
@@ -119,7 +132,7 @@ const LandingPage = () => {
         <h3 className='text-4xl '>How It Works:</h3>
         <h3 className='text-4xl mb-6'>A Simple Path to Financial Growth</h3>
         <img
-          src='./landingImages/STEPS.png'
+          src={steps}
           alt=''
           className='w-3/5 mx-auto my-20'
         />
@@ -129,7 +142,7 @@ const LandingPage = () => {
       <section className='card-section flex flex-col my-20 pb-6 pt-[80px] gap-12'>
         <div className='mx-72 text-white'>
           <div className='shadow-sm card-one mx-10 flex gap-4 bg-[#323232] rounded-xl justify-center p-6'>
-            <img src='./landingImages/Vector1.png' alt='' className='w-2/5' />
+            <img src={vector1} alt='' className='w-2/5' />
             <div className='card-one-text text-whiteColor text-left'>
               <h3 className='text-4xl font-bold mb-3'>Lenders</h3>
               <p className='text-lg '>
@@ -142,7 +155,7 @@ const LandingPage = () => {
         </div>
 
         <div className='card-two flex mx-80 text-whiteColor gap-4 bg-primary rounded-xl justify-center px-6 py-6'>
-          <img src='./landingImages/Vector2.png' alt='' className='w-2/5' />
+          <img src={vector2} alt='' className='w-2/5' />
           <div className='card-two-text w-3/4 text-left'>
             <h3 className='text-4xl font-bold mb-3'>Borrowers</h3>
             <p className='text-lg'>
@@ -157,7 +170,7 @@ const LandingPage = () => {
       <section className='flex item-center pt-[80px]  w-full px-7 bg-[#f0f0f0]'>
         <div className=' w-[50%]'>
           <img
-            src='./landingImages/woman-logo.png'
+            src={womanlogo}
             alt='woman-logo'
             className='w-3/4'
           />
@@ -167,7 +180,7 @@ const LandingPage = () => {
             Friendly <span className='text-primary'>Interest Rate</span>{' '}
           </h3>
           <img
-            src='./landingImages/interest.png'
+            src={interest}
             alt='interest-logo'
             className=' w-[400px]'
           />
@@ -191,14 +204,14 @@ const LandingPage = () => {
           <div id='download-section' className='self-end mt-10 '>
             <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
-                src='./LandingImages/appStore.png'
+                src={apple}
                 alt='app store'
                 className='mb-2'
               />
             </Link>
             <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
-                src='./landingImages/googlePlay.png'
+                src={googleplay}
                 alt='google play'
                 className=''
               />
@@ -208,7 +221,7 @@ const LandingPage = () => {
         {/* Left */}
         <div>
           <img
-            src='./landingImages/phone-2.png'
+            src={phone}
             alt='phone mockup'
             className='inline-block w-[90%] '
           />
@@ -226,16 +239,16 @@ const LandingPage = () => {
           id='partner-logo'
           className='flex gap-12 w-full text-center justify-center item-center m-10'
         >
-          <img src='./landingImages/logo2.png' alt='Tiidelab' />
-          <img src='./landingImages/logo3.png' alt='NECA' />
-          <img src='./landingImages/logo1.png' alt='ITF' />
+          <img src={logo2} alt='Tiidelab' />
+          <img src={logo3} alt='NECA' />
+          <img src={logo1} alt='ITF' />
         </div>
       </section>
 
       {/* BLOG SECTION */}
       <div className='blog-section flex gap-28 justify-center align-center mb-[80px] mt-[80px]'>
         <div className='blog-section-one w-96 shadow-2xl'>
-          <img src='./landingImages/loan.png' alt='' className='mb-2 w-96' />
+          <img src={loan} alt='' className='mb-2 w-96' />
           <h4 className='font-bold px-4 text-lg text-left'>
             PadiPay: Benefits of using a loan platform
           </h4>
@@ -247,7 +260,7 @@ const LandingPage = () => {
           </div>
         </div>
         <div className='blog-section-two w-96 shadow-2xl'>
-          <img src='./landingImages/group-people.png' alt='' className='w-96' />
+          <img src={grouppeople} alt='' className='w-96' />
           <h4 className='font-bold text-lg  text-left px-4 mb-4'>
             Money Lending in Nigeria: A Closer Look at the Financial Landscape
           </h4>

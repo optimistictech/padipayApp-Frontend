@@ -10,13 +10,6 @@ import SignupPage from './Pages/SignupPage';
 // import PadiLogo from './Components/PadiLogo';
 import LendersBorrowers from './Pages/LendersBorrowers'
 import LoginPage from './Pages/LoginPage';
-import contactus from './Pages/ContactUs'
-import terms from './Pages/TermsandConditionPage'
-import whatwedo from './Pages/WhatwedoPage'
-import privacy from './Pages/PrivacyPolicyPage'
-import guarantorsaggreement from './Pages/GuarantorsAgreementPage'
-import lendersagreement from './Pages/LendersAgreementPage'
-import Borrowersagreement from './Pages/BorrowersAgreementPage'
 import BlogPage from './Pages/BlogPage'
 import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
