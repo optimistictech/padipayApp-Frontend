@@ -33,7 +33,7 @@ const Footer = () => {
               <Link to='/'>Terms and Conditions</Link>
             </li>
             <li>
-              <Link to='/'>Policy Privacy</Link>
+              <Link to='/privacy'>Policy Privacy</Link>
             </li>
             <li>
               <Link to='/'>Lenders Agreement</Link>
@@ -42,7 +42,7 @@ const Footer = () => {
               <Link to='/'>Borrowers Agreement</Link>
             </li>
             <li>
-              <Link to='/'>Gurantors Agreement</Link>
+              <Link to='/guarantoragree'>Gurantors Agreement</Link>
             </li>
           </ul>
         </div>
