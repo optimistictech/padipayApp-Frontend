@@ -1,7 +1,7 @@
 import './App.css';
 import 'remixicon/fonts/remixicon.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import LandingPage from './Pages/LandersPage';
+import LandingPage from './Pages/LandingPage';
 // import Navbar from './Components/Navbar';
 import AboutPage from './Pages/AboutusPage';
 import CommunityPage from './Pages/CommunityPage';

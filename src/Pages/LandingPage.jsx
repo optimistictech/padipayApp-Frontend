@@ -2,6 +2,8 @@ import React from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import { Link } from 'react-router-dom';
+import phone from '../assets/landingImages/PhoneMain.png'
+import apple from '../assets/landingImages/appStore.png'
 
 const LandingPage = () => {
   return (
@@ -31,9 +33,8 @@ const LandingPage = () => {
 
         {/* Hero Right */}
         <div className=' w-[50%] flex items-center justify-center  mt-10'>
-          <img
+          <img src={phone}
             className='w-[70%] '
-            src='./landingImages/phoneMain.png'
             alt='phone'
           />
 
@@ -41,7 +42,7 @@ const LandingPage = () => {
           <div id='download-section' className='self-end mb-16 w-[100px]'>
             <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
-                src='./LandingImages/appStore.png'
+                src={apple}
                 alt='app store'
                 className='mb-2'
               />
