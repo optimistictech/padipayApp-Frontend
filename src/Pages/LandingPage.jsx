@@ -2,21 +2,8 @@ import React from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import { Link } from 'react-router-dom';
-import phone from '../assets/landingImages/PhoneMain.png'
-import apple from '../assets/landingImages/appStore.png'
-import manandgirl from '../assets/landingImages/manGirl.png'
-import googleplay from '../assets/landingImages/googlePlay.png'
-import girl from '../assets/landingImages/girl.png'
-import steps from '../assets/landingImages/STEPS.png'
-import vector2 from '../assets/landingImages/Vector2.png'
-import vector1 from '../assets/landingImages/Vector1.png'
-import womanlogo from '../assets/landingImages/woman-logo.png'
-import interest from '../assets/landingImages/iNTREST_Rate__1_-removebg-preview.png'
-import grouppeople from '../assets/landingImages/group-people.png'
-import loan from '../assets/landingImages/loan.png'
-import logo1 from '../assets/landingImages/logo1.png'
-import logo2 from '../assets/landingImages/logo2.png'
-import logo3 from '../assets/landingImages/logo3.png'
+import Button from '../Components/Button';
+import MobileStore from '../Components/Sections/MobileStore';
 
 const LandingPage = () => {
   return (
@@ -39,15 +26,21 @@ const LandingPage = () => {
             marketplace that connects borrowers seeking loans with investors
             looking to invest in loan opportunities.
           </p>
-          <button className='animate-bounce hover:animate-none ml-3 bg-primary text-whiteColor px-4 py-2 rounded-md'>
-            <Link to ='/login'>Get Started</Link>
-          </button>
+
+          <div className=' hover:text-md ml-3'>
+            <Link to='/signup'>
+              <Button text={'Get Started'} />
+            </Link>
+          </div>
         </div>
 
         {/* Hero Right */}
         <div className=' w-[50%] flex items-center justify-center  mt-10'>
-          <img src={phone}
-            className='w-[70%] '
+          <img
+            src={
+              'https://ik.imagekit.io/gru3qfrss/tr:w-200,h-500,bl-10/Group%2023936.svg'
+            }
+            className='w-[60%]'
             alt='phone'
           />
 
@@ -55,14 +48,14 @@ const LandingPage = () => {
           <div id='download-section' className='self-end mb-16 w-[100px]'>
             <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
-                src={apple}
+                src={'https://ik.imagekit.io/gru3qfrss/appStore.png?'}
                 alt='app store'
                 className='mb-2'
               />
             </Link>
             <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
-                src={googleplay}
+                src={'https://ik.imagekit.io/gru3qfrss/googlePlay.png?'}
                 alt='google play'
                 className=''
               />
@@ -85,9 +78,12 @@ const LandingPage = () => {
             Discover Our Collaborative{' '}
             <span className='text-primary'>Community</span>
           </h2>
-          <button className=' text-white m-5 bg-primary text-whiteColor px-4 py-2 rounded-md hover:bg-blue-800'>
-            <Link to='/community'>Connect and Engage</Link>
-          </button>
+
+          <div className=' hover:text-md m-5'>
+            <Link to='/signup'>
+              <Button text={'Connect and Engage'} />
+            </Link>
+          </div>
 
           <p className='text-lg w-[70%]  ml-5'>
             Build a thriving lending community where borrowers and lenders can
@@ -99,9 +95,9 @@ const LandingPage = () => {
         {/* right */}
         <div className='bg-[#B1B1B1] w-[40%] flex items-center justify-start '>
           <img
-            src={manandgirl}
+            src={'https://ik.imagekit.io/gru3qfrss/manGirl.png?'}
             alt='man and a girl'
-            className='w-[40%] absolute top-[600px] right-[160px] bottom-0'
+            className='w-[40%] absolute top-[660px] right-[160px] bottom-0'
           />
         </div>
       </section>
@@ -120,7 +116,7 @@ const LandingPage = () => {
         </p>
         {/* <!-- girl --> */}
         <div id='section-three' className='w-2/5 mx-auto mt-8'>
-          <img src={girl} alt='girl' />
+          <img src={'https://ik.imagekit.io/gru3qfrss/girl.png'} alt='girl' />
         </div>
       </section>
 
@@ -132,7 +128,7 @@ const LandingPage = () => {
         <h3 className='text-4xl '>How It Works:</h3>
         <h3 className='text-4xl mb-6'>A Simple Path to Financial Growth</h3>
         <img
-          src={steps}
+          src={'https://ik.imagekit.io/gru3qfrss/STEPS.png'}
           alt=''
           className='w-3/5 mx-auto my-20'
         />
@@ -140,9 +136,13 @@ const LandingPage = () => {
 
       {/* <!-- CARD SECTION --> */}
       <section className='card-section flex flex-col my-20 pb-6 pt-[80px] gap-12'>
-        <div className='mx-72 text-white'>
+        <Link to='/' className='mx-72 text-white'>
           <div className='shadow-sm card-one mx-10 flex gap-4 bg-[#323232] rounded-xl justify-center p-6'>
-            <img src={vector1} alt='' className='w-2/5' />
+            <img
+              src={'https://ik.imagekit.io/gru3qfrss/Vector1.png'}
+              alt=''
+              className='w-2/5'
+            />
             <div className='card-one-text text-whiteColor text-left'>
               <h3 className='text-4xl font-bold mb-3'>Lenders</h3>
               <p className='text-lg '>
@@ -152,10 +152,17 @@ const LandingPage = () => {
               </p>
             </div>
           </div>
-        </div>
+        </Link>
 
-        <div className='card-two flex mx-80 text-whiteColor gap-4 bg-primary rounded-xl justify-center px-6 py-6'>
-          <img src={vector2} alt='' className='w-2/5' />
+        <Link
+          to='/BorrowersPage'
+          className='card-two flex mx-80 text-whiteColor gap-4 bg-primary rounded-xl justify-center px-6 py-6'
+        >
+          <img
+            src={'https://ik.imagekit.io/gru3qfrss/Vector2.png'}
+            alt=''
+            className='w-2/5'
+          />
           <div className='card-two-text w-3/4 text-left'>
             <h3 className='text-4xl font-bold mb-3'>Borrowers</h3>
             <p className='text-lg'>
@@ -163,14 +170,14 @@ const LandingPage = () => {
               Platform connects you with investors who believe in your vision.
             </p>
           </div>
-        </div>
+        </Link>
       </section>
 
       {/* section 4  - interest rate*/}
       <section className='flex item-center pt-[80px]  w-full px-7 bg-[#f0f0f0]'>
         <div className=' w-[50%]'>
           <img
-            src={womanlogo}
+            src={'https://ik.imagekit.io/gru3qfrss/woman-logo.png'}
             alt='woman-logo'
             className='w-3/4'
           />
@@ -180,7 +187,7 @@ const LandingPage = () => {
             Friendly <span className='text-primary'>Interest Rate</span>{' '}
           </h3>
           <img
-            src={interest}
+            src={'https://ik.imagekit.io/gru3qfrss/interest.png'}
             alt='interest-logo'
             className=' w-[400px]'
           />
@@ -188,44 +195,8 @@ const LandingPage = () => {
       </section>
 
       {/* <!-- SECTION FIVE --> */}
-      <section
-        id='section-five'
-        className='flex bg-primary pt-[80px] item-center justify-between text-whiteColor px-7 pt-20'
-      >
-        <div id='section-five-text' className=' text-left pt-24'>
-          <h3 className='text-4xl font-bold pb-8'>
-            Register without any charges.
-          </h3>
-          <p className='text-xl'>
-            - Access immediate loans. <br />- Start your journey as a lender
-            today.
-          </p>
-          {/* downloadIcons */}
-          <div id='download-section' className='self-end mt-10 '>
-            <Link to='http://' target='_blank' rel='noopener noreferrer'>
-              <img
-                src={apple}
-                alt='app store'
-                className='mb-2'
-              />
-            </Link>
-            <Link to='http://' target='_blank' rel='noopener noreferrer'>
-              <img
-                src={googleplay}
-                alt='google play'
-                className=''
-              />
-            </Link>
-          </div>
-        </div>
-        {/* Left */}
-        <div>
-          <img
-            src={phone}
-            alt='phone mockup'
-            className='inline-block w-[90%] '
-          />
-        </div>
+      <section>
+        <MobileStore />
       </section>
 
       {/* <!-- SECTION SIX --> */}
@@ -237,18 +208,25 @@ const LandingPage = () => {
         <h3 className='text-4xl text-primary'>Business Collaborators</h3>
         <div
           id='partner-logo'
-          className='flex gap-12 w-full text-center justify-center item-center m-10'
+          className='flex gap-20 w-[100%] text-center justify-center item-center m-10'
         >
-          <img src={logo2} alt='Tiidelab' />
-          <img src={logo3} alt='NECA' />
-          <img src={logo1} alt='ITF' />
+          <img
+            src={'https://ik.imagekit.io/gru3qfrss/logo2.png'}
+            alt='Tiidelab'
+          />
+          <img src={'https://ik.imagekit.io/gru3qfrss/logo3.png'} alt='NECA' />
+          <img src={'https://ik.imagekit.io/gru3qfrss/logo1.png'} alt='ITF' />
         </div>
       </section>
 
       {/* BLOG SECTION */}
       <div className='blog-section flex gap-28 justify-center align-center mb-[80px] mt-[80px]'>
         <div className='blog-section-one w-96 shadow-2xl'>
-          <img src={loan} alt='' className='mb-2 w-96' />
+          <img
+            src={'https://ik.imagekit.io/gru3qfrss/loan.png'}
+            alt=''
+            className='mb-2 w-96'
+          />
           <h4 className='font-bold px-4 text-lg text-left'>
             PadiPay: Benefits of using a loan platform
           </h4>
@@ -260,7 +238,11 @@ const LandingPage = () => {
           </div>
         </div>
         <div className='blog-section-two w-96 shadow-2xl'>
-          <img src={grouppeople} alt='' className='w-96' />
+          <img
+            src={'https://ik.imagekit.io/gru3qfrss/group-people.png'}
+            alt=''
+            className='w-96'
+          />
           <h4 className='font-bold text-lg  text-left px-4 mb-4'>
             Money Lending in Nigeria: A Closer Look at the Financial Landscape
           </h4>

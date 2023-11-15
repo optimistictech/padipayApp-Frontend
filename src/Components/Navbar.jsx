@@ -18,7 +18,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to='/aboutus' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
+              <Link
+                to='/aboutus'
+                className='md:mx-2 lg:mx-8 hover:text-blue-500'
+              >
                 About Us
               </Link>
             </li>
@@ -28,7 +31,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to='/community' className='md:mx-2 lg:mx-8 hover:text-blue-500'>
+              <Link
+                to='/community'
+                className='md:mx-2 lg:mx-8 hover:text-blue-500'
+              >
                 Community
               </Link>
             </li>
@@ -40,18 +46,17 @@ const Navbar = () => {
           </ul>
         </div>
         <div className='flex gap-3'>
-          <div>
-              <Link to='/login'>
-              <Button text={"Login"}></Button>
-              </Link>
+          <div className='border-0'>
+            <Link to='/login'>
+              <Button text={'Login'}></Button>
+            </Link>
           </div>
           <div>
-          <div>
+            <div>
               <Link to='/signup'>
-              <Button text={"Register Now"}/>
+                <Button text={'Register Now'} />
               </Link>
-          </div>
-  
+            </div>
           </div>
         </div>
       </div>
@@ -59,4 +64,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar
+export default Navbar;
