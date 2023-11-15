@@ -5,9 +5,9 @@ const MobileStore = () => {
   return (
     <section
       id='section-five'
-      className='flex bg-primary item-center justify-between text-whiteColor px-7 py-10'
+      className='flex bg-primary item-center justify-between w-full text-whiteColor px-7 py-5'
     >
-      <div id='section-five-text' className=' text-left pt-24'>
+      <div id='section-five-text' className=' text-left w-[50%] pt-32'>
         <h3 className='text-4xl font-bold pb-8'>
           Register without any charges.
         </h3>
@@ -34,13 +34,13 @@ const MobileStore = () => {
         </div>
       </div>
       {/* Left */}
-      <div>
+      <div className='w-[60%]'>
         <img
           src={
-            'https://ik.imagekit.io/gru3qfrss/Group%2023936%20(1)%20(1).png?'
+            'https://ik.imagekit.io/gru3qfrss/PADIPAY-MOBILE-1.png?updatedAt=1700044443697'
           }
           alt='phone mockup'
-          className='inline-block w-[100%] '
+          className='inline-block w-[80%] '
         />
       </div>
     </section>
