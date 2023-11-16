@@ -2,9 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
-import img1 from '../assets/postForBlogImages/postForBlog1.png';
-import img2 from '../assets/postForBlogImages/postForBlog2.png';
-import img3 from '../assets/postForBlogImages/postForBlogIcon.png';
 
 const PostForBlog = () => {
   return (
@@ -17,11 +14,11 @@ const PostForBlog = () => {
     Reshaping the Lending Industry
   </h2>
   <div className="flex pt-3 pb-5 text-[#696A75]">
-    <img src={img3} />
+    <img src={'https://ik.imagekit.io/9tezgt6wp/postForBlogIcon.png?updatedAt=1700151430615'} />
     <p className="pl-2 pr-6">Chioma Ukoha</p>
     <p>August 20, 2023</p>
   </div>
-  <img src={img1} />
+  <img src={'https://ik.imagekit.io/9tezgt6wp/postForBlog1.png?updatedAt=1700151326496'} />
   <p className="font-inter pt-5 pb-5 text-[#3B3C4A] leading-8">
     In today's rapidly evolving digital landscape, industries across the
     board are<br />
@@ -79,7 +76,7 @@ const PostForBlog = () => {
       era of convenience, efficiency, and customer-centricity."
     </p>
   </div>
-  <img src={img2} className="pb-7 pt-7" />
+  <img src={'https://ik.imagekit.io/9tezgt6wp/postForBlog2.png?updatedAt=1700151388234'} className="pb-7 pt-7" />
   <div className="ml-8 mr-8 mb-5 text-center bg-[#E8E8EA] rounded-xl text-[#696A75] pt-5 pb-5">
     <p className="text-sm">Advertisement</p>
     <p className="font-semibold">You can place ads</p>
