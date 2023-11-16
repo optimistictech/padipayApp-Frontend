@@ -4,13 +4,6 @@ import Navbar from '../Components/Navbar'
 import Footer from '../Components/Footer'
 import {Button} from '../Components/Button'
 import 'remixicon/fonts/remixicon.css'
-import img2 from '../assets/CommunityPageImages/Image1.png';
-import img4 from '../assets/CommunityPageImages/abadge.png';
-import img5 from '../assets/CommunityPageImages/group1.png';
-import img6 from '../assets/CommunityPageImages/group2.png'; 
-import img7 from '../assets/CommunityPageImages/group3.png';
-import img8 from '../assets/CommunityPageImages/image2.png';
-import img9 from '../assets/CommunityPageImages/image3.png';
 
 const CommunityPage = () => {
   return (
@@ -34,18 +27,18 @@ const CommunityPage = () => {
             <h2 className="text-3xl mt-6 font-semibold">Trending</h2>
             <div className="trendingBoxSection flex gap-4 text-white mt-4">
                 <div className="trendingBoxOne w-1/3 bg-primary p-4 rounded-xl">
-                    <img src={img5} alt="Two men"/>
-                    <img src={img4} alt="" className="mt-2 pt-2"/>
+                    <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/group1.png"} alt="Two men"/>
+                    <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/abadge.png?updatedAt=1700102430611"} alt="" className="mt-2 pt-2"/>
                     <p className="py-2">The Impact of Technology on the Workplace: How Technology is Changing</p>
                 </div>
                 <div className="trendingBoxOne w-1/3 bg-primary p-4 rounded-xl">
-                    <img src={img6} alt="Two men"/>
-                    <img src={img4} alt="" className="mt-2 pt-2"/>
+                    <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/group2.png"} alt="Two men"/>
+                    <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/abadge.png"} alt="" className="mt-2 pt-2"/>
                     <p className="py-2">The Impact of Technology on the Workplace: How Technology is Changing</p>
                 </div>
                 <div className="trendingBoxOne w-1/3 bg-primary p-4 rounded-xl">
-                    <img src={img7} alt="Two men"/>
-                    <img src={img4} alt="" className="mt-2 pt-2"/>
+                    <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/group3.png"} alt="Two men"/>
+                    <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/abadge.png"} alt="" className="mt-2 pt-2"/>
                     <p className="py-2">The Impact of Technology on the Workplace: How Technology is Changing</p>
                 </div>
             </div>
@@ -69,7 +62,7 @@ const CommunityPage = () => {
             {/* ONE */}
             <div className="article-section-container-one flex border-b border-borderBlack gap-6 items-center">
                 <div className="article-img -mt-4">
-                    <img src={img8} alt="" className="w-16"/>
+                    <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/image2.png"} alt="" className="w-16"/>
                 </div>
                 <div className="article pr-8">
                     <h5 className="mb-1 text-xl font-semibold">What fees are associated with PadiPay lending platform?</h5>
@@ -90,7 +83,7 @@ const CommunityPage = () => {
             {/* TWO */}
             <div className="article-section-container-two flex border-b border-borderBlack gap-9 items-center">
                 <div className="article-img -mt-4">
-                    <img src={img2} alt="" className="w-16"/>
+                    <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/Image1.png?"} alt="" className="w-16"/>
                 </div>
                 <div className="article pr-8">
                     <h5 className="mb-1 text-xl font-semibold">How does PadiPay lending community work?</h5>
@@ -111,7 +104,7 @@ const CommunityPage = () => {
             {/* THREE */}
             <div className="article-section-container-three flex border-b border-borderBlack gap-6 items-center">
                 <div className="article-img -mt-4">
-                    <img src={img9} alt="" className="w-16"/>
+                    <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/image3.png?updatedAt=1700102430517"} alt="" className="w-16"/>
                 </div>
                 <div className="article pr-8">
                     <h5 className="mb-1 text-xl font-semibold">Who can invest in PadiPay ?</h5>
@@ -132,7 +125,7 @@ const CommunityPage = () => {
             {/* FOUR */}
             <div className="article-section-container-four flex border-b border-borderBlack gap-6 items-center">
                 <div className="article-img -mt-4">
-                    <img src={img8} alt="" className="w-16"/>
+                    <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/image2.png"} alt="" className="w-16"/>
                 </div>
                 <div className="article pr-8">
                     <h5 className="mb-1 text-xl font-semibold">What are the potential returns for investors?</h5>

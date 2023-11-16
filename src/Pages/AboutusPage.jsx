@@ -1,7 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import img1 from '../assets/AboutPageImages/group.png'
-import img2 from '../assets/AboutPageImages/man2.jpg'
 import Footer from '../Components/Footer';
 import Navbar from '../Components/Navbar';
 import {Button} from '../Components/Button'
@@ -27,7 +25,7 @@ const AboutusPage = () => {
             </p>
           </div>
         </div>
-        <img src={img1} className="w-2/4" alt=""/>
+        <img src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/AboutPageImages/group.png"} className="w-2/4" alt=""/>
       </div>
       <section className="text-section">
         <div className="px-20 my-16 w-3/5 mx-auto">
@@ -41,7 +39,7 @@ const AboutusPage = () => {
           </p>
         </div>
         <div className="mb-5 px-10 py-5 flex gap-16">
-          <img className="w-2/5" src={img2} alt="" />
+          <img className="w-2/5" src={"https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/AboutPageImages/man2.jpg"} alt="" />
           <div className="what-text text-justify">
             <h3 className="font-bold text-5xl text-primary mt-6">
               What We Stand For
