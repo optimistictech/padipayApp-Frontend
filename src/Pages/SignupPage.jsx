@@ -1,16 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
-import img1 from '../assets/SignupImages/padiphone.png'
-import img2 from '../assets/SignupImages/playstore.png';
-import img3 from '../assets/SignupImages/appstore.png'; 
-import img4 from '../assets/SignupImages/google-logo.svg';
 
 const SignupPage = () => {
   return (
     <div className='bg-primary'>
-      <Navbar/>
       <div className=' h-100vw py-6'>
       <div className="flex justify-around gap-2 small-screen">
         <div className="flex flex-col relative items-center justify-center text-white w-screen">
@@ -18,23 +11,15 @@ const SignupPage = () => {
             <h1 className="text-4xl">Welcome Onboard</h1>
             <span className="text-4xl font-bold">Padi</span>
           </div>
-          <div className="mx-auto">
-            <img src={img1} alt="PadiPay" className="right-img" />
+          <div className="mx-auto ">
+          <img src={"https://ik.imagekit.io/gru3qfrss/tr:w-200,h-500,bl-10/Group%2023936.svg"} alt="PadiPay" className="right-img mt-8" />
           </div>
-          <div className="flex gap-4 small-screen relative -top-10">
-            <div className="flex gap-2 bg-black p-4 rounded-lg">
-              <img src={img3} alt="apple mockup" className="w-20" />
-              <div className="flex flex-col text-white">
-                <Link to="" className="text-xs">Download on the</Link>
-                <Link to="" className="font-bold text-xl">App Store</Link>
-              </div>
+          <div className="flex gap-4 small-screen relative ">
+            <div className=" p-4 rounded-lg">
+            <img src={"https://ik.imagekit.io/gru3qfrss/appStore.png"} alt="apple mockup" className="w-40" />
             </div>
-            <div className="flex gap-2 bg-black p-4 rounded-lg">
-              <img src={img2} alt="google-play mockup" className="w-20"/>
-              <div className="flex flex-col text-white">
-                <Link to="" className="text-xs">Get in on</Link>
-                <Link to="" className="font-bold text-xl">Google Play</Link>
-              </div>
+            <div className="p-4 rounded-lg">
+            <img src={"https://ik.imagekit.io/gru3qfrss/googlePlay.png"} alt="google-play mockup" className="w-40"/>
             </div>
           </div>
         </div>
@@ -46,7 +31,7 @@ const SignupPage = () => {
             <p className="text-xl my-4">Welcome! Please enter with your details</p>
           </div>
           <button className="border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8">
-            <img src={img4} alt="google-play mockup" className="w-10"/>
+            <img src={"https://ik.imagekit.io/b6b9xwu9l/google-logo.svg"} alt="google-play mockup" className="w-10"/>
             <span>Sign up with Google</span>
           </button>
           {/* MAIN BODY - SIGNUP FORM */}
@@ -152,7 +137,6 @@ const SignupPage = () => {
         </div>
       </div>
       </div>
-      <Footer/>
     </div>
   )
 }

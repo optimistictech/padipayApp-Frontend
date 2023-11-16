@@ -1,45 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
-import img1 from '../assets/SignupImages/padiphone.png'
-import img2 from '../assets/SignupImages/playstore.png';
-import img3 from '../assets/SignupImages/appstore.png'; 
-import img4 from '../assets/SignupImages/google-logo.svg';
-
+import LeftPartLogin from "../Components/LeftPartLogin"
 
 const LoginPage = () => {
   return (
-    <div className="bg-[#003399] h-100vw">
-      <Navbar/>
-            <div className="pt-28 flex justify-around gap-2 small-screen">
+    <div className="bg-[#003399] h-40vw">
+      <div className="pt-10 flex justify-around gap-2 small-screen">
         {/* LEFT SIDE */}
         <div className="flex flex-col relative items-center justify-center text-white w-screen">
-          <div className="text-center">
-            <h1 className="text-4xl">Welcome Onboard</h1>
-            <span className="text-4xl font-bold">Padi</span>
-          </div>
-          <div className="mx-auto ">
-          <img src={img1} alt="PadiPay" className="right-img" />
-          </div>
-          <div className="flex gap-4 small-screen relative -top-10">
-            <div className="flex gap-2 bg-black p-4 rounded-lg">
-            <img src={img3} alt="apple mockup" className="w-20" />
-              <div className="flex flex-col text-white">
-                <Link to="" className="text-xs">Download on </Link>
-                <Link to="" className="font-bold text-xl">App Store</Link>
-              </div>
-            </div>
-            <div className="flex gap-2 bg-black p-4 rounded-lg">
-            <img src={img2} alt="google-play mockup" className="w-20"/>
-              <div className="flex flex-col text-white">
-                <Link to="" className="text-xs">Download on</Link>
-                <Link to="" className="font-bold text-xl">Google Play</Link>
-              </div>
-            </div>
-          </div>
+          <LeftPartLogin/>
         </div>
-
         {/* RIGHT SIDE */}
         <div className="bg-white w-screen px-10 m-16 p-8">
           <div className="text-center">
@@ -51,7 +21,7 @@ const LoginPage = () => {
             </p>
           </div>
           <button className="border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8">
-          <img src={img4} alt="google-play mockup" className="w-10"/>
+          <img src={"https://ik.imagekit.io/b6b9xwu9l/google-logo.svg"} alt="google-play mockup" className="w-10"/>
           <span>Login with Google</span>
           </button>
 
@@ -104,7 +74,6 @@ const LoginPage = () => {
           </p>
         </div>
       </div>
-      <Footer/>
     </div>
   )
 }
