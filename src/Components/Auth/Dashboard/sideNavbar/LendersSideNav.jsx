@@ -1,0 +1,182 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+// import padiLogo from '../assets/padiLogo.png';
+
+const LendersSideNav = () => {
+  return (
+    <div className=' w-[20%] text-white bg-[#003399] font-primaryFont m-5 rounded-xl p-5'>
+      {/* head */}
+      <div className='px-3 py-2'>
+        {/* <img src={padiLogo} alt='padiLogo' /> */}
+        <span className=' font-bold'>Hello! Padi-Lender</span>
+      </div>
+
+      <hr className='font-bold my-4' />
+      {/* Name */}
+      <div className='lg:flex flex-row justify-between items-center px-3 '>
+        <Link to='/' className='flex gap-8 items-center py-4'>
+          <p className='flex gap-1'>
+            {/* img icon */}
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              fill='none'
+              viewBox='0 0 24 24'
+              strokeWidth={1.5}
+              stroke='currentColor'
+              className='w-6 h-6'
+            >
+              <path
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z'
+              />
+            </svg>
+            <span> Alfred Jimoh</span>
+          </p>
+          {/* down arrow */}
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 24 24'
+            strokeWidth={1.5}
+            stroke='currentColor'
+            className='w-6 h-6'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              d='M19.5 8.25l-7.5 7.5-7.5-7.5'
+            />
+          </svg>
+        </Link>
+        {/* <Link to='/'>Change Account Type</Link> */}
+      </div>
+
+      <hr className='font-bold my-3' />
+
+      {/* dashboard */}
+      <Link
+        to='/'
+        className='flex gap-4 active items-center px-3 bg-[#4F4F52]  py-4 mt-5 rounded'
+      >
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth={1.5}
+          stroke='currentColor'
+          className='w-6 h-6'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z'
+          />
+        </svg>
+        <span className=''>Dashboard</span>
+      </Link>
+
+      {/* lend */}
+      <Link to='/' className='flex gap-4 items-center px-3 py-5 '>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth={1.5}
+          stroke='currentColor'
+          className='w-6 h-6'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z'
+          />
+        </svg>
+
+        <span className=''>Lend</span>
+      </Link>
+
+      {/* Invest */}
+      <Link to='/' className='flex gap-4 active items-center px-3 py-5 rounded'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth={1.5}
+          stroke='currentColor'
+          className='w-6 h-6'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3'
+          />
+        </svg>
+
+        <span className=''>Invest</span>
+      </Link>
+
+      {/* Record */}
+      <Link to='/' className='flex gap-4 active items-center px-3 py-5 rounded'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth={1.5}
+          stroke='currentColor'
+          className='w-6 h-6'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25M9 16.5v.75m3-3v3M15 12v5.25m-4.5-15H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z'
+          />
+        </svg>
+
+        <span className=''>Analytics</span>
+      </Link>
+
+      {/* Risk Apetite */}
+      <Link to='/' className='flex gap-4 active items-center px-3 py-5 rounded'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          strokeWidth={1.5}
+          stroke='currentColor'
+          className='w-6 h-6'
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z'
+          />
+        </svg>
+
+        <span className=''>Risk Apetite</span>
+      </Link>
+
+      {/* Avaliable Card */}
+      <div className='bg-white text-black p-5 mt-10 rounded'>
+        <div className='flex justify-between items-center'>
+          <p>Available</p>
+          <p className='font-bold'>#300,000</p>
+        </div>
+        <div className='flex flex-col my-5'>
+          <button className='border-solid border mb-3 border-black rounded py-2 shadow-md'>
+            Add Funds
+          </button>
+
+          <Link
+            to='/'
+            className=' bg-[#646464] rounded text-center py-2 bg-opacity-40'
+          >
+            Create Auto Invest
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LendersSideNav;

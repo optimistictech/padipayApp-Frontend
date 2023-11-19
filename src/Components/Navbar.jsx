@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <header className='bg-primary w-full md:block fixed z-50 text-whiteColor h-18 text-14px'>
+    <header className='bg-primary font-primaryFont w-full md:block fixed z-50 text-whiteColor h-18 text-14px'>
       <div className='flex justify-between align-center  items-center py-3 px-10'>
         <div className='flex'>
           <PadiLogo />

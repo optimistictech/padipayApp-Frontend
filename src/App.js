@@ -15,6 +15,7 @@ import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 import MobileStore from './Components/Sections/MobileStore';
+import LendersDashboard from './Pages/dashboard/LendersDashboard/LendersDashboard';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       {/* <PadiLogo /> */}
       {/* <Navbar/> */}
       {/* <MobileStore /> */}
+
       <Routes>
         <Route path='/aboutus' element={<AboutPage />} />
         <Route path='/login' element={<LoginPage />} />
@@ -33,6 +35,7 @@ function App() {
         <Route path='/privacy' element={<PrivacyPolicyPage />} />
         <Route path='/guarantoragree' element={<GuarantorsAgreementPage />} />
         <Route path='/' element={<LandingPage />} />
+        <Route path='/lendersDashboard' element={<LendersDashboard />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>

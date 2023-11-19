@@ -5,7 +5,7 @@ const MobileStore = () => {
   return (
     <section
       id='section-five'
-      className='flex bg-primary item-center justify-between w-full text-whiteColor px-7 py-5'
+      className='flex bg-primary font-primaryFont item-center justify-between w-full text-whiteColor px-7 py-5'
     >
       <div id='section-five-text' className=' text-left w-[50%] pt-32'>
         <h3 className='text-4xl font-bold pb-8'>

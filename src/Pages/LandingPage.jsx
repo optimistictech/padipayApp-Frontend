@@ -15,7 +15,7 @@ const LandingPage = () => {
       {/* HERO SECTION */}
       <section
         id='heroSection'
-        className='flex items-center w-full p-7 bg-[#F5F1F1] justify-between '
+        className='flex items-center font-primaryFont w-full p-7 bg-[#F5F1F1] justify-between '
       >
         <div id='hero-text' className='w-[50%] ml-3 text-left'>
           <h1 className='text-[60px] leading-[70px] ml-4 font-extrabold'>

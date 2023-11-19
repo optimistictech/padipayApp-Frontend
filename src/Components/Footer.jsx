@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className='footer mt-8  bg-[#323232] text-[#B6BDC3] text-left py-10 px-10'>
+    <footer className='footer font-primaryFont mt-8  bg-[#323232] text-[#B6BDC3] text-left py-10 px-10'>
       <div className='lg:flex justify-between items-start '>
         {/* left */}
         <div>
@@ -72,7 +72,7 @@ const Footer = () => {
             <Link to=''>
               <i className='fab fa-facebook'></i>
             </Link>
-            < Link to=''>
+            <Link to=''>
               <i className='fab fa-instagram'></i>
             </Link>
           </div>
