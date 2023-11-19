@@ -113,6 +113,11 @@ const LendersNavbar = () => {
           <span class='text-primary'>Account ID:</span> PDWR101
         </p>
 
+        {/* Incomplete profile */}
+        <p class=' text-[#FC1616] border px-4 py-1 border-[#FC1616] rounded'>
+          Incomplete Profile
+        </p>
+
         {/* btn */}
         <div className=' hover:text-md'>
           <Link to='/signup'>

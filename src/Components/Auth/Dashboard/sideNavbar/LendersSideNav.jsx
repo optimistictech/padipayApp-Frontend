@@ -185,7 +185,9 @@ const LendersSideNav = () => {
       <div className='bg-white text-black p-5 mt-10 rounded'>
         <div className='flex justify-between items-center'>
           <p>Available</p>
-          <p className='font-bold'>#300,000</p>
+          <p className='font-bold'>
+            <span>&#8358;</span>300,000
+          </p>
         </div>
         <div className='flex flex-col my-5'>
           <button className='border-solid border mb-3 border-black rounded py-2 shadow-md'>

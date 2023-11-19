@@ -16,6 +16,7 @@ import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 import MobileStore from './Components/Sections/MobileStore';
 import LendersDashboard from './Pages/dashboard/LendersDashboard/LendersDashboard';
+import BorrowersDashboard from './Pages/dashboard/BorrowersDashboard/BorrowersDashboard';
 
 function App() {
   return (
@@ -31,11 +32,12 @@ function App() {
         <Route path='/community' element={<CommunityPage />} />
         <Route path='/blog' element={<BlogPage />} />
         <Route path='/postforblog' element={<PostForBlog />} />
-        <Route path='/areyou' element={<LendersBorrowers />} />
+        <Route path='/lendersBorrowers' element={<LendersBorrowers />} />
         <Route path='/privacy' element={<PrivacyPolicyPage />} />
         <Route path='/guarantoragree' element={<GuarantorsAgreementPage />} />
         <Route path='/' element={<LandingPage />} />
         <Route path='/lendersDashboard' element={<LendersDashboard />} />
+        <Route path='/borrowersDashboard' element={<BorrowersDashboard />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>

@@ -69,7 +69,7 @@ const LoginPage = () => {
             </div>
 
             <div className='text-center my-4'>
-              <Link to='/lendersDashboard'>
+              <Link to='/lendersBorrowers'>
                 <input
                   type='submit'
                   value='Login'
