@@ -32,10 +32,10 @@ const Navbar = () => {
             </li>
             <li>
               <Link
-                to='/community'
+                to='/calculator'
                 className='md:mx-2 lg:mx-8 hover:text-blue-500'
               >
-                Community
+                Calculator
               </Link>
             </li>
             <li>
