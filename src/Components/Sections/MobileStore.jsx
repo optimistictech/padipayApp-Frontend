@@ -1,10 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Section } from "../common";
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { Section } from '../common';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const MobileStore = () => {
+  // AOS
+  useEffect(() => {
+    Aos.init();
+    Aos.refresh();
+  }, []);
   return (
-
     <section id='section-five' className='bg-primary'>
       <Section className='flex items-center justify-between w-full text-white py-5'>
         <div id='section-five-text' className=' text-left w-[50%] pt-32'>
@@ -22,25 +28,22 @@ const MobileStore = () => {
           >
             <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
-                src={"https://ik.imagekit.io/gru3qfrss/appStore.png"}
+                src={'https://ik.imagekit.io/gru3qfrss/appStore.png'}
                 alt='app store'
               />
             </Link>
             <Link to='http://' target='_blank' rel='noopener noreferrer'>
               <img
-                src={"https://ik.imagekit.io/gru3qfrss/appStore.png"}
+                src={'https://ik.imagekit.io/gru3qfrss/appStore.png'}
                 alt='google play'
               />
             </Link>
           </div>
-
         </div>
         {/* Left */}
-        <div className='w-[60%]'>
+        <div className='w-[60%]' data-aos='zoom-in-up'>
           <img
-            src={
-              "https://ik.imagekit.io/gru3qfrss/PADIPAY-MOBILE-1.png?updatedAt=1700044443697"
-            }
+            src={'https://ik.imagekit.io/gru3qfrss/PADIPAY-MOBILE-1%201.png'}
             alt='phone mockup'
             className='inline-block w-[80%] '
           />

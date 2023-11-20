@@ -1,12 +1,21 @@
-import React from "react";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
-import { Link } from "react-router-dom";
-import Button from "../Components/Button";
-import MobileStore from "../Components/Sections/MobileStore";
-import { Section } from "../Components/common";
+import React, { useEffect } from 'react';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
+import { Link } from 'react-router-dom';
+import Button from '../Components/Button';
+import MobileStore from '../Components/Sections/MobileStore';
+import { Section } from '../Components/common';
+import BlogCard from '../Components/BlogCard';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const LandingPage = () => {
+  // AOS
+  useEffect(() => {
+    Aos.init();
+    Aos.refresh();
+  }, []);
+
   return (
     <div>
       <Navbar />
@@ -20,7 +29,7 @@ const LandingPage = () => {
         >
           <div id='hero-text' className='w-[50%] text-left'>
             <h1 className='text-[60px] leading-[70px] font-extrabold'>
-              Empower Your{" "}
+              Empower Your{' '}
               <span className='text-primary'>Financial Growth</span>
             </h1>
             <p className='py-[30px] text-[18px] text-justify w-[80%]'>
@@ -28,7 +37,6 @@ const LandingPage = () => {
               marketplace that connects borrowers seeking loans with investors
               looking to invest in loan opportunities.
             </p>
-
 
             <div className=' hover:text-md'>
               <Link to='/signup'>
@@ -41,9 +49,12 @@ const LandingPage = () => {
           <div className=' w-[50%] flex items-center justify-center  mt-10'>
             <img
               src={
-                "https://ik.imagekit.io/gru3qfrss/tr:w-200,h-500,bl-10/Group%2023936.svg"
+                'https://ik.imagekit.io/gru3qfrss/Group%2023936%20(2).png?updatedAt=1700484441946'
               }
               className='w-[60%]'
+              data-aos='fade-down'
+              data-aos-easing='linear'
+              data-aos-duration='1500'
               alt='phone'
             />
 
@@ -51,14 +62,14 @@ const LandingPage = () => {
             <div id='download-section' className='self-end mb-16 w-[100px]'>
               <Link to='http://' target='_blank' rel='noopener noreferrer'>
                 <img
-                  src={"https://ik.imagekit.io/gru3qfrss/appStore.png?"}
+                  src={'https://ik.imagekit.io/gru3qfrss/appStore.png?'}
                   alt='app store'
                   className='mb-2'
                 />
               </Link>
               <Link to='http://' target='_blank' rel='noopener noreferrer'>
                 <img
-                  src={"https://ik.imagekit.io/gru3qfrss/googlePlay.png?"}
+                  src={'https://ik.imagekit.io/gru3qfrss/googlePlay.png?'}
                   alt='google play'
                   className=''
                 />
@@ -76,15 +87,16 @@ const LandingPage = () => {
         <div
           id='section-one-text'
           className='flex flex-col justify-center gap-5 h-full bg-white px-10 py-20 text-left max-w-2xl'
+          data-aos='fade-right'
         >
           <h2 className='text-4xl font-bold'>
-            Discover Our Collaborative{" "}
+            Discover Our Collaborative{' '}
             <span className='text-primary'>Community</span>
           </h2>
 
           <div className='hover:text-md'>
             <Link to='/signup'>
-              <Button text={"Connect and Engage"} />
+              <Button text={'Connect and Engage'} />
             </Link>
           </div>
 
@@ -99,7 +111,7 @@ const LandingPage = () => {
         <div className='flex items-center justify-start relative'>
           <img
             src={
-              "https://cdn.hashnode.com/res/hashnode/image/upload/v1700297603689/20b89194-e953-434c-a635-fe80ce46d112.jpeg"
+              'https://cdn.hashnode.com/res/hashnode/image/upload/v1700297603689/20b89194-e953-434c-a635-fe80ce46d112.jpeg'
             }
             alt='man and a girl'
             className='h-full rounded'
@@ -108,7 +120,7 @@ const LandingPage = () => {
       </section>
 
       {/* <!-- SECTION TWO --> */}
-      <section id='section-two' className='text-center bg-[#f0f0f0] pt-[80px]'>
+      <section id='section-two' className='text-center  bg-[#f0f0f0] pt-[80px]'>
         <h3 className='text-primary font-bold text-4xl mb-4'>
           Non-Interest Credit Facility
         </h3>
@@ -120,8 +132,8 @@ const LandingPage = () => {
           the legal owner of the business.
         </p>
         {/* <!-- girl --> */}
-        <div id='section-three' className='w-2/5 mx-auto mt-8'>
-          <img src={"https://ik.imagekit.io/gru3qfrss/girl.png"} alt='girl' />
+        <div id='section-three' className='w-3/5 mx-auto mt-8'>
+          <img src={'https://ik.imagekit.io/gru3qfrss/Lady2.png'} alt='girl' />
         </div>
       </section>
 
@@ -133,9 +145,10 @@ const LandingPage = () => {
         <h3 className='text-4xl mb-3'>How It Works:</h3>
         <h3 className='text-4xl mb-6'>A Simple Path to Financial Growth</h3>
         <img
-          src={"https://ik.imagekit.io/gru3qfrss/STEPS.png"}
+          src={'https://ik.imagekit.io/gru3qfrss/Group%2023937.png'}
           alt=''
           className='w-3/5 mx-auto my-20'
+          data-aos='fade-right'
         />
       </section>
 
@@ -144,8 +157,15 @@ const LandingPage = () => {
         <Link
           to='/'
           className='shadow-sm flex text-white gap-4 rounded-xl p-6 bg-[#323232]'
+          data-aos='fade-right'
         >
-          <img src={"https://ik.imagekit.io/gru3qfrss/Vector1.png"} alt='' />
+          <img
+            src={
+              'https://ik.imagekit.io/gru3qfrss/Vector.png?updatedAt=1700484442611'
+            }
+            className='w-[30%]'
+            alt=''
+          />
           <div className='text-left'>
             <h3 className='text-4xl font-bold mb-3'>Lenders</h3>
             <p className='text-lg'>
@@ -159,9 +179,14 @@ const LandingPage = () => {
         <Link
           to='/BorrowersPage'
           className='shadow-sm flex text-white gap-4 bg-primary rounded-xl p-6'
+          data-aos='fade-left'
         >
-          <img src={"https://ik.imagekit.io/gru3qfrss/Vector2.png"} alt='' />
-          <div className='text-left'>
+          <img
+            src={'https://ik.imagekit.io/gru3qfrss/unsplash_amX7z6WNQmk.png'}
+            className='w-[30%]'
+            alt=''
+          />
+          <div className='text-left '>
             <h3 className='text-4xl font-bold mb-3'>Borrowers</h3>
             <p className='text-lg'>
               Are you ready to turn your dreams into reality? PadiPay's Lending
@@ -176,17 +201,17 @@ const LandingPage = () => {
         <Section className='flex item-center pt-[80px] w-full'>
           <div className='w-[50%]'>
             <img
-              src={"https://ik.imagekit.io/gru3qfrss/woman-logo.png"}
+              src={'https://ik.imagekit.io/gru3qfrss/LadyImage1.png'}
               alt='woman-logo'
-              className='w-3/4'
+              className='w-'
             />
           </div>
           <div className=' pt-20 text-right  w-[50%]'>
             <h3 className='font-bold text-left text-5xl'>
-              Friendly <span className='text-primary'>Interest Rate</span>{" "}
+              Friendly <span className='text-primary'>Interest Rate</span>{' '}
             </h3>
             <img
-              src={"https://ik.imagekit.io/gru3qfrss/interest.png"}
+              src={'https://ik.imagekit.io/gru3qfrss/image%203.png'}
               alt='interest-logo'
               className='w-[400px]'
             />
@@ -210,18 +235,18 @@ const LandingPage = () => {
         >
           <div className='flex items-center'>
             <img
-              src={"https://ik.imagekit.io/gru3qfrss/logo2.png"}
+              src={'https://ik.imagekit.io/gru3qfrss/logo2.png'}
               alt='Tiidelab'
             />
           </div>
           <div className='flex items-center'>
             <img
-              src={"https://ik.imagekit.io/gru3qfrss/logo3.png"}
+              src={'https://ik.imagekit.io/gru3qfrss/logo3.png'}
               alt='NECA'
             />
           </div>
           <div className='flex items-center'>
-            <img src={"https://ik.imagekit.io/gru3qfrss/logo1.png"} alt='ITF' />
+            <img src={'https://ik.imagekit.io/gru3qfrss/logo1.png'} alt='ITF' />
           </div>
         </div>
       </section>
@@ -232,12 +257,12 @@ const LandingPage = () => {
           Recent posts
         </h3>
 
-        <div className='blog-section flex gap-10 justify-center align-center'>
+        <div className='blog-section  flex gap-10 justify-center align-center'>
           <BlogCard
-            coverImage='https://ik.imagekit.io/gru3qfrss/loan.png'
+            coverImage='https://ik.imagekit.io/gru3qfrss/pretty-young-black-lady-holding-money-celebrating-front-white-background.jpg?'
             title='PadiPay: Benefits of using a loan platform'
             url='blog'
-            publishedDate='23/8/2023'
+            publishedDate='20/11/2023'
             brief='The lending industry is no
 exception. Digital transformation has become a pivotal force, revolutionizing
 traditional lending practices and paving the way for innovative approaches that offer
@@ -248,7 +273,7 @@ enhanced efficiency, convenience, and customer experiences.'
             title='Money Lending in Nigeria: A Closer Look at the Financial Landscape'
             brief="In today's rapidly evolving digital landscape, industries across the board are undergoing transformative changes driven by technology."
             url='blog'
-            publishedDate='23/8/2023'
+            publishedDate='20/11/2023'
           />
         </div>
       </section>
@@ -256,41 +281,6 @@ enhanced efficiency, convenience, and customer experiences.'
       {/* FOOTER */}
       <Footer />
     </div>
-  );
-};
-
-const BlogCard = ({ coverImage, title, url, publishedDate, brief }) => {
-  return (
-    <article className='blog-section-two w-96 shadow rounded-lg overflow-hidden pb-4'>
-      <img src={coverImage} alt='' className='w-full' />
-      <section className='px-4 my-4'>
-        <h4 className='font-bold text-xl text-left mb-3'>{title}</h4>
-        <p>{brief.slice(0, 120)}...</p>
-      </section>
-      <div className=' gap-40 flex items-center px-4'>
-        <p className='text-sm font-medium'>{publishedDate}</p>
-        <Link
-          to={url}
-          className='text-primary font-bold flex items-center gap-2'
-        >
-          <span>Read More</span>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            fill='none'
-            viewBox='0 0 24 24'
-            strokeWidth={1.5}
-            stroke='currentColor'
-            className='w-4 h-4'
-          >
-            <path
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25'
-            />
-          </svg>
-        </Link>
-      </div>
-    </article>
   );
 };
 
