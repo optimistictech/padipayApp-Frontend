@@ -36,7 +36,7 @@ const Footer = () => {
               <Link to='/privacy'>Policy Privacy</Link>
             </li>
             <li>
-              <Link to='/'>Lenders Agreement</Link>
+              <Link to='/lendersagree'>Lenders Agreement</Link>
             </li>
             <li>
               <Link to='/'>Borrowers Agreement</Link>
