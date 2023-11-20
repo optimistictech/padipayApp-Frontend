@@ -1,13 +1,12 @@
-import React from "react";
-import Button from "./Button";
-import PadiLogo from "./PadiLogo";
-import { Link } from "react-router-dom";
+import React from 'react';
+import Button from './Button';
+import PadiLogo from './PadiLogo';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav className='bg-primary w-full md:block fixed z-50 text-whiteColor h-18 text-14px'>
       <div className='max-w-[1400px] mx-auto flex justify-between align-center  items-center py-3 px-10'>
-    
         <div className='flex'>
           <PadiLogo />
         </div>
@@ -37,17 +36,14 @@ const Navbar = () => {
                 Blog
               </Link>
             </li>
-            {/* <li>
+            <li>
               <Link
-                to='/community'
+                to='/calculator'
                 className='md:mx-2 lg:mx-8 text-slate-50 hover:text-slate-300'
-
-              
-
               >
                 Calculator
               </Link>
-            </li> */}
+            </li>
             <li>
               <Link
                 to='/contact-us'

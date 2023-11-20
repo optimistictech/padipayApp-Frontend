@@ -149,20 +149,19 @@ const SignupPage = () => {
                   </span>
                 </div>
               </div>
-              <div className='text-center my-4'>
-                <Link to='/lendersBorrowers'>
-                  <input
-                    type='submit'
-                    value='Sign up'
-                    className='bg-[#003399] text-white w-1/3 px-4 py-2 rounded-[10px] cursor-pointer'
-                  />
-                </Link>
-              </div>
+
+              <Link to='/account-type'>
+                <input
+                  type='submit'
+                  value='Sign up'
+                  className='bg-[#003399] text-white w-1/3 px-4 py-2 rounded-[10px] cursor-pointer'
+                />
+              </Link>
             </form>
 
             <p className='font-bold text-xl text-center'>
               Already have an account?
-              <Link to='/login' className='text-red-500 ml-2'>
+              <Link to='/account-type' className='text-red-500 ml-2'>
                 Login
               </Link>{' '}
               here

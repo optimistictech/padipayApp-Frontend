@@ -11,6 +11,10 @@ import SignupPage from './Pages/SignupPage';
 
 import LendersBorrowers from './Pages/LendersBorrowers';
 import LoginPage from './Pages/LoginPage';
+import ContactUs from './Pages/ContactUs';
+import TermsandConditionPage from './Pages/TermsandConditionPage';
+import WhatwedoPage from './Pages/WhatwedoPage';
+import Lendersagreement from './Pages/LendersAgreementPage';
 import BlogPage from './Pages/BlogPage';
 import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
@@ -28,6 +32,8 @@ function App() {
       {/* <MobileStore /> */}
 
       <Routes>
+        <Route path='/lendersagree' element={<Lendersagreement />} />
+
         <Route path='/about-us' element={<AboutPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/signup' element={<SignupPage />} />
