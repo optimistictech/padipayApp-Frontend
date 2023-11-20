@@ -17,6 +17,7 @@ import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 import MobileStore from './Components/Sections/MobileStore';
 import LendersDashboard from './Pages/dashboard/LendersDashboard/LendersDashboard';
 import BorrowersDashboard from './Pages/dashboard/BorrowersDashboard/BorrowersDashboard';
+import Calculator from './Components/Calculator/Calculator';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path='/' element={<LandingPage />} />
         <Route path='/lendersDashboard' element={<LendersDashboard />} />
         <Route path='/borrowersDashboard' element={<BorrowersDashboard />} />
+        <Route path='/calculator' element={<Calculator />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>

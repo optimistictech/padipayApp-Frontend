@@ -1,8 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import padiLogo from '../assets/padiLogo.png';
+import MenuItem from '@mui/material/MenuItem';
+import { TextField } from '@mui/material';
 
 const LendersSideNav = () => {
+  // const profileDetails = [
+  //   {
+  //     text: 'Alfred Jimoh',
+  //   },
+  //   {
+  //     text: 'Change to a Borrower',
+  //     value: '',
+  //   },
+  // ];
   return (
     <div className=' w-[20%] text-white bg-[#003399] font-primaryFont m-5 rounded-xl p-5'>
       {/* head */}
@@ -51,6 +62,21 @@ const LendersSideNav = () => {
         </Link>
         {/* <Link to='/'>Change Account Type</Link> */}
       </div>
+
+      {/* <TextField
+        className='text-white outline-none'
+        select
+        text='Select'
+        defaultValue='Alfred Jimoh'
+        helperText='Please change your account type'
+        variant='standard'
+      >
+        {profileDetails.map((option) => (
+          <MenuItem key={option.value} value={option.value}>
+            {option.text}
+          </MenuItem>
+        ))}
+      </TextField> */}
 
       <hr className='font-bold my-3' />
 
