@@ -12,6 +12,7 @@ const LandingPage = () => {
       <Navbar />
 
       {/* HERO SECTION */}
+
       <section className='bg-[#F5F1F1]'>
         <div
           id='heroSection'
@@ -27,6 +28,7 @@ const LandingPage = () => {
               marketplace that connects borrowers seeking loans with investors
               looking to invest in loan opportunities.
             </p>
+
 
             <div className=' hover:text-md'>
               <Link to='/signup'>

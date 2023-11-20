@@ -11,7 +11,7 @@ const LeftPartLogin = () => {
           <div className="mx-auto ">
           <img src={"https://ik.imagekit.io/gru3qfrss/tr:w-200,h-500,bl-10/Group%2023936.svg"} alt="PadiPay" className="right-img" />
           </div>
-          <div className="flex gap-4 small-screen relative ">
+          <div className="flex gap-4 small-screen  relative ">
             <div className=" p-4 rounded-lg">
             <img src={"https://ik.imagekit.io/gru3qfrss/appStore.png"} alt="apple mockup" className="w-40" />
             </div>

@@ -1,12 +1,10 @@
-import React from 'react'
-import Navbar from '../Components/Navbar'
-import Footer from '../Components/Footer'
+import React from 'react';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 const BorrowersAgreementPage = () => {
   return (
-    <div>
-      <nav>
-        <Navbar />
-      </nav>
+    <div className='font-primaryFont'>
+      <Navbar />
 
       <div>
         <h1>Borrowers Agreements</h1>
@@ -34,6 +32,6 @@ const BorrowersAgreementPage = () => {
       <Footer />
     </div>
   );
-}
+};
 
-export default BorrowersAgreementPage
+export default BorrowersAgreementPage;

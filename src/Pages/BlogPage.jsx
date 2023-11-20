@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
@@ -6,6 +7,11 @@ import Footer from "../Components/Footer";
 const BlogPage = () => {
   return (
     <div>
+
+
+const BlogPage = () => {
+  return (
+    <div className='font-primaryFont'>
       <Navbar />
       {/* Main Container */}
       <div className='text-center pt-20'>
@@ -14,6 +20,7 @@ const BlogPage = () => {
         </h2>
         <ul className='flex justify-center gap-12 leading-[24px]'>
           <li className='text-[16px] font-[400]  font-Inter text-navColor '>
+
             <Link to='/post-for-blog'>Business</Link>
           </li>
           <li className='text-[16px] font-[400]  font-Inter text-navColor '>
@@ -27,6 +34,7 @@ const BlogPage = () => {
           </li>
           <li className='text-[16px] font-[400]  font-Inter text-navColor '>
             <Link to='/post-for-blog'>Leaderships</Link>
+           
           </li>
         </ul>
       </div>
@@ -38,6 +46,7 @@ const BlogPage = () => {
           <div
             style={{
               backgroundImage: `url(${"https://ik.imagekit.io/9tezgt6wp/post-for-blog1.png?updatedAt=1700151326496"})`,
+
             }}
             className='flex w-[1200px] rounded-[12px]  flex-col justify-end bg-cover lg:h-[450px] lg:mt-10 gap-10 p-[40px] container mx-auto '
           >
@@ -50,7 +59,9 @@ const BlogPage = () => {
                 Industry
               </p>
               <div className='flex items-center gap-[20px]'>
+
                 <img src={""} className='w-[36px] h-[36px] rounded-[28px] ' />
+
                 <p className='text-[16px] font-[500] leading-[24px] text-white'>
                   Chioma Ukoha
                 </p>
@@ -66,11 +77,13 @@ const BlogPage = () => {
           <div className='flex  flex-col items-start gap-[20px]'>
             <div className='flex items-start gap-[20px]'>
               {/*  col -1  */}
+
               <Link to='/post-for-blog'>
                 <div className='flex w-[392px] p-[16px] flex-col justify-center	item-center gap-[16px] rounded-[12px] bg-white border-solid border-[1px] border-[#E8E8EA]'>
                   <img
                     src={
                       "https://ik.imagekit.io/9tezgt6wp/post-for-blog1.png?updatedAt=1700151326496"
+             
                     }
                     className='w-[360px] h-[240pxpx] rounded-[6px]'
                   />
@@ -79,6 +92,7 @@ const BlogPage = () => {
                       <button
                         className='rounded-[16px] text-[#4B6BFB] bg-arbitrary  py-[4px] px-[10px] justify-center items-center gap-[4px] '
                         style={{ backgroundColor: "rgba(75, 107, 251, 0.05)" }}
+
                       >
                         Technology
                       </button>
@@ -89,7 +103,9 @@ const BlogPage = () => {
                       <div className='flex items-center gap-[20px]'>
                         <img
                           src={
+
                             "https://ik.imagekit.io/9tezgt6wp/avater.jpeg?updatedAt=1700152909415"
+
                           }
                           className='flex items-center gap-[12px] w-[36px] h-[36px] rounded-[28px] bg-lightgray bg-cover bg-no-repeat'
                         />
@@ -105,11 +121,13 @@ const BlogPage = () => {
                 </div>
               </Link>
               {/*  col -2  */}
+
               <Link to='/post-for-blog'>
                 <div className='flex w-[392px] p-[16px] flex-col justify-center	item-center gap-[16px] rounded-[12px] bg-white border-solid border-[1px] border-[#E8E8EA]'>
                   <img
                     src={
                       "https://ik.imagekit.io/9tezgt6wp/money.jpeg?updatedAt=1700153289546"
+
                     }
                     className='w-[360px] h-[240pxpx] rounded-[6px]'
                   />
@@ -117,7 +135,9 @@ const BlogPage = () => {
                     <div className='flex flex-col items-start gap-[16px] self-stretch'>
                       <button
                         className='rounded-[16px] text-[#4B6BFB] bg-arbitrary  py-[4px] px-[10px] justify-center items-center gap-[4px] '
+
                         style={{ backgroundColor: "rgba(75, 107, 251, 0.05)" }}
+
                       >
                         Business
                       </button>
@@ -128,7 +148,9 @@ const BlogPage = () => {
                       <div className='flex items-center gap-[20px]'>
                         <img
                           src={
+
                             "https://ik.imagekit.io/9tezgt6wp/ayo.jpeg?updatedAt=1700152952770"
+
                           }
                           className='flex items-center gap-[12px] w-[36px] h-[36px] rounded-[28px] bg-lightgray bg-cover bg-no-repeat'
                         />
@@ -144,11 +166,13 @@ const BlogPage = () => {
                 </div>
               </Link>
               {/*  col -3  */}
+
               <Link to='/post-for-blog'>
                 <div className='flex w-[392px] p-[16px] flex-col justify-center	item-center gap-[16px] rounded-[12px] bg-white border-solid border-[1px] border-[#E8E8EA]'>
                   <img
                     src={
                       "https://ik.imagekit.io/9tezgt6wp/book.jpeg?updatedAt=1700153094494"
+              
                     }
                     className='w-[360px] h-[240pxpx] rounded-[6px]'
                   />
@@ -156,7 +180,9 @@ const BlogPage = () => {
                     <div className='flex flex-col items-start gap-[16px] self-stretch'>
                       <button
                         className='rounded-[16px] text-[#4B6BFB] bg-arbitrary  py-[4px] px-[10px] justify-center items-center gap-[4px] '
+
                         style={{ backgroundColor: "rgba(75, 107, 251, 0.05)" }}
+
                       >
                         Business
                       </button>
@@ -196,6 +222,7 @@ const BlogPage = () => {
                   <img
                     src={
                       "https://ik.imagekit.io/9tezgt6wp/blog3.jpeg?updatedAt=1700153012522"
+
                     }
                     className='w-[360px] h-[240pxpx] rounded-[6px]'
                   />
@@ -204,6 +231,7 @@ const BlogPage = () => {
                       <button
                         className='rounded-[16px] text-[#4B6BFB] bg-arbitrary  py-[4px] px-[10px] justify-center items-center gap-[4px] '
                         style={{ backgroundColor: "rgba(75, 107, 251, 0.05)" }}
+
                       >
                         Technology
                       </button>
@@ -214,7 +242,9 @@ const BlogPage = () => {
                       <div className='flex items-center gap-[20px]'>
                         <img
                           src={
+
                             "https://ik.imagekit.io/9tezgt6wp/avater.jpeg?updatedAt=1700152909415"
+
                           }
                           className='flex items-center gap-[12px] w-[36px] h-[36px] rounded-[28px] bg-lightgray bg-cover bg-no-repeat'
                         />
@@ -230,11 +260,13 @@ const BlogPage = () => {
                 </div>
               </Link>
               {/*  col -2  */}
+
               <Link to='/post-for-blog'>
                 <div className='flex w-[392px] p-[16px] flex-col justify-center	item-center gap-[16px] rounded-[12px] bg-white border-solid border-[1px] border-[#E8E8EA]'>
                   <img
                     src={
                       "https://ik.imagekit.io/9tezgt6wp/blog4.jpeg?updatedAt=1700153052134"
+
                     }
                     className='w-[360px] h-[240pxpx] rounded-[6px]'
                   />
@@ -243,6 +275,7 @@ const BlogPage = () => {
                       <button
                         className='rounded-[16px] text-[#4B6BFB] bg-arbitrary  py-[4px] px-[10px] justify-center items-center gap-[4px] '
                         style={{ backgroundColor: "rgba(75, 107, 251, 0.05)" }}
+
                       >
                         Business
                       </button>
@@ -253,7 +286,9 @@ const BlogPage = () => {
                       <div className='flex items-center gap-[20px]'>
                         <img
                           src={
+
                             "https://ik.imagekit.io/9tezgt6wp/ayo.jpeg?updatedAt=1700152952770"
+
                           }
                           className='flex items-center gap-[12px] w-[36px] h-[36px] rounded-[28px] bg-lightgray bg-cover bg-no-repeat'
                         />
@@ -272,7 +307,9 @@ const BlogPage = () => {
               <div className='flex w-[392px] p-[16px] flex-col justify-center	item-center gap-[16px] rounded-[12px] bg-white border-solid border-[1px] border-[#E8E8EA]'>
                 <img
                   src={
+
                     "https://ik.imagekit.io/9tezgt6wp/book.jpeg?updatedAt=1700153094494"
+
                   }
                   className='w-[360px] h-[240pxpx] rounded-[6px]'
                 />
@@ -280,7 +317,9 @@ const BlogPage = () => {
                   <div className='flex flex-col items-start gap-[16px] self-stretch'>
                     <button
                       className='rounded-[16px] text-[#4B6BFB] bg-arbitrary  py-[4px] px-[10px] justify-center items-center gap-[4px] '
+
                       style={{ backgroundColor: "rgba(75, 107, 251, 0.05)" }}
+
                     >
                       Business
                     </button>
@@ -291,7 +330,9 @@ const BlogPage = () => {
                     <div className='flex items-center gap-[20px]'>
                       <img
                         src={
+
                           "https://ik.imagekit.io/9tezgt6wp/neems.jpeg?updatedAt=1700153301777"
+
                         }
                         className='flex items-center gap-[12px] w-[36px] h-[36px] rounded-[28px] bg-lightgray bg-cover bg-no-repeat'
                       />
@@ -319,6 +360,7 @@ const BlogPage = () => {
                   <img
                     src={
                       "https://ik.imagekit.io/9tezgt6wp/post-for-blog1.png?updatedAt=1700151326496"
+
                     }
                     className='w-[360px] h-[240pxpx] rounded-[6px]'
                   />
@@ -326,7 +368,9 @@ const BlogPage = () => {
                     <div className='flex flex-col items-start gap-[16px] self-stretch'>
                       <button
                         className='rounded-[16px] text-[#4B6BFB] bg-arbitrary  py-[4px] px-[10px] justify-center items-center gap-[4px] '
+
                         style={{ backgroundColor: "rgba(75, 107, 251, 0.05)" }}
+
                       >
                         Technology
                       </button>
@@ -337,7 +381,9 @@ const BlogPage = () => {
                       <div className='flex items-center gap-[20px]'>
                         <img
                           src={
+
                             "https://ik.imagekit.io/9tezgt6wp/avater.jpeg?updatedAt=1700152909415"
+
                           }
                           className='flex items-center gap-[12px] w-[36px] h-[36px] rounded-[28px] bg-lightgray bg-cover bg-no-repeat'
                         />
@@ -353,11 +399,13 @@ const BlogPage = () => {
                 </div>
               </Link>
               {/*  col -2  */}
+
               <Link to='/post-for-blog'>
                 <div className='flex w-[392px] p-[16px] flex-col justify-center	item-center gap-[16px] rounded-[12px] bg-white border-solid border-[1px] border-[#E8E8EA]'>
                   <img
                     src={
                       "https://ik.imagekit.io/9tezgt6wp/money.jpeg?updatedAt=1700153289546"
+
                     }
                     className='w-[360px] h-[240pxpx] rounded-[6px]'
                   />
@@ -365,7 +413,9 @@ const BlogPage = () => {
                     <div className='flex flex-col items-start gap-[16px] self-stretch'>
                       <button
                         className='rounded-[16px] text-[#4B6BFB] bg-arbitrary  py-[4px] px-[10px] justify-center items-center gap-[4px] '
+
                         style={{ backgroundColor: "rgba(75, 107, 251, 0.05)" }}
+
                       >
                         Business
                       </button>
@@ -376,7 +426,9 @@ const BlogPage = () => {
                       <div className='flex items-center gap-[20px]'>
                         <img
                           src={
+
                             "https://ik.imagekit.io/9tezgt6wp/ayo.jpeg?updatedAt=1700152952770"
+
                           }
                           className='flex items-center gap-[12px] w-[36px] h-[36px] rounded-[28px] bg-lightgray bg-cover bg-no-repeat'
                         />
@@ -392,11 +444,13 @@ const BlogPage = () => {
                 </div>
               </Link>
               {/*  col -3  */}
+
               <Link to='/post-for-blog'>
                 <div className='flex w-[392px] p-[16px] flex-col justify-center	item-center gap-[16px] rounded-[12px] bg-white border-solid border-[1px] border-[#E8E8EA]'>
                   <img
                     src={
                       "https://ik.imagekit.io/9tezgt6wp/book.jpeg?updatedAt=1700153094494"
+
                     }
                     className='w-[360px] h-[240pxpx] rounded-[6px]'
                   />
@@ -404,7 +458,9 @@ const BlogPage = () => {
                     <div className='flex flex-col items-start gap-[16px] self-stretch'>
                       <button
                         className='rounded-[16px] text-[#4B6BFB] bg-arbitrary  py-[4px] px-[10px] justify-center items-center gap-[4px] '
+
                         style={{ backgroundColor: "rgba(75, 107, 251, 0.05)" }}
+
                       >
                         Business
                       </button>
@@ -415,7 +471,9 @@ const BlogPage = () => {
                       <div className='flex items-center gap-[20px]'>
                         <img
                           src={
+
                             "https://ik.imagekit.io/9tezgt6wp/neems.jpeg?updatedAt=1700153301777"
+
                           }
                           className='flex items-center gap-[12px] w-[36px] h-[36px] rounded-[28px] bg-lightgray bg-cover bg-no-repeat'
                         />
@@ -437,8 +495,10 @@ const BlogPage = () => {
         {/* button */}
         <div className='px-[36rem]'>
           <button className='bg-[#003399] text-white px-4 py-2 rounded-[10px] cursor-pointer'>
+
             {" "}
             <Link to='/post-for-blog'>Load More</Link>
+
           </button>
         </div>
       </main>

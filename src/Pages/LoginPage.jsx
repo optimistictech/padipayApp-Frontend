@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import LeftPartLogin from "../Components/LeftPartLogin";
@@ -11,7 +12,9 @@ const LoginPage = () => {
           <LeftPartLogin />
         </div>
         {/* RIGHT SIDE */}
+
         <div className='bg-white rounded w-screen px-10 m-16 p-8'>
+
           <div className='text-center'>
             <h1 className='text-4xl'>
               Log in to <span className='font-bold'>Padi</span>Pay
@@ -24,6 +27,7 @@ const LoginPage = () => {
           <button className='border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8'>
             <img
               src={"https://ik.imagekit.io/b6b9xwu9l/google-logo.svg"}
+
               alt='google-play mockup'
               className='w-10'
             />
@@ -69,18 +73,22 @@ const LoginPage = () => {
             </div>
 
             <div className='text-center my-4'>
+
               <input
                 type='submit'
                 value='Login'
                 className='bg-[#003399] text-white w-1/3 px-4 py-2 rounded-[10px] cursor-pointer'
               />
+
             </div>
           </form>
           <p className='text-xl font-bold text-center'>
             Don't have an account?
             <Link to='' className='text-red-500 ml-2'>
               Sign up
+
             </Link>{" "}
+
             here
           </p>
         </div>

@@ -4,6 +4,7 @@ import { Section } from "../common";
 
 const MobileStore = () => {
   return (
+
     <section id='section-five' className='bg-primary'>
       <Section className='flex items-center justify-between w-full text-white py-5'>
         <div id='section-five-text' className=' text-left w-[50%] pt-32'>
@@ -32,6 +33,7 @@ const MobileStore = () => {
               />
             </Link>
           </div>
+
         </div>
         {/* Left */}
         <div className='w-[60%]'>

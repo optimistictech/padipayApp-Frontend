@@ -1,11 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 const PostForBlog = () => {
   return (
-    <div>
+    <div className='font-primaryFont'>
       <Navbar />
       <div className='px-80 text-xl pt-20 '>
         <p className='bg-[#4B6BFB] w-fit px-4 py-2 text-white rounded-md'>
@@ -19,7 +19,7 @@ const PostForBlog = () => {
         <div className='flex pt-3 pb-5 text-[#696A75]'>
           <img
             src={
-              "https://ik.imagekit.io/9tezgt6wp/post-for-blogIcon.png?updatedAt=1700151430615"
+              'https://ik.imagekit.io/9tezgt6wp/postForBlogIcon.png?updatedAt=1700151430615
             }
           />
           <p className='pl-2 pr-6'>Chioma Ukoha</p>
@@ -27,7 +27,9 @@ const PostForBlog = () => {
         </div>
         <img
           src={
+
             "https://ik.imagekit.io/9tezgt6wp/post-for-blog1.png?updatedAt=1700151326496"
+
           }
         />
         <p className='font-inter pt-5 pb-5 text-[#3B3C4A] leading-8'>
@@ -115,6 +117,7 @@ const PostForBlog = () => {
         <img
           src={
             "https://ik.imagekit.io/9tezgt6wp/post-for-blog2.png?updatedAt=1700151388234"
+
           }
           className='pb-7 pt-7'
         />
