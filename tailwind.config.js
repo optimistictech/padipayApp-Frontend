@@ -12,6 +12,8 @@ module.exports = {
     extend: {
       fontFamily: {
         Work: ['Montserrat', 'sans-serif'],
+        primaryFont: ['Poppins', 'sans-serif'],
+        secondaryFont: ['Lato', 'sans-serif'],
       },
       height: {
         vh: '100vh',
@@ -33,7 +35,7 @@ module.exports = {
         grey: '#039',
       },
     },
-    
+
     backgroundImage: {
       'lender-borrower': "url('/assets/images/lb-bg.png')",
       'dash-board-image': "url('/assets/images/dash-img.png')",

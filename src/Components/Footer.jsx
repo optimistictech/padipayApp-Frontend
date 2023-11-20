@@ -1,10 +1,10 @@
-import React from 'react';
-import PadiLogo from './PadiLogo';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PadiLogo from "./PadiLogo";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className='footer mt-8  bg-[#323232] text-[#B6BDC3] text-left py-10 px-10'>
+    <footer className='footer font-primaryFont mt-8  bg-[#323232] text-[#B6BDC3] text-left py-10 px-10'>
       <div className='lg:flex justify-between items-start '>
         {/* left */}
         <div>
@@ -33,7 +33,7 @@ const Footer = () => {
               <Link to='/'>Terms and Conditions</Link>
             </li>
             <li>
-              <Link to='/'>Policy Privacy</Link>
+              <Link to='/privacy'>Policy Privacy</Link>
             </li>
             <li>
               <Link to='/lendersagree'>Lenders Agreement</Link>
@@ -42,7 +42,7 @@ const Footer = () => {
               <Link to='/'>Borrowers Agreement</Link>
             </li>
             <li>
-              <Link to='/'>Gurantors Agreement</Link>
+              <Link to='/guarantor-agreement'>Gurantors Agreement</Link>
             </li>
           </ul>
         </div>
