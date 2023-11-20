@@ -1,6 +1,6 @@
-import React from 'react';
-import PadiLogo from './PadiLogo';
-import { Link } from 'react-router-dom';
+import React from "react";
+import PadiLogo from "./PadiLogo";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -42,7 +42,7 @@ const Footer = () => {
               <Link to='/'>Borrowers Agreement</Link>
             </li>
             <li>
-              <Link to='/guarantoragree'>Gurantors Agreement</Link>
+              <Link to='/guarantor-agreement'>Gurantors Agreement</Link>
             </li>
           </ul>
         </div>
@@ -72,7 +72,7 @@ const Footer = () => {
             <Link to=''>
               <i className='fab fa-facebook'></i>
             </Link>
-            < Link to=''>
+            <Link to=''>
               <i className='fab fa-instagram'></i>
             </Link>
           </div>

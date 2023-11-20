@@ -1,91 +1,92 @@
-import React from 'react';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
-import { Link } from 'react-router-dom';
-import Button from '../Components/Button';
-import MobileStore from '../Components/Sections/MobileStore';
+import React from "react";
+import Navbar from "../Components/Navbar";
+import Footer from "../Components/Footer";
+import { Link } from "react-router-dom";
+import Button from "../Components/Button";
+import MobileStore from "../Components/Sections/MobileStore";
+import { Section } from "../Components/common";
 
 const LandingPage = () => {
   return (
     <div>
-      <nav>
-        <Navbar />
-      </nav>
+      <Navbar />
 
       {/* HERO SECTION */}
-      <section
-        id='heroSection'
-        className='flex items-center w-full p-7 bg-[#F5F1F1] justify-between '
-      >
-        <div id='hero-text' className='w-[50%] ml-3 text-left'>
-          <h1 className='text-[60px] leading-[70px] ml-4 font-extrabold'>
-            Empower Your <span className='text-primary'>Financial Growth</span>
-          </h1>
-          <p className='py-[30px] text-[18px] ml-4 text-justify w-[80%] '>
-            The PadiPay Lending Platform aims to provide an online lending
-            marketplace that connects borrowers seeking loans with investors
-            looking to invest in loan opportunities.
-          </p>
+      <section className='bg-[#F5F1F1]'>
+        <div
+          id='heroSection'
+          className='pt-[66px] max-w-[1400px] mx-auto flex items-center w-full p-10 bg-[#F5F1F1] justify-between'
+        >
+          <div id='hero-text' className='w-[50%] text-left'>
+            <h1 className='text-[60px] leading-[70px] font-extrabold'>
+              Empower Your{" "}
+              <span className='text-primary'>Financial Growth</span>
+            </h1>
+            <p className='py-[30px] text-[18px] text-justify w-[80%]'>
+              The PadiPay Lending Platform aims to provide an online lending
+              marketplace that connects borrowers seeking loans with investors
+              looking to invest in loan opportunities.
+            </p>
 
-          <div className=' hover:text-md ml-3'>
-            <Link to='/signup'>
-              <Button text={'Get Started'} />
-            </Link>
+            <div className=' hover:text-md'>
+              <Link to='/signup'>
+                <Button text='Get Started' size='md' />
+              </Link>
+            </div>
           </div>
-        </div>
 
-        {/* Hero Right */}
-        <div className=' w-[50%] flex items-center justify-center  mt-10'>
-          <img
-            src={
-              'https://ik.imagekit.io/gru3qfrss/tr:w-200,h-500,bl-10/Group%2023936.svg'
-            }
-            className='w-[60%]'
-            alt='phone'
-          />
+          {/* Hero Right */}
+          <div className=' w-[50%] flex items-center justify-center  mt-10'>
+            <img
+              src={
+                "https://ik.imagekit.io/gru3qfrss/tr:w-200,h-500,bl-10/Group%2023936.svg"
+              }
+              className='w-[60%]'
+              alt='phone'
+            />
 
-          {/* downloadIcons */}
-          <div id='download-section' className='self-end mb-16 w-[100px]'>
-            <Link to='http://' target='_blank' rel='noopener noreferrer'>
-              <img
-                src={'https://ik.imagekit.io/gru3qfrss/appStore.png?'}
-                alt='app store'
-                className='mb-2'
-              />
-            </Link>
-            <Link to='http://' target='_blank' rel='noopener noreferrer'>
-              <img
-                src={'https://ik.imagekit.io/gru3qfrss/googlePlay.png?'}
-                alt='google play'
-                className=''
-              />
-            </Link>
+            {/* downloadIcons */}
+            <div id='download-section' className='self-end mb-16 w-[100px]'>
+              <Link to='http://' target='_blank' rel='noopener noreferrer'>
+                <img
+                  src={"https://ik.imagekit.io/gru3qfrss/appStore.png?"}
+                  alt='app store'
+                  className='mb-2'
+                />
+              </Link>
+              <Link to='http://' target='_blank' rel='noopener noreferrer'>
+                <img
+                  src={"https://ik.imagekit.io/gru3qfrss/googlePlay.png?"}
+                  alt='google play'
+                  className=''
+                />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-
       {/* <!-- COMMUNITY SECTION --> */}
       <section
         id='section-one'
-        className='w-full h-[500px]  bg-[#B1B1B1] flex items-center justify-between'
+        className='w-full  max-w-[1400px] mx-auto h-[700px] bg-white flex items-center justify-between'
       >
         {/* left */}
         <div
           id='section-one-text'
-          className='w-[60%] h-[500px] bg-whiteColor px-7 py-20 text-left '
+          className='flex flex-col justify-center gap-5 h-full bg-white px-10 py-20 text-left max-w-2xl'
         >
-          <h2 className='text-4xl font-bold px-5 w-[90%] '>
-            Discover Our Collaborative{' '}
+          <h2 className='text-4xl font-bold'>
+            Discover Our Collaborative{" "}
             <span className='text-primary'>Community</span>
           </h2>
 
-          <div className=' hover:text-md m-5'>
+          <div className='hover:text-md'>
             <Link to='/signup'>
-              <Button text={'Connect and Engage'} />
+              <Button text={"Connect and Engage"} />
             </Link>
           </div>
 
-          <p className='text-lg w-[70%]  ml-5'>
+          <p className='text-lg'>
             Build a thriving lending community where borrowers and lenders can
             interact, share insights, and foster meaningful connections. Our
             platform's Community Section serves as a hub for engagement and
@@ -93,11 +94,13 @@ const LandingPage = () => {
           </p>
         </div>
         {/* right */}
-        <div className='bg-[#B1B1B1] w-[40%] flex items-center justify-start '>
+        <div className='flex items-center justify-start relative'>
           <img
-            src={'https://ik.imagekit.io/gru3qfrss/manGirl.png?'}
+            src={
+              "https://cdn.hashnode.com/res/hashnode/image/upload/v1700297603689/20b89194-e953-434c-a635-fe80ce46d112.jpeg"
+            }
             alt='man and a girl'
-            className='w-[40%] absolute top-[660px] right-[160px] bottom-0'
+            className='h-full rounded'
           />
         </div>
       </section>
@@ -116,7 +119,7 @@ const LandingPage = () => {
         </p>
         {/* <!-- girl --> */}
         <div id='section-three' className='w-2/5 mx-auto mt-8'>
-          <img src={'https://ik.imagekit.io/gru3qfrss/girl.png'} alt='girl' />
+          <img src={"https://ik.imagekit.io/gru3qfrss/girl.png"} alt='girl' />
         </div>
       </section>
 
@@ -125,45 +128,38 @@ const LandingPage = () => {
         id='step-section'
         className='bg-primary pb-[40px] pt-[80px] text-whiteColor font-bold text-center'
       >
-        <h3 className='text-4xl '>How It Works:</h3>
+        <h3 className='text-4xl mb-3'>How It Works:</h3>
         <h3 className='text-4xl mb-6'>A Simple Path to Financial Growth</h3>
         <img
-          src={'https://ik.imagekit.io/gru3qfrss/STEPS.png'}
+          src={"https://ik.imagekit.io/gru3qfrss/STEPS.png"}
           alt=''
           className='w-3/5 mx-auto my-20'
         />
       </section>
 
       {/* <!-- CARD SECTION --> */}
-      <section className='card-section flex flex-col my-20 pb-6 pt-[80px] gap-12'>
-        <Link to='/' className='mx-72 text-white'>
-          <div className='shadow-sm card-one mx-10 flex gap-4 bg-[#323232] rounded-xl justify-center p-6'>
-            <img
-              src={'https://ik.imagekit.io/gru3qfrss/Vector1.png'}
-              alt=''
-              className='w-2/5'
-            />
-            <div className='card-one-text text-whiteColor text-left'>
-              <h3 className='text-4xl font-bold mb-3'>Lenders</h3>
-              <p className='text-lg '>
-                Are you ready to explore exciting investment opportunities and
-                contribute to borrowers' financial growth? PadiPay's Lending
-                Platform opens doors to a world of possibilities.
-              </p>
-            </div>
+      <section className='card-section flex flex-col my-20 pb-6 px-10 pt-[80px] gap-12 lg:max-w-[920px] mx-auto'>
+        <Link
+          to='/'
+          className='shadow-sm flex text-white gap-4 rounded-xl p-6 bg-[#323232]'
+        >
+          <img src={"https://ik.imagekit.io/gru3qfrss/Vector1.png"} alt='' />
+          <div className='text-left'>
+            <h3 className='text-4xl font-bold mb-3'>Lenders</h3>
+            <p className='text-lg'>
+              Are you ready to explore exciting investment opportunities and
+              contribute to borrowers' financial growth? PadiPay's Lending
+              Platform opens doors to a world of possibilities.
+            </p>
           </div>
         </Link>
 
         <Link
           to='/BorrowersPage'
-          className='card-two flex mx-80 text-whiteColor gap-4 bg-primary rounded-xl justify-center px-6 py-6'
+          className='shadow-sm flex text-white gap-4 bg-primary rounded-xl p-6'
         >
-          <img
-            src={'https://ik.imagekit.io/gru3qfrss/Vector2.png'}
-            alt=''
-            className='w-2/5'
-          />
-          <div className='card-two-text w-3/4 text-left'>
+          <img src={"https://ik.imagekit.io/gru3qfrss/Vector2.png"} alt='' />
+          <div className='text-left'>
             <h3 className='text-4xl font-bold mb-3'>Borrowers</h3>
             <p className='text-lg'>
               Are you ready to turn your dreams into reality? PadiPay's Lending
@@ -173,91 +169,126 @@ const LandingPage = () => {
         </Link>
       </section>
 
-      {/* section 4  - interest rate*/}
-      <section className='flex item-center pt-[80px]  w-full px-7 bg-[#f0f0f0]'>
-        <div className=' w-[50%]'>
-          <img
-            src={'https://ik.imagekit.io/gru3qfrss/woman-logo.png'}
-            alt='woman-logo'
-            className='w-3/4'
-          />
-        </div>
-        <div className=' pt-20 text-right  w-[50%]'>
-          <h3 className='font-bold text-left text-5xl'>
-            Friendly <span className='text-primary'>Interest Rate</span>{' '}
-          </h3>
-          <img
-            src={'https://ik.imagekit.io/gru3qfrss/interest.png'}
-            alt='interest-logo'
-            className=' w-[400px]'
-          />
-        </div>
+      {/* Friendly interest rate*/}
+      <section className='bg-[#f0f0f0]'>
+        <Section className='flex item-center pt-[80px] w-full'>
+          <div className='w-[50%]'>
+            <img
+              src={"https://ik.imagekit.io/gru3qfrss/woman-logo.png"}
+              alt='woman-logo'
+              className='w-3/4'
+            />
+          </div>
+          <div className=' pt-20 text-right  w-[50%]'>
+            <h3 className='font-bold text-left text-5xl'>
+              Friendly <span className='text-primary'>Interest Rate</span>{" "}
+            </h3>
+            <img
+              src={"https://ik.imagekit.io/gru3qfrss/interest.png"}
+              alt='interest-logo'
+              className='w-[400px]'
+            />
+          </div>
+        </Section>
       </section>
 
-      {/* <!-- SECTION FIVE --> */}
-      <section>
-        <MobileStore />
-      </section>
+      {/* <!-- Register without any charges.--> */}
+      <MobileStore />
 
       {/* <!-- SECTION SIX --> */}
       <section
         id='section-six'
         className='text-center pt-[80px] font-bold p-14'
       >
-        <h3 className='text-4xl'>A Selection of Our Reliable</h3>
+        <h3 className='text-4xl mb-3'>A Selection of Our Reliable</h3>
         <h3 className='text-4xl text-primary'>Business Collaborators</h3>
         <div
           id='partner-logo'
-          className='flex gap-20 w-[100%] text-center justify-center item-center m-10'
+          className='flex gap-20 text-center justify-center item-center my-10'
         >
-          <img
-            src={'https://ik.imagekit.io/gru3qfrss/logo2.png'}
-            alt='Tiidelab'
-          />
-          <img src={'https://ik.imagekit.io/gru3qfrss/logo3.png'} alt='NECA' />
-          <img src={'https://ik.imagekit.io/gru3qfrss/logo1.png'} alt='ITF' />
+          <div className='flex items-center'>
+            <img
+              src={"https://ik.imagekit.io/gru3qfrss/logo2.png"}
+              alt='Tiidelab'
+            />
+          </div>
+          <div className='flex items-center'>
+            <img
+              src={"https://ik.imagekit.io/gru3qfrss/logo3.png"}
+              alt='NECA'
+            />
+          </div>
+          <div className='flex items-center'>
+            <img src={"https://ik.imagekit.io/gru3qfrss/logo1.png"} alt='ITF' />
+          </div>
         </div>
       </section>
 
       {/* BLOG SECTION */}
-      <div className='blog-section flex gap-28 justify-center align-center mb-[80px] mt-[80px]'>
-        <div className='blog-section-one w-96 shadow-2xl'>
-          <img
-            src={'https://ik.imagekit.io/gru3qfrss/loan.png'}
-            alt=''
-            className='mb-2 w-96'
+      <section className='bg-[#f0f0f0] pt-14 pb-32 -mb-8'>
+        <h3 className='text-4xl text-primary mb-16 text-center font-semibold'>
+          Recent posts
+        </h3>
+
+        <div className='blog-section flex gap-10 justify-center align-center'>
+          <BlogCard
+            coverImage='https://ik.imagekit.io/gru3qfrss/loan.png'
+            title='PadiPay: Benefits of using a loan platform'
+            url='blog'
+            publishedDate='23/8/2023'
+            brief='The lending industry is no
+exception. Digital transformation has become a pivotal force, revolutionizing
+traditional lending practices and paving the way for innovative approaches that offer
+enhanced efficiency, convenience, and customer experiences.'
           />
-          <h4 className='font-bold px-4 text-lg text-left'>
-            PadiPay: Benefits of using a loan platform
-          </h4>
-          <div className='more flex mt-3 gap-36 align-center pb-12 px-4'>
-            <p className='text-sm'>23/8/2023</p>
-            <Link to='/blog' className='font-bold text-primary'>
-              Read More
-            </Link>
-          </div>
-        </div>
-        <div className='blog-section-two w-96 shadow-2xl'>
-          <img
-            src={'https://ik.imagekit.io/gru3qfrss/group-people.png'}
-            alt=''
-            className='w-96'
+          <BlogCard
+            coverImage='https://ik.imagekit.io/gru3qfrss/group-people.png'
+            title='Money Lending in Nigeria: A Closer Look at the Financial Landscape'
+            brief="In today's rapidly evolving digital landscape, industries across the board are undergoing transformative changes driven by technology."
+            url='blog'
+            publishedDate='23/8/2023'
           />
-          <h4 className='font-bold text-lg  text-left px-4 mb-4'>
-            Money Lending in Nigeria: A Closer Look at the Financial Landscape
-          </h4>
-          <div className='more flex gap-40 align-center px-4'>
-            <p className='text-sm'>23/8/2023</p>
-            <Link to='.blog' className='text-primary font-bold'>
-              Read More
-            </Link>
-          </div>
         </div>
-      </div>
+      </section>
 
       {/* FOOTER */}
       <Footer />
     </div>
+  );
+};
+
+const BlogCard = ({ coverImage, title, url, publishedDate, brief }) => {
+  return (
+    <article className='blog-section-two w-96 shadow rounded-lg overflow-hidden pb-4'>
+      <img src={coverImage} alt='' className='w-full' />
+      <section className='px-4 my-4'>
+        <h4 className='font-bold text-xl text-left mb-3'>{title}</h4>
+        <p>{brief.slice(0, 120)}...</p>
+      </section>
+      <div className=' gap-40 flex items-center px-4'>
+        <p className='text-sm font-medium'>{publishedDate}</p>
+        <Link
+          to={url}
+          className='text-primary font-bold flex items-center gap-2'
+        >
+          <span>Read More</span>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 24 24'
+            strokeWidth={1.5}
+            stroke='currentColor'
+            className='w-4 h-4'
+          >
+            <path
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              d='M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25'
+            />
+          </svg>
+        </Link>
+      </div>
+    </article>
   );
 };
 
