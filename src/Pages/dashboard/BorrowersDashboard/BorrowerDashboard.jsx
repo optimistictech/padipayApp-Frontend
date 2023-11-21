@@ -1,21 +1,9 @@
-import React from 'react';
-// import { Link } from 'react-router-dom';
-import BorrowersNavbar from '../../../Components/Auth/Dashboard/headerNavBar/BorrowersNavbar';
-import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/BorrowersSideNav';
+import React from 'react'
 
-
-const BorrowersDashboard = () => {
+const BorrowerDashboard = () => {
   return (
-    <div className='flex'>
-      <BorrowersSideNav />
-      <div>
-      <BorrowersNavbar />
-        <div>
-          ggggggg
-        </div>
-      </div>
-    </div>
-  );
-};
+    <div>BorrowerDashboard</div>
+  )
+}
 
-export default BorrowersDashboard;
+export default BorrowerDashboard
