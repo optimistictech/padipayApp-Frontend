@@ -10,7 +10,7 @@ const BorrowerSectionFive = () => {
       <div>
       {/* <BorrowersNavbar /> */}
         <div>
-        <div className="firstsection flex gap-2 justify-between mt-[50px] mr-6">
+        <div className="firstsection flex gap-2 justify-between mt-[50px]">
             <div className="flex gap-8"> 
                 <h2 className="ml-6 font-semibold text-xl"> <span className="font-semibold "> Request to pay Alfred Jimoh Ogundare</span> </h2>
                 <p className="text-sm mt-1">Account ID  : <span className="text-blue font-semibold ">PDWR101</span></p>
@@ -19,7 +19,7 @@ const BorrowerSectionFive = () => {
                 <h3 className="">Outstanding Loan:</h3>
                 <h3 className="text-blue">N2,775.00</h3>
             </div>
-            <button className="bg-blue text-white rounded-xl px-6 py-2 h-[70px]">Share on Facebook</button>
+            <button className="bg-blue text-white rounded-xl px-6 py-2 h-[70px]">Share </button>
         </div>
 
         <div className="secondsection my-20">
