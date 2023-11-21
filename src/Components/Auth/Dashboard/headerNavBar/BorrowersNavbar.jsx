@@ -4,7 +4,7 @@ import Button from '../../../Button';
 
 const BorrowersNavbar = () => {
   return (
-    <main className='w-[80%] font-primaryFont flex flex-col '>
+    <main className='w-[100%] font-primaryFont flex flex-col '>
       {/* LEFT CONTENT */}
       <header className='p-5 flex justify-between items-center'>
         <div className=''>
