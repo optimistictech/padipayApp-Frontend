@@ -1,5 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
+import { TextField } from '@mui/material';
+import Button from '../Components/Button'
 
 const SignupPage = () => {
   return (
@@ -20,7 +21,7 @@ const SignupPage = () => {
                 className='right-img mt-8'
               />
             </div>
-            <div className='flex gap-4 small-screen relative '>
+            <div className='flex gap-4 small-screen relative md:flex-col'>
               <div className=' p-4 rounded-lg'>
                 <img
                   src={'https://ik.imagekit.io/gru3qfrss/appStore.png'}
@@ -37,7 +38,7 @@ const SignupPage = () => {
               </div>
             </div>
           </div>
-          <div className='bg-white w-screen px-10 m-16 p-8'>
+          <div className='bg-white rounded-md w-screen px-10 m-16 p-8'>
             <div className='text-center'>
               <h1 className='text-4xl'>
                 Create Your Account<span className='font-bold'></span>
@@ -53,86 +54,87 @@ const SignupPage = () => {
                 className='w-10'
               />
               <span>Sign up with Google</span>
-            </button>
+            </ button>
             {/* MAIN BODY - SIGNUP FORM */}
-            <form name='loginForm' onsubmit='saveData(event)'>
-              <div className='relative my-6'>
+            <form name='loginForm' onsubmit='saveData(event) '>
+              <div className='relative my-6 '>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
-                <input
-                  type='text'
-                  name='firstName'
-                  id='firstName'
-                  placeholder='Enter Your firstName'
-                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                <TextField
+                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                label='Enter Your first Name'
+                variant='outlined'
+                id='lastName'
+                type='text'
                 />
                 <br />
               </div>
 
               <div className='relative my-6'>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
-                <input
-                  type='text'
-                  name='lastName'
-                  id='lastName'
-                  placeholder='Enter Your lastName'
-                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                <TextField
+                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                label='Enter Your last Name'
+                variant='outlined'
+                id='lastName'
+                type='text'
                 />
+                
                 <br />
               </div>
 
               <div className='relative my-6'>
                 <i className='fa-solid fa-envelope absolute px-3.5 py-4 text-2xl'></i>
-                <input
-                  type='email'
-                  name='email'
-                  id='email'
-                  placeholder='Email'
-                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                <TextField
+                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                label=' Email Address'
+                variant='outlined'
+                id='lastName'
+                type='email'
                 />
                 <br />
               </div>
 
               <div className='relative my-6'>
                 <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
-                <input
-                  type='password'
-                  name='password'
-                  id='password'
-                  placeholder='Password'
-                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                <TextField
+                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                label='Password'
+                variant='outlined'
+                id='password'
+                type='password'
                 />
               </div>
 
               <div className='relative my-6'>
                 <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
-                <input
-                  type='password'
-                  name='confirmPassword'
-                  id='confirmPassword'
-                  placeholder='Retype Password'
-                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                <TextField
+                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                label='Retype Password'
+                variant='outlined'
+                id='confirmPassword'
+                type='password'
                 />
               </div>
 
               <div className='relative my-6'>
                 <i className='fa-solid fa-phone absolute px-3.5 py-4 text-2xl'></i>
-                <input
-                  type='tel'
-                  name='phone'
-                  id='phone'
-                  placeholder='Phone'
-                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                <TextField
+                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                label='Phone Number'
+                variant='outlined'
+                id='phone'
+                type='number'
                 />
               </div>
 
               <div className='relative my-6'>
                 <i className='fa-solid fa-location-dot absolute px-3.5 py-4 text-2xl'></i>
-                <input
-                  type='text'
-                  name='address'
-                  id='address'
-                  placeholder='Address'
-                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                <TextField
+                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                label='Address'
+                variant='outlined'
+                id='address'
+                type='text'
                 />
               </div>
 
@@ -150,18 +152,17 @@ const SignupPage = () => {
                 </div>
               </div>
 
-              <Link to='/account-type'>
-                <input
-                  type='submit'
-                  value='Sign up'
-                  className='bg-[#003399] text-white w-1/3 px-4 py-2 rounded-[10px] cursor-pointer'
+              <Link to='/account-type' className='flex justify-center align-middle my-10' >
+                <Button
+                  text='Sign up'
+                  className='bg-[#003399] text-white  rounded-[10px] cursor-pointer ' size='lg'
                 />
               </Link>
             </form>
 
             <p className='font-bold text-xl text-center'>
               Already have an account?
-              <Link to='/account-type' className='text-red-500 ml-2'>
+              <Link to='/login' className='text-red-500 ml-2'>
                 Login
               </Link>{' '}
               here
