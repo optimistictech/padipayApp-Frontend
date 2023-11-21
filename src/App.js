@@ -21,7 +21,7 @@ import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 import MobileStore from './Components/Sections/MobileStore';
 import LendersDashboard from './Pages/dashboard/lendersDashboard/LendersDashboard';
-import BorrowersDashboard from './Pages/dashboard/borrowersDashboard/BorrowersDashboard';
+import BorrowersDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
 import BorrowersSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerSectionTwo';
 import BorrowerSectionThree from './Pages/dashboard/borrowersDashboard/BorrowerSectionThree';
 import BorrowerSectionFour from './Pages/dashboard/borrowersDashboard/BorrowerSectionFour';
@@ -56,12 +56,11 @@ function App() {
         <Route path='/lendersDashboard' element={<LendersDashboard />} />
         <Route path='/calculator' element={<Calculator />} />
         <Route path='/borrowersDashboard' element={<BorrowersDashboard />} />
-        <Route path='/calculator' element={<BorrowersSectionTwo/>} />
-        <Route path='/calculator' element={<BorrowerSectionThree/>} />
-        <Route path='/calculator' element={<BorrowerSectionFour/>} />
-        <Route path='/calculator' element={<BorrowerSectionFive/>} />
-        <Route path='/calculator' element={<BorrowerSectionSix/>} />
-        <Route path='/calculator' element={<Calculator />} />
+        <Route path='/borrowersDashboard2' element={<BorrowersSectionTwo/>} />
+        <Route path='/borrowersDashboard3' element={<BorrowerSectionThree/>} />
+        <Route path='/borrowersDashboard4' element={<BorrowerSectionFour/>} />
+        <Route path='/borrowersDashboard5' element={<BorrowerSectionFive/>} />
+        <Route path='/borrowersDashboard6' element={<BorrowerSectionSix/>} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
