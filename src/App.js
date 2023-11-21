@@ -20,9 +20,16 @@ import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 import MobileStore from './Components/Sections/MobileStore';
-import LendersDashboard from './Pages/dashboard/LendersDashboard/LendersDashboard';
-import BorrowersDashboard from './Pages/dashboard/BorrowersDashboard/BorrowersDashboard';
+import LendersDashboard from './Pages/dashboard/lendersDashboard/LendersDashboard';
+import BorrowersDashboard from './Pages/dashboard/borrowersDashboard/BorrowersDashboard';
+import BorrowersSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerSectionTwo';
+import BorrowerSectionThree from './Pages/dashboard/borrowersDashboard/BorrowerSectionThree';
+import BorrowerSectionFour from './Pages/dashboard/borrowersDashboard/BorrowerSectionFour';
+import BorrowerSectionFive from './Pages/dashboard/borrowersDashboard/BorrowerSectionFive';
+import BorrowerSectionSix from './Pages/dashboard/borrowersDashboard/BorrowerSectionSix';
 import Calculator from './Components/Calculator/Calculator';
+
+          
 
 function App() {
   return (
@@ -33,7 +40,6 @@ function App() {
 
       <Routes>
         <Route path='/lendersagree' element={<Lendersagreement />} />
-
         <Route path='/about-us' element={<AboutPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/signup' element={<SignupPage />} />
@@ -41,7 +47,6 @@ function App() {
         <Route path='/blog' element={<BlogPage />} />
         <Route path='/post-for-blog' element={<PostForBlog />} />
         <Route path='/account-type' element={<LendersBorrowers />} />
-
         <Route path='/privacy' element={<PrivacyPolicyPage />} />
         <Route
           path='/guarantor-agreement'
@@ -49,7 +54,13 @@ function App() {
         />
         <Route path='/' element={<LandingPage />} />
         <Route path='/lendersDashboard' element={<LendersDashboard />} />
+        <Route path='/calculator' element={<Calculator />} />
         <Route path='/borrowersDashboard' element={<BorrowersDashboard />} />
+        <Route path='/calculator' element={<BorrowersSectionTwo/>} />
+        <Route path='/calculator' element={<BorrowerSectionThree/>} />
+        <Route path='/calculator' element={<BorrowerSectionFour/>} />
+        <Route path='/calculator' element={<BorrowerSectionFive/>} />
+        <Route path='/calculator' element={<BorrowerSectionSix/>} />
         <Route path='/calculator' element={<Calculator />} />
       </Routes>
       {/* <Footer /> */}
