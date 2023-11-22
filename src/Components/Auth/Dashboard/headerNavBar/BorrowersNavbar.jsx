@@ -4,9 +4,9 @@ import Button from '../../../Button';
 
 const BorrowersNavbar = () => {
   return (
-    <main className='w-[100%] font-primaryFont flex flex-col '>
+    <main className='w-full mX-8 font-primaryFont flex flex-col '>
       {/* LEFT CONTENT */}
-      <header className='p-5 flex justify-between items-center'>
+      <header className='p-5 flex justify-between w-full items-center'>
         <div className=''>
           <div className='flex flex-col '>
             <p className='text-sm flex gap-1 items-center'>
@@ -104,7 +104,7 @@ const BorrowersNavbar = () => {
       </header>
 
       {/*(SECTION MIDDLE) Card */}
-      <section className='p-5 flex justify-between items-center'>
+      <section className='p-5 flex w-full justify-between items-center'>
         <h3 className=' text-xl'>
           <span className='font-bold'>Nimota</span> Celine Adeyemi
         </h3>
