@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Footer from '../Components/Footer';
-import Navbar from '../Components/Navbar';
+import Navbar from '../Components/navBar/Navbar';
 import { Button } from '../Components/Button';
 
 const AboutusPage = () => {

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Navbar from '../Components/Navbar';
+import Navbar from '../Components/navBar/Navbar';
 import Footer from '../Components/Footer';
 import { Link } from 'react-router-dom';
 import Aos from 'aos';
@@ -20,7 +20,6 @@ function LendersBorrowers() {
         </h1>
 
         <section className='w-[80%] m-auto flex justify-evenly pointer text-whiteColor text-center mb-40'>
-
           <div className='flex flex-col gap-5' data-aos='fade-up-right'>
             <Link
               to='/lendersDashboard'
@@ -33,7 +32,6 @@ function LendersBorrowers() {
             <Link
               to='/'
               className='font-bold text-base  flex gap-3 animate-pulse  items-center justify-center text-navColor  hover:text-[#0044ffc0]'
-
               target='_blank'
             >
               Read About becoming a Lender
@@ -65,7 +63,6 @@ function LendersBorrowers() {
             <Link
               to='/'
               className='font-bold flex gap-3 items-center animate-pulse justify-center text-navColor hover:text-[#0044ffc0]'
-
               target='_blank'
             >
               Read About becoming a Borrower

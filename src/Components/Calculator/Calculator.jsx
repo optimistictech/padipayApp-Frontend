@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../Navbar';
+import Navbar from '../navBar/Navbar';
 import { TextField } from '@mui/material';
 
 const Calculator = () => {
@@ -18,12 +18,14 @@ const Calculator = () => {
       const r = parseFloat(interest) / 100;
 
       const totalAmount = P * Math.pow(1 + r / n, n * t);
-      setResult(totalAmount.toFixed(2));
-
       const totalInterestAmount = totalAmount - P;
+      const monthlyPayment = totalAmount / t;
+
+      setResult(totalAmount.toFixed(2));
 
       const breakdownData = [
         { label: 'Loan Amount', value: `₦${P.toFixed(2)}` },
+        { label: 'Monthly Payment', value: `₦${monthlyPayment.toFixed(2)}` },
         {
           label: 'Total Interest',
           value: `₦${totalInterestAmount.toFixed(2)}`,
