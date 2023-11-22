@@ -1,24 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Navbar from "../Components/Navbar";
-import Footer from "../Components/Footer";
-import { Button } from "../Components/Button";
-import "remixicon/fonts/remixicon.css";
-
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Navbar from '../Components/navBar/Navbar';
+import Footer from '../Components/Footer';
+import { Button } from '../Components/Button';
+import 'remixicon/fonts/remixicon.css';
 
 const CommunityPage = () => {
   const topics = [
     {
       user: {
-        name: "Emma Johnson",
-        img: "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/Image1.png?",
+        name: 'Emma Johnson',
+        img: 'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/Image1.png?',
       },
-      date: "31/12/2020",
-      title: "Who can invest in PadiPay ?",
+      date: '31/12/2020',
+      title: 'Who can invest in PadiPay ?',
     },
   ];
   return (
-
     <div className='font-primaryFont'>
       {/* NAVBAR */}
       <Navbar />
@@ -53,17 +51,13 @@ const CommunityPage = () => {
           <div className='trendingBoxOne w-1/3 bg-primary p-4 rounded-xl'>
             <img
               src={
-
-                "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/group1.png"
-
+                'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/group1.png'
               }
               alt='Two men'
             />
             <img
               src={
-
-                "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/abadge.png?updatedAt=1700102430611"
-
+                'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/abadge.png?updatedAt=1700102430611'
               }
               alt=''
               className='mt-2 pt-2'
@@ -76,17 +70,13 @@ const CommunityPage = () => {
           <div className='trendingBoxOne w-1/3 bg-primary p-4 rounded-xl'>
             <img
               src={
-
-                "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/group2.png"
-
+                'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/group2.png'
               }
               alt='Two men'
             />
             <img
               src={
-
-                "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/abadge.png"
-
+                'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/abadge.png'
               }
               alt=''
               className='mt-2 pt-2'
@@ -99,17 +89,13 @@ const CommunityPage = () => {
           <div className='trendingBoxOne w-1/3 bg-primary p-4 rounded-xl'>
             <img
               src={
-
-                "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/group3.png"
-
+                'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/group3.png'
               }
               alt='Two men'
             />
             <img
               src={
-
-                "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/abadge.png"
-
+                'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/abadge.png'
               }
               alt=''
               className='mt-2 pt-2'
@@ -157,9 +143,7 @@ const CommunityPage = () => {
             <div className='article-img -mt-4'>
               <img
                 src={
-
-                  "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/image2.png"
-
+                  'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/image2.png'
                 }
                 alt=''
                 className='w-16'
@@ -194,9 +178,7 @@ const CommunityPage = () => {
             <div className='article-img -mt-4'>
               <img
                 src={
-
-                  "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/Image1.png?"
-
+                  'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/Image1.png?'
                 }
                 alt=''
                 className='w-16'
@@ -232,9 +214,7 @@ const CommunityPage = () => {
             <div className='article-img -mt-4'>
               <img
                 src={
-
-                  "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/image3.png?updatedAt=1700102430517"
-
+                  'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/image3.png?updatedAt=1700102430517'
                 }
                 alt=''
                 className='w-16'
@@ -270,9 +250,7 @@ const CommunityPage = () => {
             <div className='article-img -mt-4'>
               <img
                 src={
-
-                  "https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/image2.png"
-
+                  'https://ik.imagekit.io/b6b9xwu9l/CommunityPageImages/image2.png'
                 }
                 alt=''
                 className='w-16'
@@ -305,9 +283,7 @@ const CommunityPage = () => {
           {/* END */}
         </div>
         <div className='text-center'>
-
-          <Button className='my-10' text={"Load More"}></Button>
-
+          <Button className='my-10' text={'Load More'}></Button>
         </div>
       </div>
 

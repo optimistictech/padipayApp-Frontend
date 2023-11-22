@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../Components/Navbar';
+import Navbar from '../Components/navBar/Navbar';
 import Footer from '../Components/Footer';
 const PrivacyPolicyPage = () => {
   return (

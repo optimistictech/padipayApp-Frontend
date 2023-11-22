@@ -92,4 +92,5 @@ const BorrowerSectionThree = () => {
   )
 }
 
-export default BorrowerSectionThree
+
+export default BorrowerSectionThree;

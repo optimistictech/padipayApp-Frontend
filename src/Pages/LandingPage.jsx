@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Navbar from '../Components/Navbar';
+import Navbar from '../Components/navBar/Navbar';
 import Footer from '../Components/Footer';
 import { Link } from 'react-router-dom';
 import Button from '../Components/Button';
@@ -27,12 +27,12 @@ const LandingPage = () => {
           id='heroSection'
           className='pt-[66px] max-w-[1400px] mx-auto flex items-center w-full p-10 bg-[#F5F1F1] justify-between'
         >
-          <div id='hero-text' className='w-[50%] text-left'>
+          <div id='hero-text' className='lg:w-[50%] text-left'>
             <h1 className='text-[60px] leading-[70px] font-extrabold'>
               Empower Your{' '}
               <span className='text-primary'>Financial Growth</span>
             </h1>
-            <p className='py-[30px] text-[18px] text-justify w-[80%]'>
+            <p className='py-[30px] text-[18px] text-justify lg:w-[80%]'>
               The PadiPay Lending Platform aims to provide an online lending
               marketplace that connects borrowers seeking loans with investors
               looking to invest in loan opportunities.
@@ -46,7 +46,7 @@ const LandingPage = () => {
           </div>
 
           {/* Hero Right */}
-          <div className=' w-[50%] flex items-center justify-center  mt-10'>
+          <div className='hidden lg:w-[50%] lg:flex items-center justify-center  mt-10'>
             <img
               src={
                 'https://ik.imagekit.io/gru3qfrss/Group%2023936%20(2).png?updatedAt=1700484441946'
