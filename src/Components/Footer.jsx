@@ -1,6 +1,6 @@
-import React from "react";
-import PadiLogo from "./PadiLogo";
-import { Link } from "react-router-dom";
+import React from 'react';
+import PadiLogo from './PadiLogo';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -27,7 +27,7 @@ const Footer = () => {
 
         {/* Middle 1 */}
         <div className='text-left'>
-          <p className='font-semibold pb-7'>Legal</p>
+          <p className='font-semibold py-7 '>Legal</p>
           <ul>
             <li>
               <Link to='/'>Terms and Conditions</Link>
@@ -49,7 +49,7 @@ const Footer = () => {
 
         {/* Middle 2 */}
         <div className=''>
-          <p className='font-semibold pb-7'>Company</p>
+          <p className='font-semibold py-7'>Company</p>
 
           <ul>
             <li>
@@ -64,7 +64,7 @@ const Footer = () => {
 
         {/* Right */}
         <div>
-          <p className='font-semibold pb-7'>Contact Us</p>
+          <p className='font-semibold pb-7 sm:pt-10'>Contact Us</p>
           <div className='flex items-center gap-3'>
             <Link to=''>
               <i className='fab fa-twitter'></i>
@@ -85,7 +85,7 @@ const Footer = () => {
 
         <Link to=''>
           <i
-            className='fa fa-arrow-circle-up flex absolute scroll-smooth focus:scroll-auto right-0 mx-16 text-[#4EABE9] text-[40px] z-50 cursor-pointer '
+            className='fa fa-arrow-circle-up lg:flex absolute scroll-smooth focus:scroll-auto right-0 mx-16 text-[#4EABE9] text-[40px] z-50 cursor-pointer '
             aria-hidden='true'
           ></i>
         </Link>

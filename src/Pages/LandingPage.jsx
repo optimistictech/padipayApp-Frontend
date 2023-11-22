@@ -25,10 +25,10 @@ const LandingPage = () => {
       <section className='bg-[#F5F1F1]'>
         <div
           id='heroSection'
-          className='pt-[66px] max-w-[1400px] mx-auto flex items-center w-full p-10 bg-[#F5F1F1] justify-between'
+          className='pt-[66px] lg:max-w-[1400px] mx-auto flex items-center w-full p-10 bg-[#F5F1F1] justify-between'
         >
           <div id='hero-text' className='lg:w-[50%] text-left'>
-            <h1 className='text-[60px] leading-[70px] font-extrabold'>
+            <h1 className='lg:text-[60px] text-[35px] leading-normal  lg:leading-[70px] font-extrabold'>
               Empower Your{' '}
               <span className='text-primary'>Financial Growth</span>
             </h1>
@@ -81,12 +81,12 @@ const LandingPage = () => {
       {/* <!-- COMMUNITY SECTION --> */}
       <section
         id='section-one'
-        className='w-full  max-w-[1400px] mx-auto h-[700px] bg-white flex items-center justify-between'
+        className='w-full lg:max-w-[1400px] mx-auto lg:h-[700px] bg-white flex items-center justify-between'
       >
         {/* left */}
         <div
           id='section-one-text'
-          className='flex flex-col justify-center gap-5 h-full bg-white px-10 py-20 text-left max-w-2xl'
+          className='flex flex-col justify-center gap-5 lg:h-full bg-white px-10 py-20 text-left max-w-2xl'
           data-aos='fade-right'
         >
           <h2 className='text-4xl font-bold'>
@@ -100,7 +100,7 @@ const LandingPage = () => {
             </Link>
           </div>
 
-          <p className='text-lg'>
+          <p className='lg:text-lg'>
             Build a thriving lending community where borrowers and lenders can
             interact, share insights, and foster meaningful connections. Our
             platform's Community Section serves as a hub for engagement and
@@ -108,7 +108,7 @@ const LandingPage = () => {
           </p>
         </div>
         {/* right */}
-        <div className='flex items-center justify-start relative'>
+        <div className='hidden lg:flex items-center justify-start relative'>
           <img
             src={
               'https://cdn.hashnode.com/res/hashnode/image/upload/v1700297603689/20b89194-e953-434c-a635-fe80ce46d112.jpeg'
@@ -119,12 +119,12 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* <!-- SECTION TWO --> */}
+      {/* <!-- NON INTEREST --> */}
       <section id='section-two' className='text-center  bg-[#f0f0f0] pt-[80px]'>
-        <h3 className='text-primary font-bold text-4xl mb-4'>
+        <h3 className='text-primary font-bold lg:text-4xl mb-4 text-2xl'>
           Non-Interest Credit Facility
         </h3>
-        <p className='text-xl text-center w-2/4 mx-auto'>
+        <p className='lg:text-xl text-center lg:w-2/4 mx-auto'>
           We at PadiPay provides a no-interest credit facilities, which
           frequently rely on asset based financing to give lenders assurance. In
           this arrangement, the loan is secured by real property or other forms
@@ -140,23 +140,25 @@ const LandingPage = () => {
       {/* <!-- STEP SECTION --> */}
       <section
         id='step-section'
-        className='bg-primary pb-[40px] pt-[80px] text-whiteColor font-bold text-center'
+        className='bg-primary pb-[40px] pt-[80px] text-white font-bold text-center'
       >
-        <h3 className='text-4xl mb-3'>How It Works:</h3>
-        <h3 className='text-4xl mb-6'>A Simple Path to Financial Growth</h3>
+        <h3 className='lg:text-4xl text-2xl mb-3'>How It Works:</h3>
+        <h3 className='lg:text-4xl text-2xl mb-6'>
+          A Simple Path to Financial Growth
+        </h3>
         <img
           src={'https://ik.imagekit.io/gru3qfrss/Group%2023937.png'}
           alt=''
-          className='w-3/5 mx-auto my-20'
+          className='lg:w-3/5 mx-auto lg:my-20'
           data-aos='fade-right'
         />
       </section>
 
       {/* <!-- CARD SECTION --> */}
-      <section className='card-section flex flex-col my-20 pb-6 px-10 pt-[80px] gap-12 lg:max-w-[920px] mx-auto'>
+      <section className='card-section flex flex-col lg:my-20 pb-6 px-10 pt-[80px] gap-12 lg:max-w-[920px] mx-auto'>
         <Link
           to='/'
-          className='shadow-sm flex text-white gap-4 rounded-xl p-6 bg-[#323232]'
+          className='shadow-sm lg:flex text-white gap-4 rounded-xl p-6 bg-[#323232]'
           data-aos='fade-right'
         >
           <img
@@ -168,7 +170,7 @@ const LandingPage = () => {
           />
           <div className='text-left'>
             <h3 className='text-4xl font-bold mb-3'>Lenders</h3>
-            <p className='text-lg'>
+            <p className='lg:text-lg'>
               Are you ready to explore exciting investment opportunities and
               contribute to borrowers' financial growth? PadiPay's Lending
               Platform opens doors to a world of possibilities.
@@ -178,7 +180,7 @@ const LandingPage = () => {
 
         <Link
           to='/BorrowersPage'
-          className='shadow-sm flex text-white gap-4 bg-primary rounded-xl p-6'
+          className='shadow-sm lg:flex text-white gap-4 bg-primary rounded-xl p-6'
           data-aos='fade-left'
         >
           <img
@@ -188,7 +190,7 @@ const LandingPage = () => {
           />
           <div className='text-left '>
             <h3 className='text-4xl font-bold mb-3'>Borrowers</h3>
-            <p className='text-lg'>
+            <p className='lg:text-lg'>
               Are you ready to turn your dreams into reality? PadiPay's Lending
               Platform connects you with investors who believe in your vision.
             </p>
@@ -198,12 +200,12 @@ const LandingPage = () => {
 
       {/* Friendly interest rate*/}
       <section className='bg-[#f0f0f0]'>
-        <Section className='flex item-center pt-[80px] w-full'>
-          <div className='w-[50%]'>
+        <Section className='flex item-center lg:pt-[80px] w-full'>
+          <div className='hidden lg:flex w-[50%]'>
             <img
               src={'https://ik.imagekit.io/gru3qfrss/LadyImage1.png'}
               alt='woman-logo'
-              className='w-'
+              className=''
             />
           </div>
           <div className=' pt-20 text-right  w-[50%]'>
@@ -225,39 +227,39 @@ const LandingPage = () => {
       {/* <!-- SECTION SIX --> */}
       <section
         id='section-six'
-        className='text-center pt-[80px] font-bold p-14'
+        className='text-center lg:pt-[80px] font-bold p-14'
       >
         <h3 className='text-4xl mb-3'>A Selection of Our Reliable</h3>
         <h3 className='text-4xl text-primary'>Business Collaborators</h3>
         <div
           id='partner-logo'
-          className='flex gap-20 text-center justify-center item-center my-10'
+          className='lg:flex gap-20 text-center justify-center item-center my-10'
         >
-          <div className='flex items-center'>
+          <div className='lg:flex text-center items-center'>
             <img
               src={'https://ik.imagekit.io/gru3qfrss/logo2.png'}
               alt='Tiidelab'
             />
           </div>
-          <div className='flex items-center'>
+          <div className='lg:flex text-center items-center'>
             <img
               src={'https://ik.imagekit.io/gru3qfrss/logo3.png'}
               alt='NECA'
             />
           </div>
-          <div className='flex items-center'>
+          <div className='lg:flex text-center items-center'>
             <img src={'https://ik.imagekit.io/gru3qfrss/logo1.png'} alt='ITF' />
           </div>
         </div>
       </section>
 
       {/* BLOG SECTION */}
-      <section className='bg-[#f0f0f0] pt-14 pb-32 -mb-8'>
+      <section className='bg-[#f0f0f0] pt-14 pb-32 '>
         <h3 className='text-4xl text-primary mb-16 text-center font-semibold'>
           Recent posts
         </h3>
 
-        <div className='blog-section  flex gap-10 justify-center align-center'>
+        <div className='blog-section flex lg:flex-row flex-col gap-10 justify-center align-center'>
           <BlogCard
             coverImage='https://ik.imagekit.io/gru3qfrss/pretty-young-black-lady-holding-money-celebrating-front-white-background.jpg?'
             title='PadiPay: Benefits of using a loan platform'
