@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../../Components/Button'
 import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/BorrowersSideNav';
+import SettingsSection from "../../../Components/SettingsSection"
 
 const BorrowerSectionFive = () => {
   return (
@@ -10,17 +11,28 @@ const BorrowerSectionFive = () => {
       <div>
       {/* <BorrowersNavbar /> */}
         <div>
-        <div className="firstsection flex gap-2 justify-between mt-[50px]">
-            <div className="flex gap-8 justify-between"> 
-                <h2 className="ml-6 font-semibold text-xl"> <span className="font-semibold "> Request to pay Alfred Jimoh Ogundare</span> </h2>
-                <p className="text-sm mt-1">Account ID  : <span className="text-blue font-semibold ">PDWR101</span></p>
-            </div>
-            <div className="font-semibold flex-col text-xl">
+        <section className='p-5 flex w-full gap-10 justify-between items-center'>
+        <h3 className=' text-xl'>
+          <span className='font-bold'>Request to pay Alfred Jimoh </span>
+        </h3>
+        {/* Account ID */}
+        <p>
+          <span className='text-primary'>Account ID:</span> PDWR300
+        </p>
+
+        {/* loan */}
+        <div className="font-semibold flex-col text-xl">
                 <h3 className="">Outstanding Loan:</h3>
                 <h3 className="text-blue">N2,775.00</h3>
             </div>
-            <Button className="bg-blue text-white rounded-xl " text="Share" size="2xl"/> 
+
+        {/* btn */}
+        <div className=' hover:text-md'>
+          <Link to='/signup'>
+            <Button text={'Share Referral Link'} />
+          </Link>
         </div>
+      </section>
 
         <div className="secondsection my-20">
             <div className="loan-box ml-10">
