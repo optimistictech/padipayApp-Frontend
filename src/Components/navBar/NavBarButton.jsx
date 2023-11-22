@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const NavBarButton = () => {
   return (
-    <div className='flex flex-col items-center lg:flex-row mt-3 lg:mt-0 gap-3 '>
+    <div className='flex flex-col items-center lg:flex-row mt-8 lg:mt-0 gap-3 '>
       <div className='border-0'>
         <Link to='/login'>
           <Button

@@ -7,7 +7,7 @@ const MobileNavBar = ({ mobileNav, setMobileNav }) => {
   return (
     <div>
       {mobileNav ? (
-        <div className='bg-black/80 fixed h-full w-full top-0 left-0 z-10'></div>
+        <div className='bg-primary fixed h-full w-full top-0 left-0 z-10'></div>
       ) : (
         ''
       )}

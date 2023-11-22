@@ -29,7 +29,7 @@ const Navbar = () => {
 
       {/* handburger */}
       <div onClick={() => setMobileNav(!mobileNav)} className='lg:hidden'>
-        <MdOutlineMenu />
+        <MdOutlineMenu value={{ size: '70px' }} />
         <MobileNavBar mobileNav={mobileNav} setMobileNav={setMobileNav} />
       </div>
     </nav>
