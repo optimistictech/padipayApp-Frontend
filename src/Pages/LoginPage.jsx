@@ -6,7 +6,7 @@ import Button from '../Components/Button'
 
 const LoginPage = () => {
   return (
-    <div className='bg-[#003399] text-primaryFont  h-screen flex flex-col justify-center'>
+    <div className='bg-[#003399] text-primaryFont h-screen flex flex-col justify-center'>
       <div className='pt-10 flex justify-around gap-2 small-screen'>
         {/* LEFT SIDE */}
         <div className='flex flex-col relative items-center justify-center text-white w-screen'>
@@ -74,13 +74,13 @@ const LoginPage = () => {
             <Link to='/account-type' className='flex justify-center align-middle my-10' size='lg'>
               <Button
                 text='Login'
-                className='bg-[#003399] text-white  rounded-[10px] cursor-pointer'
+                className='bg-[#003399] text-white  rounded-[10px] cursor-pointer' size="lg"
               />
             </Link>
           </form>
           <p className='text-xl font-bold text-center'>
             Don't have an account?
-            <Link to='/sign-up' className='text-red-500 ml-2'>
+            <Link to='/signup' className='text-red-500 ml-2'>
               Sign up
             </Link>{' '}
             here

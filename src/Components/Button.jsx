@@ -5,7 +5,7 @@ export const Button = ({ text, className, size, noborder }) => {
     sm: "px-4 py-2",
     md: "px-5 py-3 text-lg font-medium",
     lg: "px-12 py-2",
-    "2xl": "px-10 py-5",
+    "2xl": "px-16 py-3",
   };
 
   return (

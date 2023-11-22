@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import BorrowersNavbar from '../../../Components/Auth/Dashboard/headerNavBar/BorrowersNavbar';
+import Button from '../../../Components/Button'
 import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/BorrowersSideNav';
 
 const BorrowerSectionFive = () => {
@@ -11,7 +11,7 @@ const BorrowerSectionFive = () => {
       {/* <BorrowersNavbar /> */}
         <div>
         <div className="firstsection flex gap-2 justify-between mt-[50px]">
-            <div className="flex gap-8"> 
+            <div className="flex gap-8 justify-between"> 
                 <h2 className="ml-6 font-semibold text-xl"> <span className="font-semibold "> Request to pay Alfred Jimoh Ogundare</span> </h2>
                 <p className="text-sm mt-1">Account ID  : <span className="text-blue font-semibold ">PDWR101</span></p>
             </div>
@@ -19,7 +19,7 @@ const BorrowerSectionFive = () => {
                 <h3 className="">Outstanding Loan:</h3>
                 <h3 className="text-blue">N2,775.00</h3>
             </div>
-            <button className="bg-blue text-white rounded-xl px-6 py-2 h-[70px]">Share </button>
+            <Button className="bg-blue text-white rounded-xl " text="Share" size="2xl"/> 
         </div>
 
         <div className="secondsection my-20">
@@ -46,7 +46,7 @@ const BorrowerSectionFive = () => {
                     <h2 className="text-blue-900">#900</h2>
                 </div>
                 <Link to="/dist/BD8.html">
-                    <button className="w-96 bg-blue rounded-xl mt-8 text-white py-2">Repay</button>
+                    <Button className=" bg-blue rounded-xl mt-8 text-white py-2" text="Repay" size="lg"/>
                 </Link>
             </div>
           </div>
