@@ -1,9 +1,14 @@
 import React from 'react'
+import Footer from '../Components/Footer';
+import Navbar from '../Components/navBar/Navbar';
+
 
 const WhatwedoPage = () => {
   return (
-   <div>
-  <h1 className="font-bold text-4xl flex justify-center text-blue-800 py-5 px-40">What We Do</h1>
+   <div className='primaryFont'>
+          <Navbar />
+
+  <h1 className="font-bold text-4xl flex justify-center text-blue-800 py-5 px-40 pt-28">What We Do</h1>
   <p className="text-2xl py-5 px-10">At PadiPay, we are committed to reshaping the way financial services are delivered in Nigeria.
     We are driven by the belief that financial inclusion and empowerment are fundamental rights for all
     Nigerians.
@@ -117,6 +122,7 @@ const WhatwedoPage = () => {
       and your financial goals are our shared mission.
     </h2>
   </div>
+  <Footer/>
 </div>
 
   )
