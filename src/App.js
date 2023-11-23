@@ -39,6 +39,7 @@ function App() {
       <Routes>
         <Route path='/lendersagree' element={<Lendersagreement />} />
         <Route path='/about-us' element={<AboutPage />} />
+        <Route path='/what-we-do' element={<WhatwedoPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/signup' element={<SignupPage />} />
         <Route path='/community' element={<CommunityPage />} />
