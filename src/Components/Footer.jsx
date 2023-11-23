@@ -53,7 +53,7 @@ const Footer = () => {
 
           <ul>
             <li>
-              <Link to='/dist/whatWeDo.html'>What we do</Link>
+              <Link to='/what-we-do'>What we do</Link>
             </li>
 
             <li>
