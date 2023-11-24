@@ -29,6 +29,12 @@ import BorrowerSectionFive from './Pages/dashboard/BorrowersDashboard/BorrowerSe
 import BorrowerSectionSix from './Pages/dashboard/BorrowersDashboard/BorrowerSectionSix';
 import Calculator from './Components/Calculator/Calculator';
 
+import LendersDashboardTwo from './Pages/dashboard/LendersDashboard/LendersDashboardTwo';
+import LendersDashboardThree from './Pages/dashboard/LendersDashboard/LendersDashboardThree';
+import LendersDashboardFour from './Pages/dashboard/LendersDashboard/LendersDashboardFour';
+import LendersDashboardFive from './Pages/dashboard/LendersDashboard/LendersDashboardFive';
+import LendersDashboardSix from './Pages/dashboard/LendersDashboard/LendersDashboardSix';
+
 function App() {
   return (
     <BrowserRouter>
@@ -60,6 +66,11 @@ function App() {
         <Route path='/borrowersDashboard4' element={<BorrowerSectionFour />} />
         <Route path='/borrowersDashboard5' element={<BorrowerSectionFive />} />
         <Route path='/borrowersDashboard6' element={<BorrowerSectionSix />} />
+        <Route path='/lendersDashboard2' element={<LendersDashboardTwo />} />
+        <Route path='/lendersDashboard3' element={<LendersDashboardThree />} />
+        <Route path='/lendersDashboard4' element={<LendersDashboardFour />} />
+        <Route path='/lendersDashboard5' element={<LendersDashboardFive />} />
+        <Route path='/lendersDashboard6' element={<LendersDashboardSix />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
