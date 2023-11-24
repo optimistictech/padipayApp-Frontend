@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const BorrowersSideNav = () => {
   return (
-    <div className=' w-[20%] text-white bg-[#003399] font-primaryFont p-5'>
+    <div className=' w-[28%] text-white bg-[#003399] font-primaryFont p-5'>
       {/* head */}
       <div className='px-3 py-2'>
         {/* <img src={padiLogo} alt='padiLogo' /> */}
