@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 // import padiLogo from '../assets/padiLogo.png';
-import MenuItem from '@mui/material/MenuItem';
-import { TextField } from '@mui/material';
+// import MenuItem from '@mui/material/MenuItem';
+// import { TextField } from '@mui/material';
 
 const LendersSideNav = () => {
   // const profileDetails = [

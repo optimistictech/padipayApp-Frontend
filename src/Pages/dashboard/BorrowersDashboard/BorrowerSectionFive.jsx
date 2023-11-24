@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../../Components/Button'
 import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/BorrowersSideNav';
-import SettingsSection from "../../../Components/SettingsSection"
+import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard';
 
 const BorrowerSectionFive = () => {
   return (
@@ -63,7 +63,8 @@ const BorrowerSectionFive = () => {
             </div>
           </div>
 
-          <SettingsSection/>
+           {/* SECOND SECTION */}
+        <FooterDashboard />
         </div>
       </div>
     </div>
