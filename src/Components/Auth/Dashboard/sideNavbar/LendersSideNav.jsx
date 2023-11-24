@@ -15,7 +15,7 @@ const LendersSideNav = () => {
   //   },
   // ];
   return (
-    <div className=' w-[20%] text-white bg-[#003399] font-primaryFont p-5'>
+    <div className=' w-[28%] text-white bg-[#003399] font-primaryFont p-5'>
       {/* head */}
       <div className='px-3 py-2'>
         {/* <img src={padiLogo} alt='padiLogo' /> */}
@@ -67,7 +67,7 @@ const LendersSideNav = () => {
 
       {/* dashboard */}
       <Link
-        to='/'
+        to='/lendersDashboard'
         className='flex gap-4 active items-center px-3 bg-[#4F4F52]  py-4 mt-5 rounded'
       >
         <svg
@@ -151,7 +151,10 @@ const LendersSideNav = () => {
       </Link>
 
       {/* Risk Apetite */}
-      <Link to='/' className='flex gap-4 active items-center px-3 py-5 rounded'>
+      <Link
+        to='/lendersDashboard2'
+        className='flex gap-4 active items-center px-3 py-5 rounded'
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
