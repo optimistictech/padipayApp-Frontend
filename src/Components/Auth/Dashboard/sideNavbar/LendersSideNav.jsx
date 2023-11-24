@@ -15,7 +15,7 @@ const LendersSideNav = () => {
   //   },
   // ];
   return (
-    <div className=' w-[20%] text-white bg-[#003399] font-primaryFont m-5 rounded-xl p-5'>
+    <div className=' w-[20%] text-white bg-[#003399] font-primaryFont p-5'>
       {/* head */}
       <div className='px-3 py-2'>
         {/* <img src={padiLogo} alt='padiLogo' /> */}
@@ -63,21 +63,6 @@ const LendersSideNav = () => {
         {/* <Link to='/'>Change Account Type</Link> */}
       </div>
 
-      {/* <TextField
-        className='text-white outline-none'
-        select
-        text='Select'
-        defaultValue='Alfred Jimoh'
-        helperText='Please change your account type'
-        variant='standard'
-      >
-        {profileDetails.map((option) => (
-          <MenuItem key={option.value} value={option.value}>
-            {option.text}
-          </MenuItem>
-        ))}
-      </TextField> */}
-
       <hr className='font-bold my-3' />
 
       {/* dashboard */}
@@ -103,7 +88,10 @@ const LendersSideNav = () => {
       </Link>
 
       {/* lend */}
-      <Link to='/' className='flex gap-4 items-center px-3 py-5 '>
+      <Link
+        to='/lendersDashboard2'
+        className='flex gap-4 items-center px-3 py-5 '
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
