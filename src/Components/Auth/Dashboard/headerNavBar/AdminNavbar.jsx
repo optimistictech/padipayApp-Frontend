@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../../Button';
 
-const BorrowersNavbarV = () => {
+const AdminNavbar = () => {
     return (
-        <main className='w-full mX-8 font-primaryFont flex flex-col pr-12'>
+        <main className='w-full font-primaryFont flex flex-col pr-12'>
           {/* LEFT CONTENT */}
-          <header className='p-5 flex justify-between w-full items-center'>
+          <header className='p-5 flex justify-between w-full items-center '>
             <div className=''>
               <div className='flex flex-col '>
                 <p className='text-sm flex gap-1 items-center'>
@@ -104,7 +104,7 @@ const BorrowersNavbarV = () => {
           </header>
     
           {/*(SECTION MIDDLE) Card */}
-          <section className='p-5 flex w-full justify-between items-center'>
+          <section className='p-5 flex w-full justify-between items-center '>
             <h3 className=' text-xl'>
               <span className='font-bold'>Nimota</span> Celine Adeyemi
             </h3>
@@ -113,9 +113,9 @@ const BorrowersNavbarV = () => {
               <span class='text-primary'>Account ID:</span> PDWR300
             </p>
     
-            {/* Verified profile */}
-            <p class=' text-primary border px-4 py-1 border-primary rounded'>
-              Verified
+            {/* Incomplete profile */}
+            <p class=' text-[#FC1616] border px-4 py-1 border-[#FC1616] rounded'>
+              Incomplete Profile
             </p>
     
             {/* btn */}
@@ -129,4 +129,4 @@ const BorrowersNavbarV = () => {
       );
 }
 
-export default BorrowersNavbarV
+export default AdminNavbar

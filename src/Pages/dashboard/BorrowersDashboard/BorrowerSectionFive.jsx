@@ -29,12 +29,12 @@ const BorrowerSectionFive = () => {
         {/* btn */}
         <div className=' hover:text-md'>
           <Link to='/signup'>
-            <Button text={'Share Referral Link'} />
+            <Button text={'Share Referral Link'} size='lg'/>
           </Link>
         </div>
       </section>
 
-        <div className="secondsection my-20">
+        <div className="secondsection my-12">
             <div className="loan-box ml-10">
                 <div className="loan-box1 w-96 py-8 px-4 shadow-md mb-4">
                     <p className="font-semibold text-2xl mb-5">N 2,775.00</p>
@@ -57,9 +57,11 @@ const BorrowerSectionFive = () => {
                     <h2 className="font-semibold">Minimum repayment</h2>
                     <h2 className="text-blue-900">#900</h2>
                 </div>
-                <Link to="/dist/BD8.html">
-                    <Button className=" bg-blue rounded-xl mt-8 text-white py-2" text="Repay" size="lg"/>
+                <div className='w-96 mt-12'>
+                <Link to="/dist/BD8.html" >
+                    <Button className=" bg-blue rounded-xl block mx-auto mt-8 text-white py-2" text="Repay" size="lg"/>
                 </Link>
+                </div>
             </div>
           </div>
 
