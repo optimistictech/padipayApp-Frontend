@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Button from '../../../Button';
 
 const AdminNavbar = () => {
     return (
-        <main className='w-full font-primaryFont flex flex-col pr-12'>
+        <main className='w-full font-primaryFont flex pr-12'>
           {/* LEFT CONTENT */}
           <header className='p-5 flex justify-between w-full items-center '>
             <div className=''>
@@ -102,29 +101,6 @@ const AdminNavbar = () => {
               </div>
             </div>
           </header>
-    
-          {/*(SECTION MIDDLE) Card */}
-          <section className='p-5 flex w-full justify-between items-center '>
-            <h3 className=' text-xl'>
-              <span className='font-bold'>Nimota</span> Celine Adeyemi
-            </h3>
-            {/* Account ID */}
-            <p>
-              <span class='text-primary'>Account ID:</span> PDWR300
-            </p>
-    
-            {/* Incomplete profile */}
-            <p class=' text-[#FC1616] border px-4 py-1 border-[#FC1616] rounded'>
-              Incomplete Profile
-            </p>
-    
-            {/* btn */}
-            <div className=' hover:text-md'>
-              <Link to='/signup'>
-                <Button text={'Share Referral Link'} />
-              </Link>
-            </div>
-          </section>
         </main>
       );
 }
