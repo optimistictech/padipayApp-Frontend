@@ -95,7 +95,7 @@ const BorrowerSectionFour = () => {
                 
               </div>
               <Link to='/lendersDashboard'>
-                <button className='mt-5 mt-5 block mx-auto outline-none border-none rounded bg-gray-300 text-black text-center text-sm font-normal py-2 px-4'>
+                <button className='mt-5 block mx-auto outline-none border-none rounded bg-gray-300 text-black text-center text-sm font-normal py-2 px-4'>
                   Match with Lender
                 </button>
               </Link>
@@ -132,12 +132,8 @@ const BorrowerSectionFour = () => {
           </div>
           {/* settings section - column */}
          <SettingsSection/>
-
-
            
           </section>
-
-    
         </div>
       
    </div>
