@@ -7,7 +7,7 @@ const ContactUs = () => {
     <div>
       <Navbar />
       {/* Contact section */}
-      <section id='contact' className='mt-20'>
+      <section className='pt-[150px]'>
         <div className='md:relative'>
           <h1 className='font-bold text-2xl text-primary px-20 mb-5'>
             Contact Us
