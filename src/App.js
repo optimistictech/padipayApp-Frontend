@@ -11,7 +11,7 @@ import CommunityPage from './Pages/CommunityPage';
 
 import LendersBorrowers from './Pages/LendersBorrowers';
 import LoginPage from './Pages/LoginPage';
-// import ContactUs from './Pages/ContactUs';
+import ContactUs from './Pages/ContactUs';
 // import TermsandConditionPage from './Pages/TermsandConditionPage';
 import WhatwedoPage from './Pages/WhatwedoPage';
 import Lendersagreement from './Pages/LendersAgreementPage';
@@ -52,6 +52,7 @@ function App() {
       <Routes>
         <Route path='/lendersagree' element={<Lendersagreement />} />
         <Route path='/about-us' element={<AboutPage />} />
+        <Route path='/contact' element={<ContactUs />} />
         <Route path='/what-we-do' element={<WhatwedoPage />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/signup' element={<SignupPage />} />

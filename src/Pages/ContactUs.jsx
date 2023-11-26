@@ -1,17 +1,6 @@
 // Import React and any additional dependencies
 import React from 'react';
 
-// Import any required CSS or external dependencies
-import './output.css'; // Assuming this is your stylesheet
-
-// Import any required images
-import manImage from '../assets/images/man.png';
-import mapImage from '../assets/images/map.png';
-import envelopeImage from '../assets/images/envelope.png';
-import phoneImage from '../assets/images/phone.png';
-import clockImage from '../assets/images/clock.png';
-import locationImage from '../assets/images/location.png';
-
 // Create the React component
 const ContactPage = () => {
   return (
