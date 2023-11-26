@@ -72,7 +72,7 @@ const BorrowerSectionThree = () => {
             </p>
             <Link to='/community'>
               <Button
-                className='text-[#FFFFFF] bg-[#003399] text-sm py-1.5 px-5 mb-4 rounded-xl'
+                className='text-[#FFFFFF] bg-[#003399] text-sm py-1.5 px-5 mb-[30px] rounded-xl'
                 text='Join Community'
                 size='lg'
               />

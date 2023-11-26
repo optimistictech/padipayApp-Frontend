@@ -11,7 +11,7 @@ const BorrowerSectionFour = () => {
       <div>
         <BorrowersNavbar />
 
-        <section className='dashboard flex gap-16 mt-5 mr-10'>
+        <section className='dashboard mt-12 flex gap-16 mr-10'>
           {/* Card Section */}
           <div className="card-sec flex-col jusify-between gap-20">
           <div className="topCard flex">

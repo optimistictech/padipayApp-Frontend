@@ -1,8 +1,11 @@
 import React from 'react';
+import Navbar from '../Components/navBar/Navbar';
+import Footer from '../Components/Footer';
 
 const ContactUs = () => {
   return (
     <div>
+      <Navbar />
       {/* Contact section */}
       <section id='contact' className='mt-20'>
         <div className='md:relative'>
@@ -30,7 +33,7 @@ const ContactUs = () => {
       </section>
 
       {/* Support section */}
-      <section id='support' className='mt-40 px-20 mb-10'>
+      <section className='mt-40 px-20 mb-10'>
         <h2 className='font-bold text-2xl text-primary mb-5'>
           Customer Support:
         </h2>
@@ -44,12 +47,11 @@ const ContactUs = () => {
               className='w-[500px]'
             />
           </div>
-          <div>{/* Support details go here */}</div>
         </div>
       </section>
 
       {/* Enquiry section */}
-      <section id='enquiry' className='px-20 mb-10'>
+      <section className='px-20 mb-10'>
         <div>
           <h3 className='font-bold text-2xl text-primary mb-5'>
             Business Inquiries:
@@ -63,9 +65,10 @@ const ContactUs = () => {
           </p>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };
 
-// Export the component
 export default ContactUs;
