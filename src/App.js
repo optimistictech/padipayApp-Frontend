@@ -8,11 +8,12 @@ import CommunityPage from './Pages/CommunityPage';
 // import Navbar from './Components/Navbar';
 // import Footer from './Components/Footer';
 // import PadiLogo from './Components/PadiLogo';
+// import TermsandConditionPage from './Pages/TermsandConditionPage';
+// import MobileStore from './Components/Sections/MobileStore';
 
 import LendersBorrowers from './Pages/LendersBorrowers';
 import LoginPage from './Pages/LoginPage';
 import ContactUs from './Pages/ContactUs';
-// import TermsandConditionPage from './Pages/TermsandConditionPage';
 import WhatwedoPage from './Pages/WhatwedoPage';
 import Lendersagreement from './Pages/LendersAgreementPage';
 import BlogPage from './Pages/BlogPage';
@@ -20,8 +21,6 @@ import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 import Calculator from './Components/Calculator/Calculator';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
-
-// import MobileStore from './Components/Sections/MobileStore';
 
 import BorrowersDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
 import BorrowersSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerSectionTwo';
