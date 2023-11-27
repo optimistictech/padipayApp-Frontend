@@ -25,7 +25,7 @@ const NavbarUl = () => {
         </Link>
       </li>
       <li>
-        <Link to='/contact-us' className=' text-slate-50 hover:text-slate-300'>
+        <Link to='/contact' className=' text-slate-50 hover:text-slate-300'>
           Contact us
         </Link>
       </li>
