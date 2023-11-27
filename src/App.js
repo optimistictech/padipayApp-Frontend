@@ -20,20 +20,20 @@ import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 import MobileStore from './Components/Sections/MobileStore';
-import LendersDashboard from './Pages/dashboard/LendersDashboard/LendersDashboard';
-import BorrowersDashboard from './Pages/dashboard/BorrowersDashboard/BorrowerDashboard';
-import BorrowersSectionTwo from './Pages/dashboard/BorrowersDashboard/BorrowerSectionTwo';
-import BorrowerSectionThree from './Pages/dashboard/BorrowersDashboard/BorrowerSectionThree';
-import BorrowerSectionFour from './Pages/dashboard/BorrowersDashboard/BorrowerSectionFour';
-import BorrowerSectionFive from './Pages/dashboard/BorrowersDashboard/BorrowerSectionFive';
-import BorrowerSectionSix from './Pages/dashboard/BorrowersDashboard/BorrowerSectionSix';
+import LendersDashboard from './Pages/dashboard/lendersDashboard/LendersDashboard';
+import BorrowersDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
+import BorrowersSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerSectionTwo';
+import BorrowerSectionThree from './Pages/dashboard/borrowersDashboard/BorrowerSectionThree';
+import BorrowerSectionFour from './Pages/dashboard/borrowersDashboard/BorrowerSectionFour';
+import BorrowerSectionFive from './Pages/dashboard/borrowersDashboard/BorrowerSectionFive';
+import BorrowerSectionSix from './Pages/dashboard/borrowersDashboard/BorrowerSectionSix';
 import Calculator from './Components/Calculator/Calculator';
 
-import LendersDashboardTwo from './Pages/dashboard/LendersDashboard/LendersDashboardTwo';
-import LendersDashboardThree from './Pages/dashboard/LendersDashboard/LendersDashboardThree';
-import LendersDashboardFour from './Pages/dashboard/LendersDashboard/LendersDashboardFour';
-import LendersDashboardFive from './Pages/dashboard/LendersDashboard/LendersDashboardFive';
-import LendersDashboardSix from './Pages/dashboard/LendersDashboard/LendersDashboardSix';
+import LendersDashboardTwo from './Pages/dashboard/lendersDashboard/LendersDashboardTwo';
+import LendersDashboardThree from './Pages/dashboard/lendersDashboard/LendersDashboardThree';
+import LendersDashboardFour from './Pages/dashboard/lendersDashboard/LendersDashboardFour';
+import LendersDashboardFive from './Pages/dashboard/lendersDashboard/LendersDashboardFive';
+import LendersDashboardSix from './Pages/dashboard/lendersDashboard/LendersDashboardSix';
 
 function App() {
   return (
