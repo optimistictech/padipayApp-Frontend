@@ -19,11 +19,18 @@ import Lendersagreement from './Pages/LendersAgreementPage';
 import BlogPage from './Pages/BlogPage';
 import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
+
 import Calculator from './Components/Calculator/Calculator';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 
+
 // import BorrowerDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
+
+// import MobileStore from './Components/Sections/MobileStore';
+
+
 import BorrowerSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerSectionTwo';
+
 import BorrowerSectionThree from './Pages/dashboard/borrowersDashboard/BorrowerSectionThree';
 import BorrowerSectionFour from './Pages/dashboard/borrowersDashboard/BorrowerSectionFour';
 import BorrowerSectionFive from './Pages/dashboard/borrowersDashboard/BorrowerSectionFive';
@@ -39,6 +46,7 @@ import LendersDashboardFive from './Pages/dashboard/lendersDashboard/LendersDash
 import LendersDashboardSix from './Pages/dashboard/lendersDashboard/LendersDashboardSix';
 
 import AdminDashboard from './Pages/dashboard/adminDashboard/AdminDashboard';
+
 
 function App() {
   return (
