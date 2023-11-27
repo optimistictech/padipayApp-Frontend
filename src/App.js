@@ -8,37 +8,28 @@ import CommunityPage from './Pages/CommunityPage';
 // import Navbar from './Components/Navbar';
 // import Footer from './Components/Footer';
 // import PadiLogo from './Components/PadiLogo';
+// import TermsandConditionPage from './Pages/TermsandConditionPage';
+// import MobileStore from './Components/Sections/MobileStore';
 
 import LendersBorrowers from './Pages/LendersBorrowers';
 import LoginPage from './Pages/LoginPage';
 import ContactUs from './Pages/ContactUs';
-// import TermsandConditionPage from './Pages/TermsandConditionPage';
 import WhatwedoPage from './Pages/WhatwedoPage';
 import Lendersagreement from './Pages/LendersAgreementPage';
 import BlogPage from './Pages/BlogPage';
 import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
-<<<<<<< HEAD
-import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
-import MobileStore from './Components/Sections/MobileStore';
-import LendersDashboard from './Pages/dashboard/lendersDashboard/LendersDashboard';
-import BorrowersDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
-import BorrowersSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerSectionTwo';
-import BorrowerSectionThree from './Pages/dashboard/borrowersDashboard/BorrowerSectionThree';
-import BorrowerSectionFour from './Pages/dashboard/borrowersDashboard/BorrowerSectionFour';
-import BorrowerSectionFive from './Pages/dashboard/borrowersDashboard/BorrowerSectionFive';
-import BorrowerSectionSix from './Pages/dashboard/borrowersDashboard/BorrowerSectionSix';
-=======
->>>>>>> 7fdb842e7bbfe27fb3e0def76c56adcd88971ac4
+
 import Calculator from './Components/Calculator/Calculator';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 
-<<<<<<< HEAD
-=======
+
 // import MobileStore from './Components/Sections/MobileStore';
 
-import BorrowersDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
-import BorrowersSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerSectionTwo';
+
+import BorrowerDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
+import BorrowerSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerSectionTwo';
+
 import BorrowerSectionThree from './Pages/dashboard/borrowersDashboard/BorrowerSectionThree';
 import BorrowerSectionFour from './Pages/dashboard/borrowersDashboard/BorrowerSectionFour';
 import BorrowerSectionFive from './Pages/dashboard/borrowersDashboard/BorrowerSectionFive';
@@ -47,17 +38,14 @@ import BorrowerDashboardSeven from './Pages/dashboard/borrowersDashboard/Borrowe
 import BorrowerDashboardEight from './Pages/dashboard/borrowersDashboard/BorrowerDashboardEight';
 
 import LendersDashboard from './Pages/dashboard/lendersDashboard/LendersDashboard';
->>>>>>> 7fdb842e7bbfe27fb3e0def76c56adcd88971ac4
 import LendersDashboardTwo from './Pages/dashboard/lendersDashboard/LendersDashboardTwo';
 import LendersDashboardThree from './Pages/dashboard/lendersDashboard/LendersDashboardThree';
 import LendersDashboardFour from './Pages/dashboard/lendersDashboard/LendersDashboardFour';
 import LendersDashboardFive from './Pages/dashboard/lendersDashboard/LendersDashboardFive';
 import LendersDashboardSix from './Pages/dashboard/lendersDashboard/LendersDashboardSix';
-<<<<<<< HEAD
-=======
 
 import AdminDashboard from './Pages/dashboard/adminDashboard/AdminDashboard';
->>>>>>> 7fdb842e7bbfe27fb3e0def76c56adcd88971ac4
+
 
 function App() {
   return (
@@ -84,9 +72,8 @@ function App() {
         />
         <Route path='/' element={<LandingPage />} />
         <Route path='/calculator' element={<Calculator />} />
-
-        <Route path='/orrowersDashboard' element={<BorrowersDashboard />} />
-        <Route path='/borrowersDashboard2' element={<BorrowersSectionTwo />} />
+        <Route path='/borrowersDashboard' element={<BorrowerDashboard />} />
+        <Route path='/borrowersDashboard2' element={<BorrowerSectionTwo />} />
         <Route path='/borrowersDashboard3' element={<BorrowerSectionThree />} />
         <Route path='/borrowersDashboard4' element={<BorrowerSectionFour />} />
         <Route path='/borrowersDashboard5' element={<BorrowerSectionFive />} />

@@ -16,7 +16,7 @@ const LendersSideNav = () => {
   return (
     <div
       spacing={2}
-      className=' w-[30%] text-white bg-[#003399] font-primaryFont p-5'
+      className=' w-[27%] text-white bg-[#003399] font-primaryFont p-5'
     >
       {/* head */}
       <div className='px-3 py-2'>
