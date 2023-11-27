@@ -1,39 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-// import padiLogo from '../assets/padiLogo.png';
-import MenuItem from '@mui/material/MenuItem';
-import { TextField } from '@mui/material';
+import { Select, MenuItem } from '@mui/material';
 
 const LendersSideNav = () => {
-  // const profileDetails = [
-  //   {
-  //     text: 'Alfred Jimoh',
-  //   },
-  //   {
-  //     text: 'Change to a Borrower',
-  //     value: '',
-  //   },
-  // ];
+  const [accountType, setAccountType] = useState('borrower');
+
+  const toggleAccountChange = (event) => {
+    setAccountType(event.target.value);
+  };
+
+  const handleLinkClick = () => {
+    setAccountType(accountType === 'borrower' ? 'switch' : 'borrower');
+  };
+
   return (
-    <div className=' w-[28%] text-white bg-[#003399] font-primaryFont p-5'>
+    <div
+      spacing={2}
+      className=' w-[27%] text-white bg-[#003399] font-primaryFont p-5'
+    >
       {/* head */}
       <div className='px-3 py-2'>
-        {/* <img src={padiLogo} alt='padiLogo' /> */}
         <span className=' font-bold'>Hello! Padi-Lender</span>
       </div>
 
       <hr className='font-bold my-4' />
       {/* Name */}
-      <div className='lg:flex flex-row justify-between items-center px-3 '>
-        <Link to='/' className='flex gap-8 items-center py-4'>
-          <p className='flex gap-1'>
+      <div
+        className='lg:flex flex-row justify-between items-center px-3'
+        onClick={handleLinkClick}
+      >
+        <Link
+          to={
+            accountType === 'borrower'
+              ? '/lendersDashboard'
+              : '/borrowersDashboard'
+          }
+          className='flex gap-8 items-center py-4 cursor-pointer'
+        >
+          <p className='flex items-center gap-1'>
             {/* img icon */}
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
               viewBox='0 0 24 24'
               strokeWidth={1.5}
-              stroke='currentColor'
+              stroke='white'
               className='w-6 h-6'
             >
               <path
@@ -42,16 +53,20 @@ const LendersSideNav = () => {
                 d='M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z'
               />
             </svg>
-            <span> Alfred Jimoh</span>
+            <span>
+              {accountType === 'borrower'
+                ? 'Alfred Jimoh'
+                : 'Switch to a Borrower'}
+            </span>
           </p>
-          {/* down arrow */}
           <svg
             xmlns='http://www.w3.org/2000/svg'
             fill='none'
             viewBox='0 0 24 24'
             strokeWidth={1.5}
             stroke='currentColor'
-            className='w-6 h-6'
+            className='w-6 h-6 cursor-pointer'
+            onClick={toggleAccountChange}
           >
             <path
               strokeLinecap='round'
@@ -60,6 +75,17 @@ const LendersSideNav = () => {
             />
           </svg>
         </Link>
+        {/* down arrow */}
+        <Select
+          value={accountType}
+          onChange={toggleAccountChange}
+          variant='outlined'
+          className='cursor-pointer'
+          style={{ display: 'none' }}
+        >
+          <MenuItem value='borrower'>Alfred Jimoh</MenuItem>
+          <MenuItem value='switch'>Switch to a Borrower</MenuItem>
+        </Select>
         {/* <Link to='/'>Change Account Type</Link> */}
       </div>
 
