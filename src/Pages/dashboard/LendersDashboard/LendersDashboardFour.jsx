@@ -1,47 +1,46 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BorrowersNavbar from '../../../Components/Auth/Dashboard/headerNavBar/BorrowersNavbarListing';
-import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/BorrowersSideNav';
-import SettingsSection from '../../../Components/SettingsSection'
+import LendersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/LendersSideNav';
+import LendersNavbarVerify from '../../../Components/Auth/Dashboard/headerNavBar/LendersNavbarVerify';
+import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard';
+import Button from '../../../Components/Button';
 
-const BorrowerSectionFour = () => {
+const LendersDashboardFour = () => {
   return (
-    <div className='lg:flex justify-between items-start'>
-      <BorrowersSideNav />
-      <div>
-        <BorrowersNavbar />
-
-        <section className='dashboard mt-12 flex gap-16 mr-10'>
-          {/* Card Section */}
-          <div className="card-sec flex-col jusify-between gap-20">
-          <div className="topCard flex">
-          <div className='card__container p-4 rounded bg-white shadow'>
+    <div className='lg:flex w-full'>
+      <LendersSideNav />
+      <section>
+        <LendersNavbarVerify />
+        {/* body */}
+        <main className='flex justify-center items-center gap-8 flex-col '>
+          <section className='flex justify-between items-center gap-5 mx-4 mt-10'>
+            <div className='card__container p-4 rounded bg-white shadow'>
               {/* Card Image */}
               <div className='card__container__img -mt-12'>
                 <img
-                  src='https://ik.imagekit.io/ffdguzut1/bg%20-%20graph.png'
+                  src='https://ik.imagekit.io/ffdguzut1/bg%20-%20graph4.png'
                   alt='Bg-Graph'
                   className='mb-[-50px] z-10'
                 />
               </div>
               {/* Card Content */}
               <div className='mt-14'>
-                <div className=' px-4'>
+                <div className=''>
                   <h3 className='text-blue-700 text-lg font-semibold'>
                     Collins Frank
                   </h3>
                   <p className='text-gray-500 text-sm'>10% Interest Rate</p>
+                </div>
+                <div className='card__container__content__rate'>
                   <p className='text-xl'>₦500,000</p>
                 </div>
-                
               </div>
-              <Link to='/lendersDashboard'>
-                <button className='mt-5 mb-10 block mx-auto outline-none border-none rounded bg-gray-300 text-black text-center text-sm font-normal py-2 px-4'>
-                  Match with Lender
+              <Link to='/lendersDashboard5'>
+                <button className='mt-5 outline-none border-none rounded bg-gray-300 text-black text-center text-sm font-normal py-2 px-4'>
+                  Match with Borrower
                 </button>
               </Link>
             </div>
-
             {/* Card-2 */}
             <div className='card__container p-4 rounded bg-white shadow'>
               {/* Card Image */}
@@ -54,27 +53,24 @@ const BorrowerSectionFour = () => {
               </div>
               {/* Card Content */}
               <div className='mt-14'>
-                <div className='px-4'>
+                <div className=''>
                   <h3 className='text-blue-700 text-lg font-semibold'>
                     Collins Frank
                   </h3>
                   <p className='text-gray-500 text-sm'>10% Interest Rate</p>
+                </div>
+                <div className='card__container__content__rate'>
                   <p className='text-xl'>₦500,000</p>
                 </div>
-                
               </div>
               <Link to='/lendersDashboard'>
-                <button className='mt-5 block mx-auto outline-none border-none rounded bg-gray-300 text-black text-center text-sm font-normal py-2 px-4'>
-                  Match with Lender
+                <button className='mt-5 outline-none border-none rounded bg-gray-300 text-black text-center text-sm font-normal py-2 px-4'>
+                  Match with Borrower
                 </button>
               </Link>
             </div>
-
-          </div>
-          {/* bottom-card */}
-          <div className="bottom-card flex">
-             {/* Card-3 */}
-             <div className='card__container p-4 rounded bg-white shadow'>
+            {/* Card-3 */}
+            <div className='card__container p-4 rounded bg-white shadow'>
               {/* Card Image */}
               <div className='card__container__img -mt-12'>
                 <img
@@ -85,18 +81,19 @@ const BorrowerSectionFour = () => {
               </div>
               {/* Card Content */}
               <div className='mt-14'>
-                <div className='px-4'>
+                <div className=''>
                   <h3 className='text-blue-700 text-lg font-semibold'>
                     Ajoke Badmus
                   </h3>
                   <p className='text-gray-500 text-sm'>10% Interest Rate</p>
+                </div>
+                <div className='card__container__content__rate'>
                   <p className='text-xl'>₦500,000</p>
                 </div>
-                
               </div>
               <Link to='/lendersDashboard'>
-                <button className='mt-5 mt-5 block mx-auto outline-none border-none rounded bg-gray-300 text-black text-center text-sm font-normal py-2 px-4'>
-                  Match with Lender
+                <button className='mt-5 outline-none border-none rounded bg-gray-300 text-black text-center text-sm font-normal py-2 px-4'>
+                  Match with Borrower
                 </button>
               </Link>
             </div>
@@ -112,36 +109,35 @@ const BorrowerSectionFour = () => {
               </div>
               {/* Card Content */}
               <div className='mt-14'>
-                <div className='px-4'>
+                <div className=''>
                   <h3 className='text-blue-700 text-lg font-semibold'>
                     Ajoke Badmus
                   </h3>
                   <p className='text-gray-500 text-sm'>10% Interest Rate</p>
+                </div>
+                <div className='card__container__content__rate'>
                   <p className='text-xl'>₦500,000</p>
                 </div>
-                
               </div>
               <Link to='/lendersDashboard'>
-                <button className='mt-5 block mx-auto outline-none border-none rounded bg-gray-300 text-black text-center text-sm font-normal py-2 px-4'>
-                  Match with Lender
+                <button className='mt-5 outline-none border-none rounded bg-gray-300 text-black text-center text-sm font-normal py-2 px-4'>
+                  Match with Borrower
                 </button>
               </Link>
             </div>
-
-          </div>
-          </div>
-          {/* settings section - column */}
-         <SettingsSection/>
-
-
-           
           </section>
 
-    
-        </div>
-      
-   </div>
+          <div className=' hover:text-md '>
+            <Link to='/'>
+              <Button text={'View All'} />
+            </Link>
+          </div>
+        </main>
+
+        <FooterDashboard />
+      </section>
+    </div>
   );
 };
 
-export default BorrowerSectionFour;
+export default LendersDashboardFour;

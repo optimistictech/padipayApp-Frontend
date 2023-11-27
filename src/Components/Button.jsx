@@ -4,7 +4,7 @@ export const Button = ({ text, className, size, noborder }) => {
   const mapSizeToStyle = {
     sm: "px-4 py-2",
     md: "px-5 py-3 text-lg font-medium",
-    lg: "px-12 py-2",
+    lg: "w-[190px] py-2",
     "2xl": "px-16 py-3",
   };
 

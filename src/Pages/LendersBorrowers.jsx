@@ -24,7 +24,7 @@ function LendersBorrowers() {
             <Link
               to='/lendersDashboard'
               target='_blank'
-              className='py-12 px-10 font-bold pointer text-whiteColor shadow-lg text-4xl w-80 border-4 border-whiteColor bg-primary'
+              className='py-5 px-10 font-bold pointer text-whiteColor shadow-lg text-4xl w-80 border-4 border-whiteColor bg-primary'
             >
               Lender
             </Link>
@@ -56,7 +56,7 @@ function LendersBorrowers() {
             <Link
               to='/borrowersDashboard'
               target='_blank'
-              className='py-12 px-10 font-bold pointer text-whiteColor shadow-lg text-4xl w-80 border-4 border-whiteColor bg-lowergrey'
+              className='py-5 px-10 font-bold pointer text-whiteColor shadow-lg text-4xl w-80 border-4 border-whiteColor bg-lowergrey'
             >
               Borrower
             </Link>
