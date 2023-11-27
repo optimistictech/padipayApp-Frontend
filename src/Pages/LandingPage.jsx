@@ -37,7 +37,7 @@ const LandingPage = () => {
               marketplace that connects borrowers seeking loans with investors
               looking to invest in loan opportunities.
             </p>
-
+            <h1>Update</h1>
             <div className=' hover:text-md'>
               <Link to='/signup'>
                 <Button text='Get Started' size='md' />
