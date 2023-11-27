@@ -2,9 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import Button from '../../../Button';
 
-const BorrowersNavbarV = () => {
-    return (
-        <main className='w-full mX-8 font-primaryFont flex flex-col pr-12'>
+
+const BorrowersNavbarListing = () => {
+  return (
+    <main className='w-full mX-8 font-primaryFont flex flex-col '>
           {/* LEFT CONTENT */}
           <header className='p-5 flex justify-between w-full items-center'>
             <div className=''>
@@ -117,6 +118,12 @@ const BorrowersNavbarV = () => {
             <p class=' text-primary border px-4 py-1 border-primary rounded'>
               Verified
             </p>
+
+            <div className=' hover:text-md'>
+              <Link to='/signup'>
+                <Button text={'Lender Listing'} />
+              </Link>
+            </div>
     
             {/* btn */}
             <div className=' hover:text-md'>
@@ -126,7 +133,7 @@ const BorrowersNavbarV = () => {
             </div>
           </section>
         </main>
-      );
+  )
 }
 
-export default BorrowersNavbarV
+export default BorrowersNavbarListing
