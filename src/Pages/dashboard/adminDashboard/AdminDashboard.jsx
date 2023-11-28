@@ -11,7 +11,7 @@ const AdminDashboard = () => {
       <BorrowersNavBar/>
       {/* top boxes */}
       <div className="flex justify-between gap-4 pl-5 py-10 pr-10">
-            <div id="viewCard" className="shadow w-[160px]">
+            <div id="viewCard" className="shadow w-[220px]">
               <div id="top_content" className="flex justify-between p-4">
                 <div
                   className="topleft_icon bg-primary py-3 px-4 text-white rounded-md relative bottom-10"
@@ -35,7 +35,7 @@ const AdminDashboard = () => {
               </div>
             </div>
 
-            <div id="viewCard" className="shadow w-[160px]">
+            <div id="viewCard" className="shadow w-[220px]">
               <div id="top_content" className="flex justify-between p-4">
                 <div
                   className="topleft_icon bg-[#E93B77] py-3 px-4 text-white rounded-md relative bottom-10"
@@ -59,7 +59,7 @@ const AdminDashboard = () => {
               </div>
             </div>
 
-            <div id="viewCard" className="shadow w-[160px]">
+            <div id="viewCard" className="shadow w-[220px]">
               <div id="top_content" className="flex justify-between p-4">
                 <div
                   className="topleft_icon bg-[#63B967] py-3 px-4 text-white rounded-md relative bottom-10"
@@ -83,7 +83,7 @@ const AdminDashboard = () => {
               </div>
             </div>
 
-            <div id="viewCard" className="shadow w-[160px]">
+            <div id="viewCard" className="shadow w-[220px]">
               <div id="top_content" className="flex justify-between p-4">
                 <div
                   className="topleft_icon bg-[#439DEE] py-3 px-4 text-white rounded-md relative bottom-10"
