@@ -46,7 +46,8 @@ import LendersDashboardFive from './Pages/dashboard/lendersDashboard/LendersDash
 import LendersDashboardSix from './Pages/dashboard/lendersDashboard/LendersDashboardSix';
 
 import AdminDashboard from './Pages/dashboard/adminDashboard/AdminDashboard';
-
+import AdminDashboard2 from './Pages/dashboard/adminDashboard/AdminDashboard2';
+import AdminDashboard3 from './Pages/dashboard/adminDashboard/AdminDashboard3';
 
 function App() {
   return (
@@ -79,14 +80,8 @@ function App() {
         <Route path='/borrowersDashboard4' element={<BorrowerSectionFour />} />
         <Route path='/borrowersDashboard5' element={<BorrowerSectionFive />} />
         <Route path='/borrowersDashboard6' element={<BorrowerSectionSix />} />
-        <Route
-          path='/borrowersDashboard7'
-          element={<BorrowerDashboardSeven />}
-        />
-        <Route
-          path='/borrowersDashboard8'
-          element={<BorrowerDashboardEight />}
-        />
+        <Route path='/borrowersDashboard7' element={<BorrowerDashboardSeven />}/>
+        <Route path='/borrowersDashboard8' element={<BorrowerDashboardEight />}/>
 
         <Route path='/lendersDashboard' element={<LendersDashboard />} />
         <Route path='/lendersDashboard2' element={<LendersDashboardTwo />} />
@@ -96,6 +91,8 @@ function App() {
         <Route path='/lendersDashboard6' element={<LendersDashboardSix />} />
 
         <Route path='/adminDashboard' element={<AdminDashboard />} />
+        <Route path='/adminDashboard2' element={<AdminDashboard2 />} />
+        <Route path='/adminDashboard3' element={<AdminDashboard3 />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
