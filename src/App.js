@@ -28,13 +28,12 @@ import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 
 // import MobileStore from './Components/Sections/MobileStore';
 
-
-import BorrowerSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerSectionTwo';
-
-import BorrowerSectionThree from './Pages/dashboard/borrowersDashboard/BorrowerSectionThree';
-import BorrowerSectionFour from './Pages/dashboard/borrowersDashboard/BorrowerSectionFour';
-import BorrowerSectionFive from './Pages/dashboard/borrowersDashboard/BorrowerSectionFive';
-import BorrowerSectionSix from './Pages/dashboard/borrowersDashboard/BorrowerSectionSix';
+import BorrowerDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
+import BorrowerSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerDashboardTwo';
+import BorrowerSectionThree from './Pages/dashboard/borrowersDashboard/BorrowerDashboardThree';
+import BorrowerSectionFour from './Pages/dashboard/borrowersDashboard/BorrowerDashboardFour';
+import BorrowerSectionFive from './Pages/dashboard/borrowersDashboard/BorrowerDashboardFive';
+import BorrowerSectionSix from './Pages/dashboard/borrowersDashboard/BorrowerDashboardSix';
 import BorrowerDashboardSeven from './Pages/dashboard/borrowersDashboard/BorrowerDashboardSeven';
 import BorrowerDashboardEight from './Pages/dashboard/borrowersDashboard/BorrowerDashboardEight';
 
@@ -74,7 +73,7 @@ function App() {
         />
         <Route path='/' element={<LandingPage />} />
         <Route path='/calculator' element={<Calculator />} />
-        {/* <Route path='/borrowersDashboard' element={<BorrowerDashboard />} /> */}
+        <Route path='/borrowersDashboard' element={<BorrowerDashboard />} />
         <Route path='/borrowersDashboard2' element={<BorrowerSectionTwo />} />
         <Route path='/borrowersDashboard3' element={<BorrowerSectionThree />} />
         <Route path='/borrowersDashboard4' element={<BorrowerSectionFour />} />
