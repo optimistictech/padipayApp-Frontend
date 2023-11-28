@@ -2,11 +2,11 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import LendersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/LendersSideNav';
 import LendersNavbar from '../../../Components/Auth/Dashboard/headerNavBar/LendersNavbar';
-import BarGraph from '../../../Components/graph/BarGraph';
 import LineGraph from '../../../Components/graph/LineGraph';
 import { MdAccessTime } from 'react-icons/md';
 import Uploader from '../../../Components/Sections/upload/Uploader';
 import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard';
+import BarGraph from '../../../Components/graph/BarGraph';
 
 const LendersDashboard = () => {
   return (
