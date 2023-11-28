@@ -24,10 +24,11 @@ import Calculator from './Components/Calculator/Calculator';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 
 
+// import BorrowerDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
+
 // import MobileStore from './Components/Sections/MobileStore';
 
 
-import BorrowerDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
 import BorrowerSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerSectionTwo';
 
 import BorrowerSectionThree from './Pages/dashboard/borrowersDashboard/BorrowerSectionThree';
@@ -72,7 +73,7 @@ function App() {
         />
         <Route path='/' element={<LandingPage />} />
         <Route path='/calculator' element={<Calculator />} />
-        <Route path='/borrowersDashboard' element={<BorrowerDashboard />} />
+        {/* <Route path='/borrowersDashboard' element={<BorrowerDashboard />} /> */}
         <Route path='/borrowersDashboard2' element={<BorrowerSectionTwo />} />
         <Route path='/borrowersDashboard3' element={<BorrowerSectionThree />} />
         <Route path='/borrowersDashboard4' element={<BorrowerSectionFour />} />
