@@ -24,7 +24,6 @@ import Calculator from './Components/Calculator/Calculator';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 
 
-// import BorrowerDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
 
 // import MobileStore from './Components/Sections/MobileStore';
 
