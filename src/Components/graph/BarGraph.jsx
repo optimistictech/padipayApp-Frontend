@@ -22,7 +22,7 @@ const BarGraph = () => {
     
       return (
         <div>
-          <Chart options={chartData.options} series={chartData.series} type="bar" height={270} />
+          <Chart options={chartData.options} bgColor='warning' series={chartData.series} type="bar" height={270} />
         </div>
       );
 }
