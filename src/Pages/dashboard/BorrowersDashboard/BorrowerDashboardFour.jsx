@@ -6,12 +6,12 @@ import SettingsSection from '../../../Components/SettingsSection'
 
 const BorrowerSectionFour = () => {
   return (
-    <div className='lg:flex justify-between items-start'>
-      <BorrowersSideNav />
-      <div>
+    <div className='lg:flex justify-between  items-start'>
+      <BorrowersSideNav  />
+      <div className='pb-8'>
         <BorrowersNavbar />
 
-        <section className='dashboard mt-12 flex gap-16 mr-10'>
+        <section className='dashboard flex pt-6 gap-16 mr-10'>
           {/* Card Section */}
           <div className="card-sec flex-col jusify-between gap-20">
           <div className="topCard flex">
