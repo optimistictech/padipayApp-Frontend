@@ -1,31 +1,63 @@
 import React from 'react'
-import { MDBProgress, MDBProgressBar } from 'mdb-react-ui-kit';
+import PropTypes from 'prop-types';
+import LinearProgress from '@mui/material/LinearProgress';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
-
-const ProgressBar = () => {
+function LinearProgressWithLabel({ value, labelValue }) {
   return (
-    <>
-      <MDBProgress>
-        <MDBProgressBar striped width='10' valuemin={0} valuemax={100} />
-      </MDBProgress>
-      <br />
-      <MDBProgress>
-        <MDBProgressBar striped bgColor='success' width='25' valuemin={0} valuemax={100}></MDBProgressBar>
-      </MDBProgress>
-      <br />
-      <MDBProgress>
-        <MDBProgressBar striped bgColor='info' width='50' valuemin={0} valuemax={100} />
-      </MDBProgress>
-      <br />
-      <MDBProgress>
-        <MDBProgressBar striped bgColor='warning' width='75' valuemin={0} valuemax={100} />
-      </MDBProgress>
-      <br />
-      <MDBProgress>
-        <MDBProgressBar striped bgColor='danger' width='100' valuemin={0} valuemax={100} />
-      </MDBProgress>
-    </>
-  )
+    <Box sx={{ display: 'flex', alignItems: 'center' }}>
+      <Box sx={{ width: '100%', mr: 1 }}>
+      <LinearProgress variant="determinate" sx={{ height: 10, borderRadius: 5 }} value={value} />
+      </Box>
+      <Box sx={{ minWidth: 35 }}>
+        <Typography variant="body2" color="text.secondary">
+          {labelValue !== undefined ? `${labelValue}%` : `${Math.round(value)}%`}
+        </Typography>
+      </Box>
+    </Box>
+  );
 }
+
+LinearProgressWithLabel.propTypes = {
+  value: PropTypes.number.isRequired,
+  labelValue: PropTypes.string, // You can change the prop type according to your needs
+};
+
+const ProgressBar = ({ labelValue }) => {
+  const [progress, setProgress] = React.useState(10);
+
+  React.useEffect(() => {
+    const timer = setInterval(() => {
+      setProgress((prevProgress) => {
+        const nextProgress = prevProgress >= 100 ? 10 : prevProgress + 10;
+        
+        // If you want to stop when progress reaches a certain value, modify the condition
+        if (nextProgress >= 50) {
+          clearInterval(timer);
+        }
+
+        return nextProgress;
+      });
+    }, 800);
+
+    // Cleanup function to clear the interval when the component is unmounted
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
+  return (
+    <Box sx={{ width: '100%' }}>
+      {/* Pass labelValue prop to set a custom label value */}
+      <LinearProgressWithLabel value={progress} labelValue={labelValue} />
+    </Box>
+  );
+};
+
+ProgressBar.propTypes = {
+  labelValue: PropTypes.string, // You can change the prop type according to your needs
+};
+
 
 export default ProgressBar
