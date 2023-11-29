@@ -157,7 +157,10 @@ const LendersSideNav = () => {
       </Link>
 
       {/* Record */}
-      <Link to='/' className='flex gap-4 active items-center px-3 py-5 rounded'>
+      <Link
+        to='/adminDashboard'
+        className='flex gap-4 active items-center px-3 py-5 rounded'
+      >
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
