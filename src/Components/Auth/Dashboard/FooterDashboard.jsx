@@ -11,7 +11,7 @@ const FooterDashboard = () => {
       {/* 1 */}
       <Link
         to='/'
-        className='group hover:bg-slate-50 h-32 shadow rounded p-5 flex gap-5 items-center'
+        className='group  hover:bg-slate-50 h-32 shadow rounded p-5 flex gap-5 items-center'
       >
         <div className='text-[50px]'>
           <IoMdSettings />

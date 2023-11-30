@@ -27,26 +27,26 @@ import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 
 // import MobileStore from './Components/Sections/MobileStore';
 
-import BorrowerDashboard from './Pages/dashboard/borrowersDashboard/BorrowerDashboard';
-import BorrowerSectionTwo from './Pages/dashboard/borrowersDashboard/BorrowerDashboardTwo';
-import BorrowerSectionThree from './Pages/dashboard/borrowersDashboard/BorrowerDashboardThree';
-import BorrowerSectionFour from './Pages/dashboard/borrowersDashboard/BorrowerDashboardFour';
-import BorrowerSectionFive from './Pages/dashboard/borrowersDashboard/BorrowerDashboardFive';
-import BorrowerSectionSix from './Pages/dashboard/borrowersDashboard/BorrowerDashboardSix';
-import BorrowerDashboardSeven from './Pages/dashboard/borrowersDashboard/BorrowerDashboardSeven';
-import BorrowerDashboardEight from './Pages/dashboard/borrowersDashboard/BorrowerDashboardEight';
+import BorrowerDashboard from './Pages/dashboard/borrower-dashboard/BorrowerDashboard';
+import BorrowerSectionTwo from './Pages/dashboard/borrower-dashboard/BorrowerDashboardTwo';
+import BorrowerSectionThree from './Pages/dashboard/borrower-dashboard/BorrowerDashboardThree';
+import BorrowerSectionFour from './Pages/dashboard/borrower-dashboard/BorrowerDashboardFour';
+import BorrowerSectionFive from './Pages/dashboard/borrower-dashboard/BorrowerDashboardFive';
+import BorrowerSectionSix from './Pages/dashboard/borrower-dashboard/BorrowerDashboardSix';
+import BorrowerDashboardSeven from './Pages/dashboard/borrower-dashboard/BorrowerDashboardSeven';
+import BorrowerDashboardEight from './Pages/dashboard/borrower-dashboard/BorrowerDashboardEight';
 
-import LendersDashboard from './Pages/dashboard/lendersDashboard/LendersDashboard';
-import LendersDashboardTwo from './Pages/dashboard/lendersDashboard/LendersDashboardTwo';
-import LendersDashboardThree from './Pages/dashboard/lendersDashboard/LendersDashboardThree';
-import LendersDashboardFour from './Pages/dashboard/lendersDashboard/LendersDashboardFour';
-import LendersDashboardFive from './Pages/dashboard/lendersDashboard/LendersDashboardFive';
-import LendersDashboardSix from './Pages/dashboard/lendersDashboard/LendersDashboardSix';
+import LendersDashboard from './Pages/dashboard/lender-dashboard/LendersDashboard';
+import LendersDashboardTwo from './Pages/dashboard/lender-dashboard/LendersDashboardTwo';
+import LendersDashboardThree from './Pages/dashboard/lender-dashboard/LendersDashboardThree';
+import LendersDashboardFour from './Pages/dashboard/lender-dashboard/LendersDashboardFour';
+import LendersDashboardFive from './Pages/dashboard/lender-dashboard/LendersDashboardFive';
+import LendersDashboardSix from './Pages/dashboard/lender-dashboard/LendersDashboardSix';
 
-import AdminDashboard from './Pages/dashboard/adminDashboard/AdminDashboard';
-import AdminDashboard3 from './Pages/dashboard/adminDashboard/AdminDashboard3';
-import AdminDashboardInvestment from './Pages/dashboard/adminDashboard/AdminDashboardInvestment';
-import AdminDashboardLoans from './Pages/dashboard/adminDashboard/AdminDashboardLoans';
+import AdminDashboard from './Pages/dashboard/admin-dashboard/AdminDashboard';
+import AdminDashboard3 from './Pages/dashboard/admin-dashboard/AdminDashboard3';
+import AdminDashboardInvestment from './Pages/dashboard/admin-dashboard/AdminDashboardInvestment';
+import AdminDashboardLoans from './Pages/dashboard/admin-dashboard/AdminDashboardLoans';
 
 function App() {
   return (
