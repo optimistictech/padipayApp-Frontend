@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const AdminSideNav = () => {
   return (
-    <div className=' w-[20%]  overscroll-auto overflow-y-scroll text-white bg-[#003399] font-primaryFont p-5'>
+    <div className=' w-[28%]  overscroll-auto overflow-y-scroll text-white bg-[#003399] font-primaryFont p-5'>
       {/* head */}
       <div className='px-3 py-2'>
         {/* <img src={padiLogo} alt='padiLogo' /> */}
@@ -11,10 +11,10 @@ const AdminSideNav = () => {
       </div>
       <hr className='font-bold my-4' />
       {/* Name */}
-      <div className='lg:flex flex-row justify-between items-center px-3 '>
+      <div className='lg:flex text-white flex-row justify-between items-center px-3 '>
         <Link
           to='/adminDashboard'
-          className='flex gap-6 justify-between items-center py-4'
+          className='flex gap-6 text-white justify-between items-center py-4'
         >
           <p className='flex items-center gap-3'>
             {/* img icon */}
@@ -42,7 +42,7 @@ const AdminSideNav = () => {
       {/* dashboards */}
       <Link
         to='/adminDashboard'
-        className='flex gap-4 active items-center px-3 bg-[#4F4F52]  py-4 mt-5 rounded'
+        className='text-white flex gap-4 active items-center px-8 bg-[#E93B77]  py-4 mt-5 rounded'
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -64,7 +64,7 @@ const AdminSideNav = () => {
       {/* investments*/}
       <Link
         to='/adminDashboardInvestment'
-        className='flex gap-4 active items-center px-3 py-5 rounded'
+        className='text-white flex gap-4 active items-center px-3 py-5 rounded'
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -86,7 +86,7 @@ const AdminSideNav = () => {
       {/* lend */}
       <Link
         to='/adminDashboardLoans'
-        className='flex gap-4 items-center px-3 py-5 '
+        className='text-white flex gap-4 items-center px-3 py-5 '
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -103,12 +103,12 @@ const AdminSideNav = () => {
           />
         </svg>
 
-        <span className=''>Loans</span>
+        <span className='text-white'>Loans</span>
       </Link>
       {/* users */}
       <Link
         to='/drawer'
-        className='flex gap-4 active items-center px-3 py-5 rounded'
+        className='text-white flex gap-4 active items-center px-3 py-5 rounded'
       >
         <svg
           xmlns='http://www.w3.org/2000/svg'
@@ -125,10 +125,10 @@ const AdminSideNav = () => {
           />
         </svg>
 
-        <span className=''>Users</span>
+        <span className='text-white'>Users</span>
       </Link>
       {/* withdrawals*/}
-      <Link to='/' className='flex gap-4 active items-center px-3 py-5 rounded'>
+      <Link to='/' className='text-white flex gap-4 active items-center px-3 py-5 rounded'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
@@ -144,10 +144,10 @@ const AdminSideNav = () => {
           />
         </svg>
 
-        <span className=''>Withdrawals</span>
+        <span className='text-white'>Withdrawals</span>
       </Link>
       {/* Transactions */}
-      <Link to='/' className='flex gap-4 active items-center px-3 py-5 rounded'>
+      <Link to='/' className='text-white flex gap-4 active items-center px-3 py-5 rounded'>
         <svg
           xmlns='http://www.w3.org/2000/svg'
           fill='none'
@@ -173,7 +173,7 @@ const AdminSideNav = () => {
         {/* Transactions */}
         <Link
           to='/'
-          className='flex gap-4 active items-center px-3 py-5 rounded'
+          className='text-white flex gap-4 active items-center px-3 py-5 rounded'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -196,7 +196,7 @@ const AdminSideNav = () => {
         {/* Transactions */}
         <Link
           to='/'
-          className='flex gap-4 active items-center px-3 py-5 rounded'
+          className='text-white flex gap-4 active items-center px-3 py-5 rounded'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -219,7 +219,7 @@ const AdminSideNav = () => {
         {/* Transactions */}
         <Link
           to='/'
-          className='flex gap-4 active items-center px-3 py-5 rounded'
+          className='text-white flex gap-4 active items-center px-3 py-5 rounded'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
