@@ -21,7 +21,7 @@ const SignupPage = () => {
                 className='right-img mt-8'
               />
             </div>
-            <div className='flex gap-4 small-screen relative md:flex-col'>
+            <div className='flex gap-4 small-screen relative md:flex-col lg:flex-row'>
               <div className=' p-4 rounded-lg'>
                 <img
                   src={'https://ik.imagekit.io/gru3qfrss/appStore.png'}
@@ -38,7 +38,7 @@ const SignupPage = () => {
               </div>
             </div>
           </div>
-          <div className='bg-white rounded-md w-screen px-10 m-16 p-8'>
+          <div className='bg-white rounded-md w-full px-10 m-16 p-8'>
             <div className='text-center'>
               <h1 className='text-4xl'>
                 Create Your Account<span className='font-bold'></span>
@@ -57,10 +57,10 @@ const SignupPage = () => {
             </ button>
             {/* MAIN BODY - SIGNUP FORM */}
             <form name='loginForm' onsubmit='saveData(event) '>
-              <div className='relative my-6 '>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                className='border-2 border-black bg-[#F0F0F0] w-full  py-4'
                 label='Enter Your first Name'
                 variant='outlined'
                 id='lastName'
@@ -69,7 +69,7 @@ const SignupPage = () => {
                 <br />
               </div>
 
-              <div className='relative my-6'>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -82,7 +82,7 @@ const SignupPage = () => {
                 <br />
               </div>
 
-              <div className='relative my-6'>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-envelope absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -94,7 +94,7 @@ const SignupPage = () => {
                 <br />
               </div>
 
-              <div className='relative my-6'>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -105,7 +105,7 @@ const SignupPage = () => {
                 />
               </div>
 
-              <div className='relative my-6'>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -116,7 +116,7 @@ const SignupPage = () => {
                 />
               </div>
 
-              <div className='relative my-6'>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-phone absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -127,7 +127,7 @@ const SignupPage = () => {
                 />
               </div>
 
-              <div className='relative my-6'>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-location-dot absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -147,7 +147,7 @@ const SignupPage = () => {
                     value='terms'
                   />
                   <span className='text-sm'>
-                    I accepted all terms & conditions
+                    I accept all terms & conditions
                   </span>
                 </div>
               </div>

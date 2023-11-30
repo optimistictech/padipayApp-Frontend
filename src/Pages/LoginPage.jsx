@@ -6,7 +6,7 @@ import Button from '../Components/Button'
 
 const LoginPage = () => {
   return (
-    <div className='bg-[#003399] text-primaryFont h-screen flex flex-col justify-center'>
+    <div className='bg-[#003399] text-primaryFont h-full flex flex-col justify-center'>
       <div className='pt-10 flex justify-around gap-2 small-screen'>
         {/* LEFT SIDE */}
         <div className='flex flex-col relative items-center justify-center text-white w-screen'>
@@ -35,7 +35,7 @@ const LoginPage = () => {
 
           {/* LOGIN FORM */}
           <form name='loginForm' onsubmit='login(event)'>
-            <div className='relative my-6'>
+            <div className='relative my-6 w-full'>
               <i className='fa-solid fa-envelope absolute px-3.5 py-4 text-2xl'></i>
               <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -46,7 +46,7 @@ const LoginPage = () => {
                 />
               <br />
             </div>
-            <div className='relative my-6'>
+            <div className='relative my-6 w-full'>
               <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
               <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -56,7 +56,7 @@ const LoginPage = () => {
                 type='password'
                 />
             </div>
-            <div className='flex justify-between'>
+            <div className='w-full flex justify-between'>
               <div className='flex items-center gap-1'>
                 <input
                   type='checkbox'
