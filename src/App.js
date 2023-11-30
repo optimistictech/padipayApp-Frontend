@@ -19,11 +19,9 @@ import Lendersagreement from './Pages/LendersAgreementPage';
 import BlogPage from './Pages/BlogPage';
 import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
-
 import Calculator from './Components/Calculator/Calculator';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
-
-
+import SettingsPage from './Pages/SettingsPage'
 
 // import MobileStore from './Components/Sections/MobileStore';
 
@@ -48,7 +46,8 @@ import AdminDashboard3 from './Pages/dashboard/admin-dashboard/AdminDashboard3';
 import AdminDashboardInvestment from './Pages/dashboard/admin-dashboard/AdminDashboardInvestment';
 import AdminDashboardLoans from './Pages/dashboard/admin-dashboard/AdminDashboardLoans';
 
-import NonInterestDashboard from "./Pages/dashboard/admin-dashboard/AdminDashboard";
+import NonInterestDashboard from "./Pages/dashboard/non-interest-dashboard/NonInterestDashboard";
+import DeviceFinanceForm from "./Pages/dashboard/non-interest-dashboard/DeviceFinanceForm";
 
 function App() {
   return (
@@ -69,12 +68,11 @@ function App() {
         <Route path='/post-for-blog' element={<PostForBlog />} />
         <Route path='/account-type' element={<LendersBorrowers />} />
         <Route path='/privacy' element={<PrivacyPolicyPage />} />
-        <Route
-          path='/guarantor-agreement'
-          element={<GuarantorsAgreementPage />}
-        />
+        <Route path='/guarantor-agreement' element={<GuarantorsAgreementPage />}/>
         <Route path='/' element={<LandingPage />} />
         <Route path='/calculator' element={<Calculator />} />
+        <Route path='/settings' element={<SettingsPage />} />
+
         <Route path='/borrowersDashboard' element={<BorrowerDashboard />} />
         <Route path='/borrowersDashboard2' element={<BorrowerSectionTwo />} />
         <Route path='/borrowersDashboard3' element={<BorrowerSectionThree />} />
@@ -97,6 +95,8 @@ function App() {
         <Route path='/adminDashboardInvestment' element={<AdminDashboardInvestment />}/>
 
         <Route path='/NonInterestDashboard' element={<NonInterestDashboard />}/>
+        <Route path='/DeviceFinanceForm' element={<DeviceFinanceForm />}/>
+
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>

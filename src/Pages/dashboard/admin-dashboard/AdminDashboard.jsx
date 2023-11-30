@@ -190,11 +190,11 @@ const AdminDashboard = () => {
           <div className="">
             <h5 className=" font-bold">Investment Portfolio Distribution</h5>
             {/* PROGRESS SECTION FOR SECTION FOUR */}
-            <div className=" pt-6 ">
+            <div className="">
             <ProgressBar/>
             </div>
             
-          </div>
+            </div>
           
           <div className="pl-8">
           <h5 className=" font-bold">Lenders Account Summary</h5>
