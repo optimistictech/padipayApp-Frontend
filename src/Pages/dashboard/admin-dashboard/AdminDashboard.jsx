@@ -8,7 +8,7 @@ import ProgressBar from '../../../Components/ProgressBar';
 import TableOne from '../../../Components/AdminTables/TableOne'
 import TableTwo from '../../../Components/AdminTables/TableTwo';
 import TableThree from '../../../Components/AdminTables/TableThree';
-import ProgressBarTwo from '../../../Components/ProgressBarTwo'
+import { Link } from 'react-router-dom';
 
 const AdminDashboard = () => {
   return (
