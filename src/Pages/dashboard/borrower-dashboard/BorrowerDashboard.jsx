@@ -9,6 +9,7 @@ import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/Borr
 import BorrowersNavBar from '../../../Components/Auth/Dashboard/headerNavBar/BorrowersNavbar';
 
 const BorrowerDashboard = () => {
+  
   return (
     <div className='flex'>
       <BorrowersSideNav />
