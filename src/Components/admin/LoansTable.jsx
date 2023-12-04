@@ -48,7 +48,7 @@ const rows = [
   createData('Business', 'E', 305, 17.5, 67, 0, '6 months ago', 'active'),
 ];
 
-const LoanTable = () => {
+const LoansTable = () => {
   return (
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 700 }} aria-label='customized table'>
@@ -88,4 +88,4 @@ const LoanTable = () => {
   );
 };
 
-export default LoanTable;
+export default LoansTable;

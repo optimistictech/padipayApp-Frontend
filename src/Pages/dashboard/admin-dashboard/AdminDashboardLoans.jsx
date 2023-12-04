@@ -8,7 +8,7 @@ const AdminDashboardLoans = () => {
   return (
     <div className='flex bg-[#F0F2F5]'>
       <AdminSideNav />
-      <div className='w-[80%]'>
+      <div className='w-[100%]'>
         <AdminNavbar />
         <AdminNavbar2 />
         {/* Headings */}

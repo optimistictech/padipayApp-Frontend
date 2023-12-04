@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AdminNavbar = () => {
+const AdminNavbar = ({ text }) => {
   return (
     <main className='w-[100%] font-primaryFont flex '>
       {/* LEFT CONTENT */}
@@ -25,7 +25,9 @@ const AdminNavbar = () => {
               </svg>
               <span className='text-[#878585]'>Dashboard</span> Overview
             </p>
-            <p className='font-bold text-xl text-primary'>Admin</p>
+            <div className='font-bold text-xl text-primary'>
+              <p text='Admin'></p>{' '}
+            </div>
           </div>
         </div>
         {/* RIGHT CONTENT */}
