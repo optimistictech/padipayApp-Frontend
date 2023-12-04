@@ -63,7 +63,7 @@ const ContactUs = () => {
             questions about our terms, agreements, or anything else, please
             don't hesitate to get in touch.
           </p>
-        </div>
+    clearc    </div>
       </section>
 
       <Footer />
