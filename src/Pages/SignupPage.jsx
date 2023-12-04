@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { TextField } from '@mui/material';
-import Button from '../Components/Button'
+import Button from '../Components/Button';
 
 const SignupPage = () => {
   return (
@@ -54,17 +54,17 @@ const SignupPage = () => {
                 className='w-10'
               />
               <span>Sign up with Google</span>
-            </ button>
+            </button>
             {/* MAIN BODY - SIGNUP FORM */}
             <form name='loginForm' onsubmit='saveData(event) '>
               <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full  py-4'
-                label='Enter Your first Name'
-                variant='outlined'
-                id='lastName'
-                type='text'
+                  className='border-2 border-black bg-[#F0F0F0] w-full  py-4'
+                  label='Enter Your first Name'
+                  variant='outlined'
+                  id='lastName'
+                  type='text'
                 />
                 <br />
               </div>
@@ -72,24 +72,24 @@ const SignupPage = () => {
               <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Enter Your last Name'
-                variant='outlined'
-                id='lastName'
-                type='text'
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label='Enter Your last Name'
+                  variant='outlined'
+                  id='lastName'
+                  type='text'
                 />
-                
+
                 <br />
               </div>
 
               <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-envelope absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label=' Email Address'
-                variant='outlined'
-                id='lastName'
-                type='email'
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label=' Email Address'
+                  variant='outlined'
+                  id='lastName'
+                  type='email'
                 />
                 <br />
               </div>
@@ -97,44 +97,44 @@ const SignupPage = () => {
               <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Password'
-                variant='outlined'
-                id='password'
-                type='password'
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label='Password'
+                  variant='outlined'
+                  id='password'
+                  type='password'
                 />
               </div>
 
               <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Retype Password'
-                variant='outlined'
-                id='confirmPassword'
-                type='password'
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label='Retype Password'
+                  variant='outlined'
+                  id='confirmPassword'
+                  type='password'
                 />
               </div>
 
               <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-phone absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Phone Number'
-                variant='outlined'
-                id='phone'
-                type='number'
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label='Phone Number'
+                  variant='outlined'
+                  id='phone'
+                  type='number'
                 />
               </div>
 
               <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-location-dot absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Address'
-                variant='outlined'
-                id='address'
-                type='text'
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label='Address'
+                  variant='outlined'
+                  id='address'
+                  type='text'
                 />
               </div>
 
@@ -152,10 +152,14 @@ const SignupPage = () => {
                 </div>
               </div>
 
-              <Link to='/account-type' className='flex justify-center align-middle my-10' >
+              <Link
+                to='/lendersDashboard'
+                className='flex justify-center align-middle my-10'
+              >
                 <Button
                   text='Sign up'
-                  className='bg-[#003399] text-white  rounded-[10px] cursor-pointer ' size='lg'
+                  className='bg-[#003399] text-white  rounded-[10px] cursor-pointer '
+                  size='lg'
                 />
               </Link>
             </form>

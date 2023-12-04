@@ -1,15 +1,28 @@
 import React, { useEffect } from 'react';
 import Navbar from '../Components/navBar/Navbar';
 import Footer from '../Components/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 
 function LendersBorrowers() {
+  const navigate = useNavigate();
+
   useEffect(() => {
     Aos.init();
     Aos.refresh();
   }, []);
+
+  const handleLender = () => {
+    localStorage.setItem('type', 'lender');
+    navigate('/signup');
+  };
+
+  const handleBorrower = () => {
+    localStorage.setItem('type', 'borrower');
+    navigate('/signup');
+  };
+
   return (
     <div className='primaryFont'>
       <Navbar />
@@ -19,15 +32,16 @@ function LendersBorrowers() {
           kindly select your account type.
         </h1>
 
+        {/* LENDERS ACCOUNT TYPE */}
+
         <section className='w-[80%] m-auto flex justify-evenly pointer text-whiteColor text-center mb-40'>
           <div className='flex flex-col gap-5' data-aos='fade-up-right'>
-            <Link
-              to='/lendersDashboard'
-              target='_blank'
+            <button
+              onClick={handleLender}
               className='py-5 px-10 font-bold pointer text-whiteColor shadow-lg text-4xl w-80 border-4 border-whiteColor bg-primary'
             >
               Lender
-            </Link>
+            </button>
 
             <Link
               to='/'
@@ -52,14 +66,14 @@ function LendersBorrowers() {
             </Link>
           </div>
 
+          {/* BORROWER ACC TYPE */}
           <div className='flex flex-col gap-5' data-aos='fade-up-left'>
-            <Link
-              to='/borrowersDashboard'
-              target='_blank'
+            <button
+              onClick={handleBorrower}
               className='py-5 px-10 font-bold pointer text-whiteColor shadow-lg text-4xl w-80 border-4 border-whiteColor bg-lowergrey'
             >
               Borrower
-            </Link>
+            </button>
             <Link
               to='/'
               className='font-bold flex gap-3 items-center animate-pulse justify-center text-navColor hover:text-[#0044ffc0]'
