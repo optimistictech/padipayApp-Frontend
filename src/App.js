@@ -41,10 +41,13 @@ import LendersDashboardFour from './Pages/dashboard/lender-dashboard/LendersDash
 import LendersDashboardFive from './Pages/dashboard/lender-dashboard/LendersDashboardFive';
 import LendersDashboardSix from './Pages/dashboard/lender-dashboard/LendersDashboardSix';
 
+
+import Lenders from './Pages/Lenders';
 import AdminDashboard from './Pages/dashboard/admin-dashboard/AdminDashboard';
 import AdminDashboard3 from './Pages/dashboard/admin-dashboard/AdminDashboard3';
 import AdminDashboardInvestment from './Pages/dashboard/admin-dashboard/AdminDashboardInvestment';
 import AdminDashboardLoans from './Pages/dashboard/admin-dashboard/AdminDashboardLoans';
+
 
 import NonInterestDashboard from './Pages/dashboard/non-interest-dashboard/NonInterestDashboard';
 import DeviceFinanceForm from './Pages/dashboard/non-interest-dashboard/DeviceFinanceForm';
@@ -111,6 +114,9 @@ function App() {
         <Route path='/adminDashboard' element={<AdminDashboard />} />
         <Route path='/adminDashboardLoans' element={<AdminDashboardLoans />} />
         <Route path='/adminDashboard3' element={<AdminDashboard3 />} />
+
+        <Route path='/lenders' element={<Lenders />} />
+
         <Route
           path='/adminDashboardInvestment'
           element={<AdminDashboardInvestment />}
@@ -133,6 +139,7 @@ function App() {
           element={<NonInterestDashboard />}
         />
         <Route path='/DeviceFinanceForm' element={<DeviceFinanceForm />} />
+
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
