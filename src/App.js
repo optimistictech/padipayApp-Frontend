@@ -36,6 +36,7 @@ import BorrowerSectionSix from './Pages/dashboard/borrowersDashboard/BorrowerDas
 import BorrowerDashboardSeven from './Pages/dashboard/borrowersDashboard/BorrowerDashboardSeven';
 import BorrowerDashboardEight from './Pages/dashboard/borrowersDashboard/BorrowerDashboardEight';
 
+import Lenders from './Pages/Lenders';
 import LendersDashboard from './Pages/dashboard/lendersDashboard/LendersDashboard';
 import LendersDashboardTwo from './Pages/dashboard/lendersDashboard/LendersDashboardTwo';
 import LendersDashboardThree from './Pages/dashboard/lendersDashboard/LendersDashboardThree';
@@ -91,6 +92,7 @@ function App() {
         <Route path='/adminDashboard' element={<AdminDashboard />} />
         <Route path='/adminDashboard2' element={<AdminDashboard2 />} />
         <Route path='/adminDashboard3' element={<AdminDashboard3 />} />
+        <Route path='/lenders' element={<Lenders />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>
