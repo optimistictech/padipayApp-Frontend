@@ -58,6 +58,7 @@ import AdminWithdrawal from './Pages/dashboard/admin-dashboard/AdminWithdrawal';
 import AdminTransactions from './Pages/dashboard/admin-dashboard/AdminTransactions';
 
 function App() {
+  const baseUrl = "https://padipay-backend.onrender.com/v1/";
   return (
     <BrowserRouter>
       {/* <PadiLogo /> */}
@@ -69,8 +70,8 @@ function App() {
         <Route path='/about-us' element={<AboutPage />} />
         <Route path='/contact' element={<ContactUs />} />
         <Route path='/what-we-do' element={<WhatwedoPage />} />
-        <Route path='/login' element={<LoginPage />} />
-        <Route path='/signup' element={<SignupPage />} />
+        <Route path='/login' element={<LoginPage baseUrl={baseUrl}/>} />
+        <Route path='/signup' element={<SignupPage baseUrl={baseUrl} />} />
         <Route path='/community' element={<CommunityPage />} />
         <Route path='/blog' element={<BlogPage />} />
         <Route path='/post-for-blog' element={<PostForBlog />} />

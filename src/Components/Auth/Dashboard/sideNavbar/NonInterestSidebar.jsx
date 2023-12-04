@@ -105,7 +105,7 @@ const NonInterestSidebar = () => {
 
       <span className='text-white'>Loans</span>
     </Link>
-    {/* users */}
+    {/* Agreement Form */}
     <Link
       to='/drawer'
       className='text-white flex gap-4 active items-center px-3 py-5 rounded'
@@ -125,7 +125,7 @@ const NonInterestSidebar = () => {
         />
       </svg>
 
-      <span className='text-white'>Users</span>
+      <span className='text-white'>Agreement Form</span>
     </Link>
     {/* withdrawals*/}
     <Link to='/' className='text-white flex gap-4 active items-center px-3 py-5 rounded'>
