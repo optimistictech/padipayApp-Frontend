@@ -1,8 +1,88 @@
-import { Link } from 'react-router-dom';
-import { TextField } from '@mui/material';
-import Button from '../Components/Button'
+import {useState} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { TextField, CircularProgress } from '@mui/material';
+import Box from '@mui/material/Box';
+import Button from '../Components/Button';
+import SelectAccount from "../Components/SelectAccount";
+import SelectGender from "../Components/SelectGender";
+// import Alert from "../Components/Alert";
 
-const SignupPage = () => {
+const SignupPage = ({baseUrl}) => {
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [phone, setPhone] = useState("");
+  const [accountType, setAccountType] = useState("");
+  const [genderType, setGenderType] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [passwordType, setPasswordType] = useState("password");
+  const [loading, setLoading] = useState(false);
+  const [check, setCheck] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [alertType, setAlertType] = useState("");
+
+  const navigate = useNavigate()
+
+  // response part 
+  async function handleSignup(e){
+    e.preventDefault()
+    console.log(accountType)
+    console.log(check)
+    console.log(JSON.stringify({firstName, lastName, password, confirmPassword, accountType, genderType, phone}))
+    
+    if(password !== confirmPassword){
+      setErrorMessage("Both passwords field must match")
+      setAlertType("danger")
+      return;
+    }else if(check === false){
+      setErrorMessage("Agree to terms and conditions")
+      setAlertType("danger")
+      return;
+    }else{
+      
+      setLoading(true)
+      const response = await fetch(`${baseUrl}/auth/login`,{
+        method: "POST",
+        headers: {
+          "Content-Type" : "application/json"
+        },
+        body : JSON.stringify({firstName, lastName, email, password, accountType, gender:genderType, phone})
+      })
+      // extract data from response object
+      const data = await response.json()
+      console.log(response, data)
+      if (response) setLoading(false)
+      if (!response.ok) {
+        setErrorMessage(data.message)
+        setTimeout(()=>{
+          setErrorMessage("")
+        },5000)
+      }
+      if (response.ok){
+        localStorage.setItem("user", JSON.stringify(data))
+        if(data.user.accountType === 1){
+          console.log("accounttype")
+          navigate("/borrowersDashboard")
+        }
+        if(data.user.accountType === 2){
+          navigate("/lendersDashboard")
+        }
+      }
+    }
+
+  }
+  
+  function isChecked(e){
+    console.log(e.target)
+    if (e.target.value === "password"){
+      setPasswordType("text")
+    } if (e.target.value === "text"){
+      setPasswordType("password")
+    }
+  }
+
   return (
     <div className='bg-primary font-primaryFont'>
       <div className=' h-100vw py-6'>
@@ -21,7 +101,7 @@ const SignupPage = () => {
                 className='right-img mt-8'
               />
             </div>
-            <div className='flex gap-4 small-screen relative md:flex-col'>
+            <div className='flex gap-4 small-screen relative md:flex-col lg:flex-row'>
               <div className=' p-4 rounded-lg'>
                 <img
                   src={'https://ik.imagekit.io/gru3qfrss/appStore.png'}
@@ -38,7 +118,7 @@ const SignupPage = () => {
               </div>
             </div>
           </div>
-          <div className='bg-white rounded-md w-screen px-10 m-16 p-8'>
+          <div className='bg-white rounded-md w-full px-10 m-16 p-8'>
             <div className='text-center'>
               <h1 className='text-4xl'>
                 Create Your Account<span className='font-bold'></span>
@@ -55,21 +135,24 @@ const SignupPage = () => {
               />
               <span>Sign up with Google</span>
             </ button>
+
+            
             {/* MAIN BODY - SIGNUP FORM */}
-            <form name='loginForm' onsubmit='saveData(event) '>
-              <div className='relative my-6 '>
+            <form name='loginForm' onSubmit={handleSignup}>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                className='border-2 border-black bg-[#F0F0F0] w-full  py-4'
                 label='Enter Your first Name'
                 variant='outlined'
-                id='lastName'
+                id='firstName'
                 type='text'
+                onChange={e => setFirstName(e.target.value)}
                 />
                 <br />
               </div>
 
-              <div className='relative my-6'>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -77,12 +160,13 @@ const SignupPage = () => {
                 variant='outlined'
                 id='lastName'
                 type='text'
+                onChange={e => setLastName(e.target.value)}
                 />
                 
                 <br />
               </div>
 
-              <div className='relative my-6'>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-envelope absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -90,22 +174,32 @@ const SignupPage = () => {
                 variant='outlined'
                 id='lastName'
                 type='email'
+                onChange={e => setEmail(e.target.value)}
                 />
                 <br />
               </div>
-
-              <div className='relative my-6'>
-                <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
+                <div className='relative my-6 w-full'>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
                 label='Password'
                 variant='outlined'
                 id='password'
-                type='password'
+                type={passwordType}
+                onChange={e => setPassword(e.target.value)}
                 />
               </div>
+              <span className=' block  w-full'>
+              <input className='mr-4'
+                    type='checkbox'
+                    name='terms'
+                    id='terms'
+                    value={passwordType}
+                    onChange={(e) => isChecked(e)}
+                  />
+                  Show password
+              </span>
 
-              <div className='relative my-6'>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -113,10 +207,12 @@ const SignupPage = () => {
                 variant='outlined'
                 id='confirmPassword'
                 type='password'
+                onChange={e => setConfirmPassword(e.target.value)}
                 />
               </div>
+              
 
-              <div className='relative my-6'>
+              <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-phone absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -124,10 +220,11 @@ const SignupPage = () => {
                 variant='outlined'
                 id='phone'
                 type='number'
+                onChange={e => setPhone(e.target.value)}
                 />
               </div>
 
-              <div className='relative my-6'>
+              {/* <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-location-dot absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
@@ -135,29 +232,40 @@ const SignupPage = () => {
                 variant='outlined'
                 id='address'
                 type='text'
+                onChange={e => setA}
                 />
-              </div>
+              </div> */}
+               <SelectGender setGenderType={setGenderType}/>
 
-              <div className='flex justify-between'>
+              <SelectAccount setAccountType={setAccountType}/>
+
+              <div className='flex justify-between mt-10'>
                 <div className='flex items-center gap-1'>
                   <input
                     type='checkbox'
                     name='terms'
                     id='terms'
-                    value='terms'
+                    value={check}
+                    onChange={e => setCheck(e.target.value)}
                   />
                   <span className='text-sm'>
-                    I accepted all terms & conditions
+                    I accept all terms & conditions
                   </span>
                 </div>
               </div>
 
-              <Link to='/account-type' className='flex justify-center align-middle my-10' >
-                <Button
-                  text='Sign up'
-                  className='bg-[#003399] text-white  rounded-[10px] cursor-pointer ' size='lg'
-                />
-              </Link>
+           {/* <Link to='/account-type' className='flex justify-center align-middle my-10' size='lg'> */}
+           {loading ?
+            <Box sx={{ display: 'flex' }}>
+              <CircularProgress />
+            </Box>
+            :
+            <Button
+              text='Login'
+              type = "submit"
+              className='bg-[#003399] text-white  rounded-[10px] cursor-pointer' size="lg"
+            />
+            }
             </form>
 
             <p className='font-bold text-xl text-center'>
@@ -170,6 +278,9 @@ const SignupPage = () => {
           </div>
         </div>
       </div>
+      {/* {errorMessage && 
+        <Alert errorMessage={errorMessage} setErrorMessage={setErrorMessage} alertType={alertType}/>
+      } */}
     </div>
   );
 };

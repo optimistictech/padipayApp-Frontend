@@ -9,14 +9,15 @@ import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/Borr
 import BorrowersNavBar from '../../../Components/Auth/Dashboard/headerNavBar/BorrowersNavbar';
 
 const BorrowerDashboard = () => {
+  
   return (
     <div className='flex'>
       <BorrowersSideNav />
       <div>
         <BorrowersNavBar />
-        <div className='flex justify-between items-center mt-5 gap-3 mx-4'>
+        <div className='flex justify-between items-center mt-5 gap-3 mx-2 '>
           {/* FIRST BOX */}
-          <div className='h-100 w-80  shadow-md rounded overflow-hidden p-4 '>
+          <div className='h-100 w-70  shadow-md rounded overflow-hidden p-4 '>
             <div className=''>
               <BarGraph />
             </div>

@@ -1,19 +1,9 @@
-import React, { useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import Button from '../../../Button';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const BorrowersNavbar = () => {
-  const user = JSON.parse(localStorage.getItem("user"))
-  console.log(user)
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if(!user){
-      navigate("/login")
-    }
-  },[])
+const NonInterestNavbar = () => {
   return (
-    <main className='w-full font-primaryFont flex flex-col pr-12'>
+    <main className='w-[100%] font-primaryFont flex '>
       {/* LEFT CONTENT */}
       <header className='p-5 flex justify-between w-full items-center '>
         <div className=''>
@@ -35,7 +25,7 @@ const BorrowersNavbar = () => {
               </svg>
               <span className='text-[#878585]'>Dashboard</span> Overview
             </p>
-            <p className='font-bold text-xl text-primary'>Analytics</p>
+            <p className='font-bold text-xl text-primary'>Admin</p>
           </div>
         </div>
         {/* RIGHT CONTENT */}
@@ -111,32 +101,8 @@ const BorrowersNavbar = () => {
           </div>
         </div>
       </header>
-
-      {/*(SECTION MIDDLE) Card */}
-      <section className='p-5 flex w-full justify-between items-center '>
-        <h3 className=' text-xl'>
-          <span className='font-bold'>{user && user.user.firstName}</span> {user && user.user.lastName}
-          {/* <span className='font-bold'></span> */}
-        </h3>
-        {/* Account ID */}
-        <p>
-          <span class='text-primary'>Account ID:</span> PDWR300
-        </p>
-
-        {/* Incomplete profile */}
-        <p class=' text-[#FC1616] border px-4 py-1 border-[#FC1616] rounded'>
-          Incomplete Profile
-        </p>
-
-        {/* btn */}
-        <div className=' hover:text-md'>
-          <Link to='/signup'>
-            <Button text={'Share Referral Link'} />
-          </Link>
-        </div>
-      </section>
     </main>
-  );
-};
+  )
+}
 
-export default BorrowersNavbar;
+export default NonInterestNavbar

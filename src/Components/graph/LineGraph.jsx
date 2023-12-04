@@ -22,7 +22,7 @@ const LineGraph = () => {
     
       return (
         <div>
-          <Chart options={chartData.options} series={chartData.series} type="line" height={270}/>
+          <Chart options={chartData.options} series={chartData.series} type="line" height={250}/>
         </div>
       );
 }
