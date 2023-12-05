@@ -1,12 +1,38 @@
 import { Link } from 'react-router-dom';
 import { TextField } from '@mui/material';
 import Button from '../Components/Button';
+import { useState } from 'react';
+
+const initialState = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  password: '',
+  gender: '',
+  phone: '',
+  accountType: 0,
+};
 
 const SignupPage = () => {
+  const [values, setValues] = useState(initialState);
+
+  // handlechange
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
+
+  // handle submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(values);
+  };
+
+  //
   return (
     <div className='bg-primary font-primaryFont'>
       <div className=' h-100vw py-6'>
-        <div className='flex justify-around gap-2 small-screen'>
+        <div className='flex gap-2 small-screen'>
           <div className='flex flex-col relative items-center justify-center text-white w-screen'>
             <div className='text-center'>
               <h1 className='text-4xl'>Welcome Onboard</h1>
@@ -47,6 +73,7 @@ const SignupPage = () => {
                 Welcome! Please enter with your details
               </p>
             </div>
+
             <button className='border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8'>
               <img
                 src={'https://ik.imagekit.io/b6b9xwu9l/google-logo.svg'}
@@ -55,8 +82,9 @@ const SignupPage = () => {
               />
               <span>Sign up with Google</span>
             </button>
+
             {/* MAIN BODY - SIGNUP FORM */}
-            <form name='loginForm' onsubmit='saveData(event) '>
+            <form onSubmit={handleSubmit}>
               <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
@@ -65,6 +93,9 @@ const SignupPage = () => {
                   variant='outlined'
                   id='lastName'
                   type='text'
+                  value={values.firstName}
+                  onChange={handleChange}
+                  name='firstName'
                 />
                 <br />
               </div>
@@ -77,6 +108,9 @@ const SignupPage = () => {
                   variant='outlined'
                   id='lastName'
                   type='text'
+                  value={values.lastName}
+                  onChange={handleChange}
+                  name='lastName'
                 />
 
                 <br />
@@ -90,6 +124,9 @@ const SignupPage = () => {
                   variant='outlined'
                   id='lastName'
                   type='email'
+                  value={values.email}
+                  onChange={handleChange}
+                  name='email'
                 />
                 <br />
               </div>
@@ -102,6 +139,9 @@ const SignupPage = () => {
                   variant='outlined'
                   id='password'
                   type='password'
+                  value={values.password}
+                  onChange={handleChange}
+                  name='password'
                 />
               </div>
 
@@ -113,7 +153,25 @@ const SignupPage = () => {
                   variant='outlined'
                   id='confirmPassword'
                   type='password'
+                  value={values.confirm_password}
+                  onChange={handleChange}
+                  name='confirm_password'
                 />
+              </div>
+
+              {/* Gender*/}
+              <div className='my-6 w-full'>
+                <select
+                  id=''
+                  className=' bg-[#F0F0F0] w-full px-5 py-4'
+                  value={values.gender}
+                  onChange={handleChange}
+                  name='gender'
+                >
+                  <option>Gender</option>
+                  <option>Male</option>
+                  <option>Female</option>
+                </select>
               </div>
 
               <div className='relative my-6 w-full'>
@@ -124,19 +182,25 @@ const SignupPage = () => {
                   variant='outlined'
                   id='phone'
                   type='number'
+                  value={values.phone}
+                  onChange={handleChange}
+                  name='phone'
                 />
               </div>
 
-              <div className='relative my-6 w-full'>
-                <i className='fa-solid fa-location-dot absolute px-3.5 py-4 text-2xl'></i>
+              {/* <div className="relative my-6 w-full">
+                <i className="fa-solid fa-location-dot absolute px-3.5 py-4 text-2xl"></i>
                 <TextField
-                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                  label='Address'
-                  variant='outlined'
-                  id='address'
-                  type='text'
+                  className="border-2 border-black bg-[#F0F0F0] w-full px-12 py-4"
+                  label="Address"
+                  variant="outlined"
+                  id="address"
+                  type="text"
+                  value={values.firstName}
+                  onChange={handleChange}
+                  name="firstName"
                 />
-              </div>
+              </div> */}
 
               <div className='flex justify-between'>
                 <div className='flex items-center gap-1'>
@@ -152,16 +216,16 @@ const SignupPage = () => {
                 </div>
               </div>
 
-              <Link
-                to='/lendersDashboard'
-                className='flex justify-center align-middle my-10'
-              >
-                <Button
-                  text='Sign up'
-                  className='bg-[#003399] text-white  rounded-[10px] cursor-pointer '
-                  size='lg'
-                />
-              </Link>
+              {/* <Link
+                to="/lendersDashboard"
+                className="flex justify-center align-middle my-10"
+              > */}
+              <Button
+                text='Sign up'
+                className='bg-[#003399] text-white  rounded-[10px] cursor-pointer '
+                size='lg'
+              />
+              {/* </Link> */}
             </form>
 
             <p className='font-bold text-xl text-center'>
