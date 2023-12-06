@@ -14,9 +14,9 @@ const SelectGender = ({setGenderType}) => {
     };
   
     return (
-      <Box sx={{ minWidth: 600 }}>
+      <Box className='mb-6 bg-[#F0F0F0]' sx={{ minWidth: 600 }}>
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label">Select gender type</InputLabel>
+          <InputLabel id="demo-simple-select-label" >Select gender type</InputLabel>
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"

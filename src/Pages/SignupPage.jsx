@@ -18,6 +18,7 @@ const SignupPage = ({baseUrl}) => {
   const [genderType, setGenderType] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [passwordType, setPasswordType] = useState("password");
+  const [passwordCheck, setPasswordCheck] = useState("password");
   const [loading, setLoading] = useState(false);
   const [check, setCheck] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -31,19 +32,29 @@ const SignupPage = ({baseUrl}) => {
     console.log(accountType)
     console.log(check)
     console.log(JSON.stringify({firstName, lastName, password, confirmPassword, accountType, genderType, phone}))
-    
-    if(password !== confirmPassword){
+    if(!firstName || !lastName || !password || !confirmPassword || !accountType || !genderType || !phone ){
+      setErrorMessage("Fill in all fields")
+      setTimeout(()=>{
+        setErrorMessage("")
+      },5000)
+      return;
+    }else if(password !== confirmPassword){
       setErrorMessage("Both passwords field must match")
-      setAlertType("danger")
+      setTimeout(()=>{
+        setErrorMessage("")
+      },5000)
       return;
     }else if(check === false){
       setErrorMessage("Agree to terms and conditions")
-      setAlertType("danger")
+      setTimeout(()=>{
+        setErrorMessage("")
+      },5000)
       return;
     }else{
       
       setLoading(true)
-      const response = await fetch(`${baseUrl}/auth/login`,{
+      console.log(loading);
+      const response = await fetch(`${baseUrl}/auth/register`,{
         method: "POST",
         headers: {
           "Content-Type" : "application/json"
@@ -73,13 +84,22 @@ const SignupPage = ({baseUrl}) => {
     }
 
   }
-  
+  // SHOW PASSWORD FUNCTIONALITY
   function isChecked(e){
     console.log(e.target)
     if (e.target.value === "password"){
       setPasswordType("text")
     } if (e.target.value === "text"){
       setPasswordType("password")
+    }
+  }
+
+   function passChecked(e){
+    console.log(e.target)
+    if (e.target.value === "password"){
+      setPasswordCheck("text")
+    } if (e.target.value === "text"){
+      setPasswordCheck("password")
     }
   }
 
@@ -124,7 +144,7 @@ const SignupPage = ({baseUrl}) => {
                 Create Your Account<span className='font-bold'></span>
               </h1>
               <p className='text-xl my-4'>
-                Welcome! Please enter with your details
+                Welcome! Please enter your details
               </p>
             </div>
             <button className='border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8'>
@@ -135,11 +155,12 @@ const SignupPage = ({baseUrl}) => {
               />
               <span>Sign up with Google</span>
             </ button>
+            {errorMessage && <p className='text-red-600 text-center h-12'>{errorMessage}</p> }
 
             
             {/* MAIN BODY - SIGNUP FORM */}
             <form name='loginForm' onSubmit={handleSignup}>
-              <div className='relative my-6 w-full'>
+              <div className='relative my-2 w-full'>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full  py-4'
@@ -206,11 +227,20 @@ const SignupPage = ({baseUrl}) => {
                 label='Retype Password'
                 variant='outlined'
                 id='confirmPassword'
-                type='password'
+                type={passwordCheck}
                 onChange={e => setConfirmPassword(e.target.value)}
                 />
               </div>
-              
+              <span className=' block  w-full'>
+              <input className='mr-4'
+                    type='checkbox'
+                    name='terms'
+                    id='terms'
+                    value={passwordCheck}
+                    onChange={(e) => passChecked(e)}
+                  />
+                  Show password
+              </span>
 
               <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-phone absolute px-3.5 py-4 text-2xl'></i>
@@ -235,11 +265,11 @@ const SignupPage = ({baseUrl}) => {
                 onChange={e => setA}
                 />
               </div> */}
-               <SelectGender setGenderType={setGenderType}/>
+               <SelectGender  setGenderType={setGenderType}/>
 
               <SelectAccount setAccountType={setAccountType}/>
 
-              <div className='flex justify-between mt-10'>
+              <div className='flex justify-between mt-10 mb-3'>
                 <div className='flex items-center gap-1'>
                   <input
                     type='checkbox'
@@ -248,7 +278,7 @@ const SignupPage = ({baseUrl}) => {
                     value={check}
                     onChange={e => setCheck(e.target.value)}
                   />
-                  <span className='text-sm'>
+                  <span className='text-sm '>
                     I accept all terms & conditions
                   </span>
                 </div>
@@ -261,7 +291,7 @@ const SignupPage = ({baseUrl}) => {
             </Box>
             :
             <Button
-              text='Login'
+              text='Sign up'
               type = "submit"
               className='bg-[#003399] text-white  rounded-[10px] cursor-pointer' size="lg"
             />
@@ -278,9 +308,7 @@ const SignupPage = ({baseUrl}) => {
           </div>
         </div>
       </div>
-      {/* {errorMessage && 
-        <Alert errorMessage={errorMessage} setErrorMessage={setErrorMessage} alertType={alertType}/>
-      } */}
+      
     </div>
   );
 };

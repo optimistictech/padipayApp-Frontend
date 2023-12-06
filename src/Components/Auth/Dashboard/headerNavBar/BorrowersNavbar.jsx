@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Button from '../../../Button';
 
 const BorrowersNavbar = () => {
+  // FUNCTIONALITY FOR USER NAME TO SHOW ON DASHBOARD
   const user = JSON.parse(localStorage.getItem("user"))
   console.log(user)
   const navigate = useNavigate()
@@ -115,6 +116,7 @@ const BorrowersNavbar = () => {
       {/*(SECTION MIDDLE) Card */}
       <section className='p-5 flex w-full justify-between items-center '>
         <h3 className=' text-xl'>
+          {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
           <span className='font-bold'>{user && user.user.firstName}</span> {user && user.user.lastName}
           {/* <span className='font-bold'></span> */}
         </h3>

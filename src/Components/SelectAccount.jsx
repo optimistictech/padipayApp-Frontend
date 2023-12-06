@@ -14,7 +14,7 @@ const SelectAccount = ({setAccountType}) => {
   };
 
   return (
-    <Box sx={{ minWidth: 600 }}>
+    <Box className='bg-[#F0F0F0]' sx={{ minWidth: 600 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Select account type</InputLabel>
         <Select

@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import LeftPartLogin from '../Components/LeftPartLogin';
 import { TextField, CircularProgress } from '@mui/material';
@@ -10,8 +10,17 @@ const LoginPage = ({baseUrl}) => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [rememberMe, setRememberMe] = useState(false)
   const navigate = useNavigate()
-  const [showPassword, setShowPassword] = useState("");
+  const [passwordType, setPasswordType] = useState("password");
+
+  function checkEmail(){
+    const email = JSON.parse(localStorage.getItem('email'))
+    if(email) setEmail(email)
+  }
+  useEffect(() =>{
+    checkEmail()
+  },[])
 
 // response part 
   async function handleSignin(e){
@@ -44,6 +53,29 @@ const LoginPage = ({baseUrl}) => {
       if(data.user.accountType === 2){
         navigate("/lendersDashboard")
       }
+    }
+  }
+
+  // REMEMBER ME FUNCTIONALITY
+  function rememberMeFunc(e){
+    if(!email){
+      return
+    }else{
+      setRememberMe(!rememberMe)
+      console.log(typeof e.target.value)
+      if(e.target.value === "false"){
+        localStorage.setItem("email", JSON.stringify(email))
+      }
+    }
+  }
+
+   // SHOW PASSWORD FUNCTIONALITY
+   function isChecked(e){
+    console.log(e.target)
+    if (e.target.value === "password"){
+      setPasswordType("text")
+    } if (e.target.value === "text"){
+      setPasswordType("password")
     }
   }
 
@@ -90,6 +122,7 @@ const LoginPage = ({baseUrl}) => {
                 variant='outlined'
                 id='lastName'
                 type='email'
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 />
               <br />
@@ -101,15 +134,16 @@ const LoginPage = ({baseUrl}) => {
                 label='Password'
                 variant='outlined'
                 id='password'
-                type='password'
-                onChange={(e) => setPassword(e.target.value)}
+                type={passwordType}
+                onChange={e => setPassword(e.target.value)}
                 />
                 <span className=' block  w-full'>
-              <input className='mr-4'
+              <input className='mr-4 my-6'
                     type='checkbox'
                     name='terms'
                     id='terms'
-                    value='terms'
+                    value={passwordType}
+                    onChange={(e) => isChecked(e)}
                   />
                   Show password
               </span>
@@ -120,7 +154,8 @@ const LoginPage = ({baseUrl}) => {
                   type='checkbox'
                   name='remember'
                   id='remember'
-                  value='Remember me'
+                  value={rememberMe}
+                  onChange={e => rememberMeFunc(e)}
                 />
                 <span className='text-sm'>Remember me</span>
               </div>
