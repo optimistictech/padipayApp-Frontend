@@ -11,6 +11,16 @@ import TableThree from '../../../Components/AdminTables/TableThree';
 import { Link, Outlet } from 'react-router-dom';
 
 const AdminDashboard = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='flex'>
       <AdminSideNav />

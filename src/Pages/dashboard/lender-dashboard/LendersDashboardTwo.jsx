@@ -32,7 +32,7 @@ const LendersDashboardTwo = () => {
           {/* form */}
           <form
             id=''
-            className='flex gap-5 flex-col items-start justify-start text-black'
+            className='flex gap-5 flex-col  items-start justify-start text-black'
           >
             {/* 1 */}
             <label
