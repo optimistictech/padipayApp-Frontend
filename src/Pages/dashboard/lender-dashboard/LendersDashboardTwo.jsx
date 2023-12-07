@@ -37,7 +37,7 @@ const LendersDashboardTwo = () => {
             {/* 1 */}
             <label
               htmlFor=''
-              className='mb-1 flex flex-col gap-2 flex flex-col gap-2'
+              className='mb-1 flex flex-col gap-2'
             >
               How would you rate your risk tolerance
               <select className=' px-2 py-1 border rounded'>
