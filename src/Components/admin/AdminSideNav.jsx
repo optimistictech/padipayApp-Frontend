@@ -17,7 +17,9 @@ const AdminSideNav = () => {
   };
 
   return (
+
     <div className=' w-[30%]  overscroll-auto  overflow-y-scroll text-white bg-[#003399] font-primaryFont p-5'>
+
       {/* head */}
       <div className='px-3 py-2'>
         {/* <img src={padiLogo} alt='padiLogo' /> */}

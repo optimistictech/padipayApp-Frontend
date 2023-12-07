@@ -1,10 +1,52 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import {useState} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import LeftPartLogin from '../Components/LeftPartLogin';
-import { TextField } from '@mui/material';
-import Button from '../Components/Button'
+import { TextField, CircularProgress } from '@mui/material';
+import Box from '@mui/material/Box';
+import Button from '../Components/Button';
 
-const LoginPage = () => {
+const LoginPage = ({baseUrl}) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate()
+  const [showPassword, setShowPassword] = useState("");
+
+// response part 
+  async function handleSignin(e){
+    e.preventDefault()
+    setLoading(true)
+    console.log(JSON.stringify({email:email, password: password}))
+    const response = await fetch(`${baseUrl}/auth/login`,{
+      method: "POST",
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      body : JSON.stringify({email:email, password: password})
+    })
+    // extract data from response object
+    const data = await response.json()
+    console.log(response, data)
+    if (response) setLoading(false)
+    if (!response.ok) {
+      setErrorMessage(data.message)
+      setTimeout(()=>{
+        setErrorMessage("")
+      },5000)
+    }
+    if (response.ok){
+      localStorage.setItem("user", JSON.stringify(data))
+      if(data.user.accountType === 1){
+        console.log("accounttype")
+        navigate("/borrowersDashboard")
+      }
+      if(data.user.accountType === 2){
+        navigate("/lendersDashboard")
+      }
+    }
+  }
+
   return (
     <div className='bg-[#003399] text-primaryFont h-full flex flex-col justify-center'>
       <div className='pt-10 flex justify-around gap-2 small-screen'>
@@ -13,6 +55,7 @@ const LoginPage = () => {
           <LeftPartLogin />
         </div>
         {/* RIGHT SIDE */}
+        
 
         <div className='bg-white rounded w-screen px-10 m-16 p-8'>
           <div className='text-center'>
@@ -33,8 +76,12 @@ const LoginPage = () => {
             <span>Login with Google</span>
           </button>
 
+          {errorMessage && 
+          <p className='text-red-600 text-center '>{errorMessage}</p>
+          }
+
           {/* LOGIN FORM */}
-          <form name='loginForm' onsubmit='login(event)'>
+          <form name='loginForm' onSubmit={handleSignin}>
             <div className='relative my-6 w-full'>
               <i className='fa-solid fa-envelope absolute px-3.5 py-4 text-2xl'></i>
               <TextField
@@ -43,6 +90,7 @@ const LoginPage = () => {
                 variant='outlined'
                 id='lastName'
                 type='email'
+                onChange={(e) => setEmail(e.target.value)}
                 />
               <br />
             </div>
@@ -54,7 +102,17 @@ const LoginPage = () => {
                 variant='outlined'
                 id='password'
                 type='password'
+                onChange={(e) => setPassword(e.target.value)}
                 />
+                <span className=' block  w-full'>
+              <input className='mr-4'
+                    type='checkbox'
+                    name='terms'
+                    id='terms'
+                    value='terms'
+                  />
+                  Show password
+              </span>
             </div>
             <div className='w-full flex justify-between'>
               <div className='flex items-center gap-1'>
@@ -71,12 +129,19 @@ const LoginPage = () => {
               </Link>
             </div>
            
-            <Link to='/account-type' className='flex justify-center align-middle my-10' size='lg'>
-              <Button
-                text='Login'
-                className='bg-[#003399] text-white  rounded-[10px] cursor-pointer' size="lg"
-              />
-            </Link>
+            {/* <Link to='/account-type' className='flex justify-center align-middle my-10' size='lg'> */}
+            {loading ?
+            <Box sx={{ display: 'flex' }}>
+              <CircularProgress />
+            </Box>
+            :
+            <Button
+              text='Login'
+              type = "submit"
+              className='bg-[#003399] text-white  rounded-[10px] cursor-pointer' size="lg"
+            />
+            }
+            {/* </Link> */}
           </form>
           <p className='text-xl font-bold text-center'>
             Don't have an account?
