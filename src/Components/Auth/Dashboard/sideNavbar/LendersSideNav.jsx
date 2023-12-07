@@ -56,7 +56,7 @@ const LendersSideNav = () => {
             <span>
               {accountType === 'borrower'
                 ?   `
-                <span className='font-bold'>{user && user.user.firstName}</span> `
+                <span className='font-bold'>{}</span> `
                 : 'Switch to a Borrower'}
             </span>
           </p>
@@ -86,7 +86,7 @@ const LendersSideNav = () => {
         >
           <MenuItem value='borrower'>
             {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
-          <span className='font-bold'>{user && user.user.firstName}</span> 
+          {/* <span className='font-bold'>{user && user.user.firstName}</span>  */}
           </MenuItem>
           <MenuItem value='switch'>Switch to a Borrower</MenuItem>
         </Select>
