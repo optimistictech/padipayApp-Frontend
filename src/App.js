@@ -21,7 +21,7 @@ import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 import Calculator from './Components/Calculator/Calculator';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
-import SettingsPage from './Pages/SettingsPage'
+import SettingsPage from './Pages/SettingsPage';
 
 // import MobileStore from './Components/Sections/MobileStore';
 
@@ -41,13 +41,24 @@ import LendersDashboardFour from './Pages/dashboard/lender-dashboard/LendersDash
 import LendersDashboardFive from './Pages/dashboard/lender-dashboard/LendersDashboardFive';
 import LendersDashboardSix from './Pages/dashboard/lender-dashboard/LendersDashboardSix';
 
+
+import Lenders from './Pages/Lenders';
 import AdminDashboard from './Pages/dashboard/admin-dashboard/AdminDashboard';
 import AdminDashboard3 from './Pages/dashboard/admin-dashboard/AdminDashboard3';
 import AdminDashboardInvestment from './Pages/dashboard/admin-dashboard/AdminDashboardInvestment';
 import AdminDashboardLoans from './Pages/dashboard/admin-dashboard/AdminDashboardLoans';
 
-import NonInterestDashboard from "./Pages/dashboard/non-interest-dashboard/NonInterestDashboard";
-import DeviceFinanceForm from "./Pages/dashboard/non-interest-dashboard/DeviceFinanceForm";
+
+import NonInterestDashboard from './Pages/dashboard/non-interest-dashboard/NonInterestDashboard';
+import DeviceFinanceForm from './Pages/dashboard/non-interest-dashboard/DeviceFinanceForm';
+import NewLoans from './Pages/dashboard/admin-dashboard/admin-loans/NewLoans';
+import ListedLoans from './Pages/dashboard/admin-dashboard/admin-loans/ListedLoans';
+import FundedLoans from './Pages/dashboard/admin-dashboard/admin-loans/FundedLoans';
+import NonInterestLoan from './Pages/dashboard/admin-dashboard/admin-loans/NonInterestLoan';
+import UsersLender from './Pages/dashboard/admin-dashboard/admin-users/UsersLender';
+import UsersBorrower from './Pages/dashboard/admin-dashboard/admin-users/UsersBorrower';
+import AdminWithdrawal from './Pages/dashboard/admin-dashboard/AdminWithdrawal';
+import AdminTransactions from './Pages/dashboard/admin-dashboard/AdminTransactions';
 
 function App() {
   const baseUrl = "https://padipay-backend.onrender.com/v1/";
@@ -69,7 +80,10 @@ function App() {
         <Route path='/post-for-blog' element={<PostForBlog />} />
         <Route path='/account-type' element={<LendersBorrowers />} />
         <Route path='/privacy' element={<PrivacyPolicyPage />} />
-        <Route path='/guarantor-agreement' element={<GuarantorsAgreementPage />}/>
+        <Route
+          path='/guarantor-agreement'
+          element={<GuarantorsAgreementPage />}
+        />
         <Route path='/' element={<LandingPage />} />
         <Route path='/calculator' element={<Calculator />} />
         <Route path='/settings' element={<SettingsPage />} />
@@ -80,8 +94,14 @@ function App() {
         <Route path='/borrowersDashboard4' element={<BorrowerSectionFour />} />
         <Route path='/borrowersDashboard5' element={<BorrowerSectionFive />} />
         <Route path='/borrowersDashboard6' element={<BorrowerSectionSix />} />
-        <Route path='/borrowersDashboard7' element={<BorrowerDashboardSeven />}/>
-        <Route path='/borrowersDashboard8' element={<BorrowerDashboardEight />}/>
+        <Route
+          path='/borrowersDashboard7'
+          element={<BorrowerDashboardSeven />}
+        />
+        <Route
+          path='/borrowersDashboard8'
+          element={<BorrowerDashboardEight />}
+        />
 
         <Route path='/lendersDashboard' element={<LendersDashboard />} />
         <Route path='/lendersDashboard2' element={<LendersDashboardTwo />} />
@@ -90,13 +110,35 @@ function App() {
         <Route path='/lendersDashboard5' element={<LendersDashboardFive />} />
         <Route path='/lendersDashboard6' element={<LendersDashboardSix />} />
 
+        {/* ADMIN ROUTER */}
         <Route path='/adminDashboard' element={<AdminDashboard />} />
         <Route path='/adminDashboardLoans' element={<AdminDashboardLoans />} />
         <Route path='/adminDashboard3' element={<AdminDashboard3 />} />
-        <Route path='/adminDashboardInvestment' element={<AdminDashboardInvestment />}/>
 
-        <Route path='/NonInterestDashboard' element={<NonInterestDashboard />}/>
-        <Route path='/DeviceFinanceForm' element={<DeviceFinanceForm />}/>
+        <Route path='/lenders' element={<Lenders />} />
+
+        <Route
+          path='/adminDashboardInvestment'
+          element={<AdminDashboardInvestment />}
+        />
+        <Route path='/adminWithdrawal' element={<AdminWithdrawal />} />
+        <Route path='/admintranscations' element={<AdminTransactions />} />
+
+        {/* admin loans */}
+        <Route path='/newloan' element={<NewLoans />} />
+        <Route path='/listedloan' element={<ListedLoans />} />
+        <Route path='/fundedloan' element={<FundedLoans />} />
+        <Route path='/nonInterestLoan' element={<NonInterestLoan />} />
+
+        {/* admin users */}
+        <Route path='/userslenders' element={<UsersLender />} />
+        <Route path='/usersborrowers' element={<UsersBorrower />} />
+
+        <Route
+          path='/NonInterestDashboard'
+          element={<NonInterestDashboard />}
+        />
+        <Route path='/DeviceFinanceForm' element={<DeviceFinanceForm />} />
 
       </Routes>
       {/* <Footer /> */}
