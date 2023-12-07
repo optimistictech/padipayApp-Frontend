@@ -55,7 +55,8 @@ const LendersSideNav = () => {
             </svg>
             <span>
               {accountType === 'borrower'
-                ? 'Alfred Jimoh'
+                ?   `
+                <span className='font-bold'>{}</span> `
                 : 'Switch to a Borrower'}
             </span>
           </p>
@@ -83,7 +84,10 @@ const LendersSideNav = () => {
           className='cursor-pointer'
           style={{ display: 'none' }}
         >
-          <MenuItem value='borrower'>Alfred Jimoh</MenuItem>
+          <MenuItem value='borrower'>
+            {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
+          {/* <span className='font-bold'>{user && user.user.firstName}</span>  */}
+          </MenuItem>
           <MenuItem value='switch'>Switch to a Borrower</MenuItem>
         </Select>
         {/* <Link to='/'>Change Account Type</Link> */}

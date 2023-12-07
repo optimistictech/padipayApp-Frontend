@@ -1,8 +1,20 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../../../Button';
 
 const LendersNavbarVerify = () => {
+  // FUNCTIONALITY FOR USER NAME TO SHOW ON DASHBOARD
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
+
   return (
     <main className='w-full mX-8 font-primaryFont flex flex-col '>
       {/* LEFT CONTENT */}
@@ -106,7 +118,8 @@ const LendersNavbarVerify = () => {
       {/*(SECTION MIDDLE) Card */}
       <section className='p-5 flex w-full justify-between items-center'>
         <h3 className=' text-xl'>
-          <span className='font-bold'>Alfred</span> Jimoh Ogunlere
+          {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
+          <span className='font-bold'>{user && user.user.firstName}</span> {user && user.user.lastName}
         </h3>
         {/* Account ID */}
         <p>
