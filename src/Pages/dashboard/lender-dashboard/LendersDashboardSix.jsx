@@ -5,6 +5,16 @@ import LendersNavbarVerify from '../../../Components/Auth/Dashboard/headerNavBar
 import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard';
 
 const LendersDashboardSix = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='lg:flex w-full'>
       <LendersSideNav />

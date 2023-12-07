@@ -9,6 +9,16 @@ import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard'
 import BarGraph from '../../../Components/graph/BarGraph';
 
 const LendersDashboard = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='lg:flex w-full'>
       <LendersSideNav />

@@ -5,6 +5,16 @@ import LendersNavbar from '../../../Components/Auth/Dashboard/headerNavBar/Lende
 import Button from '../../../Components/Button';
 
 const LendersDashboardTwo = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='lg:flex w-full'>
       <LendersSideNav />

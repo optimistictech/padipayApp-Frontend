@@ -10,6 +10,16 @@ import { IoMdCheckmarkCircle } from 'react-icons/io';
 import { MdCancel } from 'react-icons/md';
 
 const LendersDashboardFive = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='lg:flex w-full'>
       <LendersSideNav />

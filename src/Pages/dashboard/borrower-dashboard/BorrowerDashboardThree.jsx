@@ -6,6 +6,16 @@ import Button from '../../../Components/Button';
 import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard';
 
 const BorrowerSectionThree = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='flex'>
       <BorrowersSideNav />

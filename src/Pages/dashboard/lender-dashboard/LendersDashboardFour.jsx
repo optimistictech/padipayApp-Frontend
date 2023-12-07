@@ -6,6 +6,16 @@ import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard'
 import Button from '../../../Components/Button';
 
 const LendersDashboardFour = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='lg:flex w-full'>
       <LendersSideNav />

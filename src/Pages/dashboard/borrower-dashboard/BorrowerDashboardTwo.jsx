@@ -10,6 +10,16 @@ import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/Borr
 import BorrowersNavBar from '../../../Components/Auth/Dashboard/headerNavBar/BorrowersNavbarV';
 
 const BorrowerSectionTwo = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='flex'>
       <BorrowersSideNav />

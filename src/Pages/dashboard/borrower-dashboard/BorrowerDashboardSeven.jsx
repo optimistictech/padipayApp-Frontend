@@ -5,6 +5,16 @@ import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/Borr
 import SettingsSection from '../../../Components/SettingsSection'
 
 const BorrowerDashboardSeven = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className="flex">
         <BorrowersSideNav/>

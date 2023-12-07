@@ -3,6 +3,16 @@ import { Link } from 'react-router-dom';
 import { Select, MenuItem } from '@mui/material';
 
 const LendersSideNav = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   const [accountType, setAccountType] = useState('borrower');
 
   const toggleAccountChange = (event) => {
@@ -86,7 +96,7 @@ const LendersSideNav = () => {
         >
           <MenuItem value='borrower'>
             {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
-          {/* <span className='font-bold'>{user && user.user.firstName}</span>  */}
+          <span className='font-bold'>{user && user.user.firstName}</span> 
           </MenuItem>
           <MenuItem value='switch'>Switch to a Borrower</MenuItem>
         </Select>
