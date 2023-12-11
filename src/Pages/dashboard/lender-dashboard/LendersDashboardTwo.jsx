@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import LendersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/LendersSideNav';
 import LendersNavbar from '../../../Components/Auth/Dashboard/headerNavBar/LendersNavbar';
 import Button from '../../../Components/Button';
 
 const LendersDashboardTwo = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='lg:flex w-full'>
       <LendersSideNav />
@@ -22,12 +33,12 @@ const LendersDashboardTwo = () => {
           {/* form */}
           <form
             id=''
-            className='flex gap-5 flex-col items-start justify-start text-black'
+            className='flex gap-5 flex-col  items-start justify-start text-black'
           >
             {/* 1 */}
             <label
               htmlFor=''
-              className='mb-1 flex flex-col gap-2 flex flex-col gap-2'
+              className='mb-1 flex flex-col gap-2'
             >
               How would you rate your risk tolerance
               <select className=' px-2 py-1 border rounded'>

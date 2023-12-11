@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AdminSideNav from '../../../Components/admin/AdminSideNav';
 import AdminNavbar2 from '../../../Components/admin/AdminNavbar2';
 import AdminNavbar from '../../../Components/admin/AdminNavbar';
@@ -6,6 +7,16 @@ import { Link } from 'react-router-dom';
 import InvestmentTable from '../../../Components/admin/InvestmentTable';
 
 const AdminDashboardInvestment = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='flex bg-[#F0F2F5]'>
       <AdminSideNav />

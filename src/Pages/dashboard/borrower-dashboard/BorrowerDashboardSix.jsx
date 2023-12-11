@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { TextField } from '@mui/material';
 import Button from '../../../Components/Button'
 import { Link } from 'react-router-dom';
@@ -6,6 +7,16 @@ import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/Borr
 import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard';
 
 const BorrowerSectionSix = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='flex'>
       <BorrowersSideNav />

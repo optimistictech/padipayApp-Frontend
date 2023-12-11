@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import LendersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/LendersSideNav';
 import LendersNavbar from '../../../Components/Auth/Dashboard/headerNavBar/LendersNavbar';
@@ -7,8 +7,19 @@ import { MdAccessTime } from 'react-icons/md';
 import Uploader from '../../../Components/Sections/upload/Uploader';
 import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard';
 import BarGraph from '../../../Components/graph/BarGraph';
+import { useNavigate } from 'react-router-dom';
 
 const LendersDashboard = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='lg:flex w-full'>
       <LendersSideNav />
