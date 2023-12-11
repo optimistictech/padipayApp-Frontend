@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import BarGraph from '../../../Components/graph/BarGraph';
 import LineGraph from '../../../Components/graph/LineGraph';
 
