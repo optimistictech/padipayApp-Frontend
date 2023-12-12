@@ -34,12 +34,12 @@ const VerifyPassword = () => {
       <Navbar />
    
       <div className="w-1/3 mx-auto">
-      <div className=" pt-[200px]">
+      <div className=" pt-[150px]">
       <div className=' '>
-        <h1 className='text-center text-3xl font-bold mb-3'>Verify Password</h1>
+        <h1 className='text-center text-3xl font-bold mb-12'>Verify Password</h1>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4 '
-                label='Password'
+                label='New Password'
                 variant='outlined'
                 id='password'
                 type={passwordType}
@@ -62,7 +62,7 @@ const VerifyPassword = () => {
       <div className=' '>
                 <TextField
                 className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Password'
+                label='Retype Password'
                 variant='outlined'
                 id='password'
                 type={passwordType}
