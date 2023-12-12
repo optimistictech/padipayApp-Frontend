@@ -159,7 +159,7 @@ const LoginPage = ({baseUrl}) => {
                 />
                 <span className='text-sm'>Remember me</span>
               </div>
-              <Link to='' className='text-sm'>
+              <Link to='/forgotpassword' className='text-sm'>
                 Forget your password?
               </Link>
             </div>
