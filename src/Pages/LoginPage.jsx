@@ -91,7 +91,7 @@ const LoginPage = ({baseUrl}) => {
 
         <div className='bg-white rounded w-screen px-10 m-16 p-8'>
           <div className='text-center'>
-            <h1 className='text-4xl'>
+            <h1 className='text-4xl text-primary'>
               Log in to <span className='font-bold'>Padi</span>Pay
             </h1>
             <p className='text-xl my-8'>
@@ -99,14 +99,14 @@ const LoginPage = ({baseUrl}) => {
               Please login with your details
             </p>
           </div>
-          <button className='border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8'>
+          {/* <button className='border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8'>
             <img
               src={'https://ik.imagekit.io/b6b9xwu9l/google-logo.svg'}
               alt='google-play mockup'
               className='w-10'
             />
             <span>Login with Google</span>
-          </button>
+          </button> */}
 
           {errorMessage && 
           <p className='text-red-600 text-center '>{errorMessage}</p>
