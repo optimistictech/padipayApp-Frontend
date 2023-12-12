@@ -147,14 +147,14 @@ const SignupPage = ({baseUrl}) => {
                 Welcome! Please enter your details
               </p>
             </div>
-            <button className='border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8'>
+            {/* <button className='border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8'>
               <img
                 src={'https://ik.imagekit.io/b6b9xwu9l/google-logo.svg'}
                 alt='google-play mockup'
                 className='w-10'
               />
               <span>Sign up with Google</span>
-            </ button>
+            </ button> */}
             {errorMessage && <p className='text-red-600 text-center h-12'>{errorMessage}</p> }
 
             
