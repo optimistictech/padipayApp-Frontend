@@ -23,6 +23,8 @@ import Calculator from './Components/Calculator/Calculator';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 import SettingsPage from './Pages/SettingsPage';
 import Kyc from './Pages/Kyc'
+import ForgotPassword from './Pages/ForgotPassword'
+import VerifyPassword from './Pages/VerifyPassword'
 
 // import MobileStore from './Components/Sections/MobileStore';
 
@@ -88,6 +90,9 @@ function App() {
         <Route path='/' element={<LandingPage />} />
         <Route path='/calculator' element={<Calculator />} />
         <Route path='/settings' element={<SettingsPage />} />
+        <Route path='/blog' element={<BlogPage />} />
+        <Route path='/verifypassword' element={<VerifyPassword />} />
+        <Route path='/forgotpassword' element={<ForgotPassword />} />
 
         <Route path='/borrowersDashboard' element={<BorrowerDashboard />} />
         <Route path='/borrowersDashboard2' element={<BorrowerSectionTwo />} />
