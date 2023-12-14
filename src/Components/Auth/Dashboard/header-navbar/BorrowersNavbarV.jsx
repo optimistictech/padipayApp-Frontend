@@ -2,9 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../../Button';
 
-const LendersNavbarVerify = () => {
+const BorrowersNavbarV = ({ user, loading }) => {
   return (
-    <main className='w-full mX-8 font-primaryFont flex flex-col '>
+    <main className='w-full mX-8 font-primaryFont flex flex-col pr-12'>
       {/* LEFT CONTENT */}
       <header className='p-5 flex justify-between w-full items-center'>
         <div className=''>
@@ -106,11 +106,17 @@ const LendersNavbarVerify = () => {
       {/*(SECTION MIDDLE) Card */}
       <section className='p-5 flex w-full justify-between items-center'>
         <h3 className=' text-xl'>
-          <span className='font-bold'>Alfred</span> Jimoh Ogunlere
+          {loading ? (
+            'loading...'
+          ) : (
+            <>
+              {user.firstName} {user.lastName}
+            </>
+          )}
         </h3>
         {/* Account ID */}
         <p>
-          <span class='text-primary'>Account ID:</span> PDWR101
+          <span class='text-primary'>Account ID:</span> PDWR300
         </p>
 
         {/* Verified profile */}
@@ -129,4 +135,4 @@ const LendersNavbarVerify = () => {
   );
 };
 
-export default LendersNavbarVerify;
+export default BorrowersNavbarV;

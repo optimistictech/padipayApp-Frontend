@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NonInterestNavbar = () => {
+const NonInterestNavbar = ({ user, loading }) => {
   return (
     <main className='w-[100%] font-primaryFont flex '>
       {/* LEFT CONTENT */}
@@ -25,7 +25,7 @@ const NonInterestNavbar = () => {
               </svg>
               <span className='text-[#878585]'>Dashboard</span> Overview
             </p>
-            <p className='font-bold text-xl text-primary'>Admin</p>
+            <p className='font-bold text-xl text-primary'>Non Interest</p>
           </div>
         </div>
         {/* RIGHT CONTENT */}
@@ -102,7 +102,7 @@ const NonInterestNavbar = () => {
         </div>
       </header>
     </main>
-  )
-}
+  );
+};
 
-export default NonInterestNavbar
+export default NonInterestNavbar;

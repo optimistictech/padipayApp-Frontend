@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Button from '../../../Button';
 
-const LendersNavbar = () => {
+const LendersNavbar = ({ user, loading }) => {
   return (
     <main className='w-[100%] font-primaryFont flex flex-col '>
       {/* LEFT CONTENT */}
@@ -60,7 +60,7 @@ const LendersNavbar = () => {
             </Link>
 
             {/* settings */}
-            <Link to='/'>
+            <Link to='/setting'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
@@ -106,7 +106,13 @@ const LendersNavbar = () => {
       {/*(SECTION MIDDLE) Card */}
       <section className='p-5 flex justify-between items-center'>
         <h3 className=' text-xl'>
-          <span className='font-bold'>Alfred</span> Jimoh Ogunlere
+          {loading ? (
+            'loading...'
+          ) : (
+            <>
+              {user.firstName} {user.lastName}
+            </>
+          )}
         </h3>
         {/* Account ID */}
         <p>

@@ -1,16 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/BorrowersSideNav';
-import BorrowersNavBar from '../../../Components/Auth/Dashboard/headerNavBar/BorrowersNavbarV';
+import BorrowersSideNav from '../../../Components/Auth/Dashboard/side-navbar/BorrowersSideNav';
+import BorrowersNavBar from '../../../Components/Auth/Dashboard/header-navbar/BorrowersNavbarV';
 import Button from '../../../Components/Button';
 import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard';
 
 const BorrowerSectionThree = () => {
+  const [user, setUser] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const response = JSON.parse(localStorage.getItem('user'));
+    setUser(response);
+    setLoading(false);
+  }, []);
+
+  //
   return (
     <div className='flex'>
-      <BorrowersSideNav />
+      <BorrowersSideNav user={user} loading={loading} />
       <div>
-        <BorrowersNavBar />
+        <BorrowersNavBar user={user} loading={loading} />
+
         <div className='grid grid-cols-3 gap-x-0 gap-y-8'>
           {/* first grid */}
           <d className=' h-90 shadow-lg my-14 rounded-md relative overflow-hidden px-4 '>
@@ -64,7 +75,9 @@ const BorrowerSectionThree = () => {
           </div>
           {/* third grid */}
           <div className=' h-90 pt-12 shadow-lg px-6 my-auto overflow-hidden'>
-            <p className='py-1 mt-8 mb-2 font-semibold text-left text-4xl'>Community?</p>
+            <p className='py-1 mt-8 mb-2 font-semibold text-left text-4xl'>
+              Community?
+            </p>
             <p className='text-xl pt-2 font-light mb-8'>
               Discover our collaborative
               <br /> community, Discover and
@@ -78,10 +91,9 @@ const BorrowerSectionThree = () => {
               />
             </Link>
           </div>
-          </div>
-  {/* SECOND SECTION */}
-  <FooterDashboard />
-        
+        </div>
+        {/* SECOND SECTION */}
+        <FooterDashboard />
       </div>
     </div>
   );

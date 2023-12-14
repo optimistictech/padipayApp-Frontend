@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import BarGraph from '../../../Components/graph/BarGraph';
 import LineGraph from '../../../Components/graph/LineGraph';
 
@@ -6,15 +6,33 @@ import Uploader from '../../../Components/Sections/upload/Uploader';
 import FooterDashboard from '../../../Components/Auth/Dashboard/FooterDashboard';
 import { MdAccessTime } from 'react-icons/md';
 
-import BorrowersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/BorrowersSideNav';
-import BorrowersNavBar from '../../../Components/Auth/Dashboard/headerNavBar/BorrowersNavbarV';
+import BorrowersSideNav from '../../../Components/Auth/Dashboard/side-navbar/BorrowersSideNav';
+import BorrowersNavBar from '../../../Components/Auth/Dashboard/header-navbar/BorrowersNavbarV';
+import { useNavigate } from 'react-router-dom/dist';
 
 const BorrowerSectionTwo = () => {
+  const [user, setUser] = useState({});
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const response = JSON.parse(localStorage.getItem('user'));
+    const token = JSON.parse(localStorage.getItem('token'));
+
+    if (!token) {
+      navigate('/login');
+      return;
+    }
+    setUser(response);
+    setLoading(false);
+  }, []);
+
+  //
   return (
     <div className='flex'>
-      <BorrowersSideNav />
+      <BorrowersSideNav user={user} loading={loading} />
       <div>
-        <BorrowersNavBar />
+        <BorrowersNavBar user={user} loading={loading} />
         <div className='flex justify-between items-center mt-5 gap-3 mx-4'>
           {/* FIRST BOX */}
           <div className='h-100 w-80  shadow-md rounded overflow-hidden p-4 '>

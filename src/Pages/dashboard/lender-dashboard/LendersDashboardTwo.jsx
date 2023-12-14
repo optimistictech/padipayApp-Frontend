@@ -1,15 +1,40 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import LendersSideNav from '../../../Components/Auth/Dashboard/sideNavbar/LendersSideNav';
-import LendersNavbar from '../../../Components/Auth/Dashboard/headerNavBar/LendersNavbar';
+import LendersSideNav from '../../../Components/Auth/Dashboard/side-navbar/LendersSideNav';
+import LendersNavbar from '../../../Components/Auth/Dashboard/header-navbar/LendersNavbar';
 import Button from '../../../Components/Button';
+import { useNavigate } from 'react-router-dom/dist';
 
 const LendersDashboardTwo = () => {
+  const [user, setUser] = useState({});
+  const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
+  const [authloading, setAuthloading] = useState(true);
+
+  useEffect(() => {
+    const response = JSON.parse(localStorage.getItem('user'));
+    const token = localStorage.getItem('token');
+
+    if (!token) {
+      navigate('/login');
+
+      return;
+    }
+    setUser(response);
+    setLoading(false);
+    setAuthloading(false);
+  }, [navigate]);
+
+  if (authloading) {
+    return;
+  }
+
+  //
   return (
     <div className='lg:flex w-full'>
-      <LendersSideNav />
+      <LendersSideNav user={user} loading={loading} />
       <section>
-        <LendersNavbar />
+        <LendersNavbar user={user} loading={loading} />
         <div className='w-[90%] flex items-start justify-start flex-col p-7 text-black bg-white text-left mt-5 mx-4 shadow'>
           <h1 className='text-2xl mb-7 text-primary'>Risk Appetite</h1>
 
