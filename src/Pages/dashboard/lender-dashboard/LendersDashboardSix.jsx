@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import LendersSideNav from '../../../Components/Auth/Dashboard/side-navbar/LendersSideNav';
 import LendersNavbarVerify from '../../../Components/Auth/Dashboard/header-navbar/LendersNavbarVerify';
@@ -29,7 +28,7 @@ const LendersDashboardSix = () => {
     return;
   }
 
-  //
+  // return key
   return (
     <div className='lg:flex w-full'>
       <LendersSideNav user={user} loading={loading} />
@@ -45,4 +44,3 @@ const LendersDashboardSix = () => {
 };
 
 export default LendersDashboardSix;
-
