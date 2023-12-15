@@ -14,7 +14,7 @@
     "aos": "^2.3.4",
     "apexcharts": "^3.44.0",
     "axios": "^1.6.2",
-    "cogo-toast": ">=4.2.3",
+    "cogo-toast": "^4.2.3",
     "framer-motion": "^10.16.5",
     "imagekitio-react": "^3.0.0",
     "mdb-react-ui-kit": "^7.0.0",
