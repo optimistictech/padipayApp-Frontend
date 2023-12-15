@@ -1,8 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import Button from '../../../Button';
 
+<<<<<<< HEAD:src/Components/Auth/Dashboard/header-navbar/BorrowersNavbarV.jsx
 const BorrowersNavbarV = ({ user, loading }) => {
+=======
+const BorrowersNavbar = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+>>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2:src/Components/Auth/Dashboard/headerNavBar/BorrowersNavbar.jsx
   return (
     <main className='w-full mX-8 font-primaryFont flex flex-col pr-12'>
       {/* LEFT CONTENT */}
@@ -106,6 +119,7 @@ const BorrowersNavbarV = ({ user, loading }) => {
       {/*(SECTION MIDDLE) Card */}
       <section className='p-5 flex w-full justify-between items-center'>
         <h3 className=' text-xl'>
+<<<<<<< HEAD:src/Components/Auth/Dashboard/header-navbar/BorrowersNavbarV.jsx
           {loading ? (
             'loading...'
           ) : (
@@ -113,6 +127,10 @@ const BorrowersNavbarV = ({ user, loading }) => {
               {user.firstName} {user.lastName}
             </>
           )}
+=======
+          <span className='font-bold'>{user && user.user.firstName}</span> {user && user.user.lastName}
+          {/* <span className='font-bold'></span> */}
+>>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2:src/Components/Auth/Dashboard/headerNavBar/BorrowersNavbar.jsx
         </h3>
         {/* Account ID */}
         <p>

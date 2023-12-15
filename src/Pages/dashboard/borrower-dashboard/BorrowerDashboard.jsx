@@ -10,6 +10,7 @@ import BorrowersNavBar from '../../../Components/Auth/Dashboard/header-navbar/Bo
 import { useNavigate } from 'react-router-dom/dist';
 
 const BorrowerDashboard = () => {
+<<<<<<< HEAD
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -27,6 +28,9 @@ const BorrowerDashboard = () => {
   }, []);
 
   //
+=======
+  
+>>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
   return (
     <div className='flex'>
       <BorrowersSideNav user={user} loading={loading} />
