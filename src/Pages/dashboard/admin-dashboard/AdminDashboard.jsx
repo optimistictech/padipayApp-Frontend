@@ -6,9 +6,9 @@ import BarGraph from '../../../Components/graph/BarGraph';
 import LineGraph from '../../../Components/graph/LineGraph';
 import { MdAccessTime } from 'react-icons/md';
 import ProgressBar from '../../../Components/ProgressBar';
-import TableOne from '../../../Components/AdminTables/TableOne';
-import TableTwo from '../../../Components/AdminTables/TableTwo';
-import TableThree from '../../../Components/AdminTables/TableThree';
+import TableOne from '../../../Components/admin-tables/TableOne';
+import TableTwo from '../../../Components/admin-tables/TableTwo';
+import TableThree from '../../../Components/admin-tables/TableThree';
 import { Link, Outlet } from 'react-router-dom';
 
 const AdminDashboard = () => {

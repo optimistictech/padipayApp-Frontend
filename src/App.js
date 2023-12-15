@@ -19,7 +19,7 @@ import Lendersagreement from './Pages/LendersAgreementPage';
 import BlogPage from './Pages/BlogPage';
 import PostForBlog from './Pages/PostForBlog';
 import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
-import Calculator from './Components/Calculator/Calculator';
+import Calculator from './Components/calculator/Calculator';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 import SettingsPage from './Pages/SettingsPage';
 import Kyc from './Pages/Kyc'
@@ -62,6 +62,14 @@ import UsersLender from './Pages/dashboard/admin-dashboard/admin-users/UsersLend
 import UsersBorrower from './Pages/dashboard/admin-dashboard/admin-users/UsersBorrower';
 import AdminWithdrawal from './Pages/dashboard/admin-dashboard/AdminWithdrawal';
 import AdminTransactions from './Pages/dashboard/admin-dashboard/AdminTransactions';
+import AccountDetails from './Pages/dashboard/borrower-dashboard/kyc/AccountDetails';
+import DigitPin from './Pages/dashboard/borrower-dashboard/kyc/DigitPin';
+import EmploymentStatus from './Pages/dashboard/borrower-dashboard/kyc/EmploymentStatus';
+import Kyc from './Pages/dashboard/borrower-dashboard/Kyc';
+import NextOfKin from './Pages/dashboard/borrower-dashboard/kyc/NextOfKin';
+import PersonalDetails from './Pages/dashboard/borrower-dashboard/kyc/PersonalDetails';
+import TermsOfUse from './Pages/dashboard/borrower-dashboard/kyc/TermsOfUse';
+import SettingPage from './Pages/dashboard/SettingPage';
 
 function App() {
   const baseUrl = "https://padipay-backend.onrender.com/v1/";
@@ -139,6 +147,18 @@ function App() {
         {/* admin users */}
         <Route path='/userslenders' element={<UsersLender />} />
         <Route path='/usersborrowers' element={<UsersBorrower />} />
+
+        {/* KYC */}
+        <Route path='/kyc' element={<Kyc />} />
+        <Route path='/accountdetails' element={<AccountDetails />} />
+        <Route path='/digitpin' element={<DigitPin />} />
+        <Route path='/employmentstatus' element={<EmploymentStatus />} />
+        <Route path='/nextofkin' element={<NextOfKin />} />
+        <Route path='/termsofuse' element={<TermsOfUse />} />
+        <Route path='/personaldetails' element={<PersonalDetails />} />
+
+        {/* SETTINGS */}
+        <Route path='/setting' element={<SettingPage />} />
 
         <Route
           path='/NonInterestDashboard'

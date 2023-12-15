@@ -1,11 +1,26 @@
 import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Button from '../../../Button';
 
-const NonInterestNavbar = () => {
+<<<<<<< HEAD:src/Components/Auth/Dashboard/header-navbar/BorrowersNavbarV.jsx
+const BorrowersNavbarV = ({ user, loading }) => {
+=======
+const BorrowersNavbar = () => {
+  // FUNCTIONALITY FOR USER NAME TO SHOW ON DASHBOARD
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+>>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2:src/Components/Auth/Dashboard/headerNavBar/BorrowersNavbar.jsx
   return (
-    <main className='w-[100%] font-primaryFont flex '>
+    <main className='w-full mX-8 font-primaryFont flex flex-col pr-12'>
       {/* LEFT CONTENT */}
-      <header className='p-5 flex justify-between w-full items-center '>
+      <header className='p-5 flex justify-between w-full items-center'>
         <div className=''>
           <div className='flex flex-col '>
             <p className='text-sm flex gap-1 items-center'>
@@ -25,7 +40,7 @@ const NonInterestNavbar = () => {
               </svg>
               <span className='text-[#878585]'>Dashboard</span> Overview
             </p>
-            <p className='font-bold text-xl text-primary'>Admin</p>
+            <p className='font-bold text-xl text-primary'>Analytics</p>
           </div>
         </div>
         {/* RIGHT CONTENT */}
@@ -101,8 +116,46 @@ const NonInterestNavbar = () => {
           </div>
         </div>
       </header>
-    </main>
-  )
-}
 
-export default NonInterestNavbar
+      {/*(SECTION MIDDLE) Card */}
+      <section className='p-5 flex w-full justify-between items-center'>
+        <h3 className=' text-xl'>
+<<<<<<< HEAD:src/Components/Auth/Dashboard/header-navbar/BorrowersNavbarV.jsx
+<<<<<<< HEAD:src/Components/Auth/Dashboard/header-navbar/BorrowersNavbarV.jsx
+          {loading ? (
+            'loading...'
+          ) : (
+            <>
+              {user.firstName} {user.lastName}
+            </>
+          )}
+=======
+=======
+          {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
+>>>>>>> 184c7c47226dffb067448114a8d3150e7930bc0d:src/Components/Auth/Dashboard/headerNavBar/BorrowersNavbar.jsx
+          <span className='font-bold'>{user && user.user.firstName}</span> {user && user.user.lastName}
+          {/* <span className='font-bold'></span> */}
+>>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2:src/Components/Auth/Dashboard/headerNavBar/BorrowersNavbar.jsx
+        </h3>
+        {/* Account ID */}
+        <p>
+          <span class='text-primary'>Account ID:</span> PDWR300
+        </p>
+
+        {/* Verified profile */}
+        <p class=' text-primary border px-4 py-1 border-primary rounded'>
+          Verified
+        </p>
+
+        {/* btn */}
+        <div className=' hover:text-md'>
+          <Link to='/signup'>
+            <Button text={'Share Referral Link'} />
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
+};
+
+export default BorrowersNavbarV;

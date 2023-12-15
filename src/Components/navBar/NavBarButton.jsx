@@ -15,7 +15,7 @@ const NavBarButton = () => {
         </Link>
       </div>
       <div>
-        <Link to='/signup'>
+        <Link to='/account-type'>
           <Button text='Register Now' />
         </Link>
       </div>

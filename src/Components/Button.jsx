@@ -16,7 +16,6 @@ export const Button = ({ text, className, size, noborder }) => {
     >
       {text}
     </button>
-
   );
 };
 

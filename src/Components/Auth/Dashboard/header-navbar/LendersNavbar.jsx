@@ -2,7 +2,10 @@ import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from '../../../Button';
 
-const BorrowersNavbar = () => {
+<<<<<<< HEAD:src/Components/Auth/Dashboard/header-navbar/LendersNavbar.jsx
+const LendersNavbar = ({ user, loading }) => {
+=======
+const LendersNavbar = () => {
   // FUNCTIONALITY FOR USER NAME TO SHOW ON DASHBOARD
   const user = JSON.parse(localStorage.getItem("user"))
   console.log(user)
@@ -13,10 +16,13 @@ const BorrowersNavbar = () => {
       navigate("/login")
     }
   },[])
+
+
+>>>>>>> 184c7c47226dffb067448114a8d3150e7930bc0d:src/Components/Auth/Dashboard/headerNavBar/LendersNavbar.jsx
   return (
-    <main className='w-full font-primaryFont flex flex-col pr-12'>
+    <main className='w-[100%] font-primaryFont flex flex-col '>
       {/* LEFT CONTENT */}
-      <header className='p-5 flex justify-between w-full items-center '>
+      <header className='p-5 flex justify-between items-center'>
         <div className=''>
           <div className='flex flex-col '>
             <p className='text-sm flex gap-1 items-center'>
@@ -70,7 +76,7 @@ const BorrowersNavbar = () => {
             </Link>
 
             {/* settings */}
-            <Link to='/'>
+            <Link to='/setting'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 fill='none'
@@ -114,15 +120,24 @@ const BorrowersNavbar = () => {
       </header>
 
       {/*(SECTION MIDDLE) Card */}
-      <section className='p-5 flex w-full justify-between items-center '>
+      <section className='p-5 flex justify-between items-center'>
         <h3 className=' text-xl'>
+<<<<<<< HEAD:src/Components/Auth/Dashboard/header-navbar/LendersNavbar.jsx
+          {loading ? (
+            'loading...'
+          ) : (
+            <>
+              {user.firstName} {user.lastName}
+            </>
+          )}
+=======
           {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
           <span className='font-bold'>{user && user.user.firstName}</span> {user && user.user.lastName}
-          {/* <span className='font-bold'></span> */}
+>>>>>>> 184c7c47226dffb067448114a8d3150e7930bc0d:src/Components/Auth/Dashboard/headerNavBar/LendersNavbar.jsx
         </h3>
         {/* Account ID */}
         <p>
-          <span class='text-primary'>Account ID:</span> PDWR300
+          <span class='text-primary'>Account ID:</span> PDWR101
         </p>
 
         {/* Incomplete profile */}
@@ -141,4 +156,4 @@ const BorrowersNavbar = () => {
   );
 };
 
-export default BorrowersNavbar;
+export default LendersNavbar;
