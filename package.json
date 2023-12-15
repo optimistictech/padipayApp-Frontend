@@ -18,7 +18,7 @@
     "framer-motion": "^10.16.5",
     "imagekitio-react": "^3.0.0",
     "mdb-react-ui-kit": "^7.0.0",
-    "react": "^18.2.0",
+    "react": ">=18.2.0",
     "react-apexcharts": "^1.4.1",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
