@@ -14,7 +14,7 @@ const BorrowerSectionSix = () => {
   useEffect(() => {
     const response = JSON.parse(localStorage.getItem('user'));
     const token = JSON.parse(localStorage.getItem('token'));
-
+    //token
     if (!token) {
       navigate('/login');
       return;
