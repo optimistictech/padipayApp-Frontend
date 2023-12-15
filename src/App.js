@@ -22,6 +22,9 @@ import PrivacyPolicyPage from './Pages/PrivacyPolicyPage';
 import Calculator from './Components/calculator/Calculator';
 import GuarantorsAgreementPage from './Pages/GuarantorsAgreementPage';
 import SettingsPage from './Pages/SettingsPage';
+import Kyc from './Pages/Kyc'
+import ForgotPassword from './Pages/ForgotPassword'
+import VerifyPassword from './Pages/VerifyPassword'
 
 // import MobileStore from './Components/Sections/MobileStore';
 
@@ -44,7 +47,7 @@ import LendersDashboardSix from './Pages/dashboard/lender-dashboard/LendersDashb
 
 import Lenders from './Pages/Lenders';
 import AdminDashboard from './Pages/dashboard/admin-dashboard/AdminDashboard';
-import AdminDashboard3 from './Pages/dashboard/admin-dashboard/AdminDashboard3';
+// import AdminDashboard3 from './Pages/dashboard/admin-dashboard/AdminDashboard3';
 import AdminDashboardInvestment from './Pages/dashboard/admin-dashboard/AdminDashboardInvestment';
 import AdminDashboardLoans from './Pages/dashboard/admin-dashboard/AdminDashboardLoans';
 
@@ -95,6 +98,9 @@ function App() {
         <Route path='/' element={<LandingPage />} />
         <Route path='/calculator' element={<Calculator />} />
         <Route path='/settings' element={<SettingsPage />} />
+        <Route path='/blog' element={<BlogPage />} />
+        <Route path='/verifypassword' element={<VerifyPassword />} />
+        <Route path='/forgotpassword' element={<ForgotPassword />} />
 
         <Route path='/borrowersDashboard' element={<BorrowerDashboard />} />
         <Route path='/borrowersDashboard2' element={<BorrowerSectionTwo />} />
@@ -121,7 +127,7 @@ function App() {
         {/* ADMIN ROUTER */}
         <Route path='/adminDashboard' element={<AdminDashboard />} />
         <Route path='/adminDashboardLoans' element={<AdminDashboardLoans />} />
-        <Route path='/adminDashboard3' element={<AdminDashboard3 />} />
+        {/* <Route path='/adminDashboard3' element={<AdminDashboard3 />} /> */}
 
         <Route path='/lenders' element={<Lenders />} />
 
@@ -159,9 +165,10 @@ function App() {
           element={<NonInterestDashboard />}
         />
         <Route path='/DeviceFinanceForm' element={<DeviceFinanceForm />} />
-
+        <Route path ='/kyc' element={<Kyc/>}/>
       </Routes>
       {/* <Footer /> */}
+      
     </BrowserRouter>
   );
 }

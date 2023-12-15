@@ -1,20 +1,19 @@
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-import { TextField } from "@mui/material";
-import Button from "../Components/Button";
-import { useEffect, useState } from "react";
-import axios from "axios";
-import cogoToast from "cogo-toast";
-import { useNavigate } from "react-router-dom/dist";
+import { Link } from 'react-router-dom';
+import { TextField } from '@mui/material';
+import Button from '../Components/Button';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import cogoToast from 'cogo-toast';
+import { useNavigate } from 'react-router-dom/dist';
 
 const initialState = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  password: "",
-  confirm_password: "",
-  gender: "",
-  phone: "",
+  firstName: '',
+  lastName: '',
+  email: '',
+  password: '',
+  confirm_password: '',
+  gender: '',
+  phone: '',
   accountType: 0,
 };
 
@@ -26,47 +25,24 @@ const SignupPage = () => {
   const [authloading, setAuthloading] = useState(true);
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    const token = localStorage.getItem("token");
+    const user = JSON.parse(localStorage.getItem('user'));
+    const token = localStorage.getItem('token');
 
     if (token) {
       navigate(
-        user?.accountType === 1 ? "/borrowersDashboard" : "/lendersDashboard"
+        user?.accountType === 1 ? '/borrowersDashboard' : '/lendersDashboard'
       );
       return;
     }
     setAuthloading(false);
   }, [navigate]);
-=======
-import {useState} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { TextField, CircularProgress } from '@mui/material';
-import Box from '@mui/material/Box';
-import Button from '../Components/Button';
-import SelectAccount from "../Components/SelectAccount";
-import SelectGender from "../Components/SelectGender";
-// import Alert from "../Components/Alert";
 
-const SignupPage = ({baseUrl}) => {
+  // handlechange
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
 
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [phone, setPhone] = useState("");
-  const [accountType, setAccountType] = useState("");
-  const [genderType, setGenderType] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [passwordType, setPasswordType] = useState("password");
-  const [loading, setLoading] = useState(false);
-  const [check, setCheck] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [alertType, setAlertType] = useState("");
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
-
-  const navigate = useNavigate()
-
-<<<<<<< HEAD
   // handle submit
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -79,22 +55,22 @@ const SignupPage = ({baseUrl}) => {
       !values.confirm_password ||
       !values.phone
     ) {
-      cogoToast.error("Input cannot be empty");
+      cogoToast.error('Input cannot be empty');
       return;
     }
 
     if (values.password !== values.confirm_password) {
-      cogoToast.error("Password should be the same");
+      cogoToast.error('Password should be the same');
       return;
     }
 
     if (!terms) {
-      cogoToast.error("Accept our terms & condition to continue");
+      cogoToast.error('Accept our terms & condition to continue');
       return;
     }
 
     // get type from local storage
-    const type = localStorage.getItem("type");
+    const type = localStorage.getItem('type');
 
     const payload = {
       firstName: values.firstName,
@@ -103,22 +79,22 @@ const SignupPage = ({baseUrl}) => {
       password: values.password,
       gender: values.gender,
       phone: values.phone,
-      accountType: type === "borrower" ? 1 : 2,
+      accountType: type === 'borrower' ? 1 : 2,
     };
 
     try {
       setLoading(true);
       await axios.post(
-        "https://padipay-backend.onrender.com/v1/auth/register",
+        'https://padipay-backend.onrender.com/v1/auth/register',
         payload,
         {
           header: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
         }
       );
-      cogoToast.success("Account Created Successfully");
-      navigate("/login");
+      cogoToast.success('Account Created Successfully');
+      navigate('/login');
 
       setLoading(false);
     } catch (error) {
@@ -131,272 +107,144 @@ const SignupPage = ({baseUrl}) => {
   if (authloading) return;
 
   //
-=======
-  // response part 
-  async function handleSignup(e){
-    e.preventDefault()
-    console.log(accountType)
-    console.log(check)
-    console.log(JSON.stringify({firstName, lastName, password, confirmPassword, accountType, genderType, phone}))
-    
-    if(password !== confirmPassword){
-      setErrorMessage("Both passwords field must match")
-      setAlertType("danger")
-      return;
-    }else if(check === false){
-      setErrorMessage("Agree to terms and conditions")
-      setAlertType("danger")
-      return;
-    }else{
-      
-      setLoading(true)
-      const response = await fetch(`${baseUrl}/auth/login`,{
-        method: "POST",
-        headers: {
-          "Content-Type" : "application/json"
-        },
-        body : JSON.stringify({firstName, lastName, email, password, accountType, gender:genderType, phone})
-      })
-      // extract data from response object
-      const data = await response.json()
-      console.log(response, data)
-      if (response) setLoading(false)
-      if (!response.ok) {
-        setErrorMessage(data.message)
-        setTimeout(()=>{
-          setErrorMessage("")
-        },5000)
-      }
-      if (response.ok){
-        localStorage.setItem("user", JSON.stringify(data))
-        if(data.user.accountType === 1){
-          console.log("accounttype")
-          navigate("/borrowersDashboard")
-        }
-        if(data.user.accountType === 2){
-          navigate("/lendersDashboard")
-        }
-      }
-    }
-
-  }
-  
-  function isChecked(e){
-    console.log(e.target)
-    if (e.target.value === "password"){
-      setPasswordType("text")
-    } if (e.target.value === "text"){
-      setPasswordType("password")
-    }
-  }
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
   return (
-    <div className="bg-primary font-primaryFont">
-      <div className=" h-100vw py-6">
-        <div className="flex gap-2 small-screen">
-          <div className="flex flex-col relative items-center justify-center text-white w-screen">
-            <div className="text-center">
-              <h1 className="text-4xl">Welcome Onboard</h1>
-              <span className="text-4xl font-bold">Padi</span>
+    <div className='bg-primary font-primaryFont'>
+      <div className=' h-100vw py-6'>
+        <div className='flex gap-2 small-screen'>
+          <div className='flex flex-col relative items-center justify-center text-white w-screen'>
+            <div className='text-center'>
+              <h1 className='text-4xl'>Welcome Onboard</h1>
+              <span className='text-4xl font-bold'>Padi</span>
             </div>
-            <div className="mx-auto ">
+            <div className='mx-auto '>
               <img
                 src={
-                  "https://ik.imagekit.io/gru3qfrss/tr:w-200,h-500,bl-10/Group%2023936.svg"
+                  'https://ik.imagekit.io/gru3qfrss/tr:w-200,h-500,bl-10/Group%2023936.svg'
                 }
-                alt="PadiPay"
-                className="right-img mt-8"
+                alt='PadiPay'
+                className='right-img mt-8'
               />
             </div>
-            <div className="flex gap-4 small-screen relative md:flex-col lg:flex-row">
-              <div className=" p-4 rounded-lg">
+            <div className='flex gap-4 small-screen relative md:flex-col lg:flex-row'>
+              <div className=' p-4 rounded-lg'>
                 <img
-                  src={"https://ik.imagekit.io/gru3qfrss/appStore.png"}
-                  alt="apple mockup"
-                  className="w-40"
+                  src={'https://ik.imagekit.io/gru3qfrss/appStore.png'}
+                  alt='apple mockup'
+                  className='w-40'
                 />
               </div>
-              <div className="p-4 rounded-lg">
+              <div className='p-4 rounded-lg'>
                 <img
-                  src={"https://ik.imagekit.io/gru3qfrss/googlePlay.png"}
-                  alt="google-play mockup"
-                  className="w-40"
+                  src={'https://ik.imagekit.io/gru3qfrss/googlePlay.png'}
+                  alt='google-play mockup'
+                  className='w-40'
                 />
               </div>
             </div>
           </div>
-          <div className="bg-white rounded-md w-full px-10 m-16 p-8">
-            <div className="text-center">
-              <h1 className="text-4xl">
-                Create Your Account<span className="font-bold"></span>
+          <div className='bg-white rounded-md w-full px-10 m-16 p-8'>
+            <div className='text-center'>
+              <h1 className='text-4xl'>
+                Create Your Account<span className='font-bold'></span>
               </h1>
-              <p className="text-xl my-4">
+              <p className='text-xl my-4'>
                 Welcome! Please enter with your details
               </p>
             </div>
 
-            <button className="border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8">
+            <button className='border-2 border-black w-full py-2 flex justify-center items-center gap-2 my-8'>
               <img
-                src={"https://ik.imagekit.io/b6b9xwu9l/google-logo.svg"}
-                alt="google-play mockup"
-                className="w-10"
+                src={'https://ik.imagekit.io/b6b9xwu9l/google-logo.svg'}
+                alt='google-play mockup'
+                className='w-10'
               />
               <span>Sign up with Google</span>
+            </button>
 
-
-            
             {/* MAIN BODY - SIGNUP FORM */}
-<<<<<<< HEAD
             <form onSubmit={handleSubmit}>
-              <div className="relative my-6 w-full">
-                <i className="fa-solid fa-user absolute px-3.5 py-4 text-2xl"></i>
-                <TextField
-                  className="border-2 border-black bg-[#F0F0F0] w-full  py-4"
-                  label="Enter Your first Name"
-                  variant="outlined"
-                  id="lastName"
-                  type="text"
-                  value={values.firstName}
-                  onChange={handleChange}
-                  name="firstName"
-=======
-            <form name='loginForm' onSubmit={handleSignup}>
               <div className='relative my-6 w-full'>
                 <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full  py-4'
-                label='Enter Your first Name'
-                variant='outlined'
-                id='firstName'
-                type='text'
-                onChange={e => setFirstName(e.target.value)}
-
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
+                  className='border-2 border-black bg-[#F0F0F0] w-full  py-4'
+                  label='Enter Your first Name'
+                  variant='outlined'
+                  id='lastName'
+                  type='text'
+                  value={values.firstName}
+                  onChange={handleChange}
+                  name='firstName'
                 />
                 <br />
               </div>
 
-              <div className="relative my-6 w-full">
-                <i className="fa-solid fa-user absolute px-3.5 py-4 text-2xl"></i>
+              <div className='relative my-6 w-full'>
+                <i className='fa-solid fa-user absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-<<<<<<< HEAD
-                  className="border-2 border-black bg-[#F0F0F0] w-full px-12 py-4"
-                  label="Enter Your last Name"
-                  variant="outlined"
-                  id="lastName"
-                  type="text"
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label='Enter Your last Name'
+                  variant='outlined'
+                  id='lastName'
+                  type='text'
                   value={values.lastName}
                   onChange={handleChange}
-                  name="lastName"
-=======
-
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Enter Your last Name'
-                variant='outlined'
-                id='lastName'
-                type='text'
-                onChange={e => setLastName(e.target.value)}
-
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
+                  name='lastName'
                 />
 
                 <br />
               </div>
 
-              <div className="relative my-6 w-full">
-                <i className="fa-solid fa-envelope absolute px-3.5 py-4 text-2xl"></i>
+              <div className='relative my-6 w-full'>
+                <i className='fa-solid fa-envelope absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-<<<<<<< HEAD
-                  className="border-2 border-black bg-[#F0F0F0] w-full px-12 py-4"
-                  label=" Email Address"
-                  variant="outlined"
-                  id="lastName"
-                  type="email"
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label=' Email Address'
+                  variant='outlined'
+                  id='lastName'
+                  type='email'
                   value={values.email}
                   onChange={handleChange}
-                  name="email"
-=======
-
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label=' Email Address'
-                variant='outlined'
-                id='lastName'
-                type='email'
-                onChange={e => setEmail(e.target.value)}
-
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
+                  name='email'
                 />
                 <br />
               </div>
-                <div className='relative my-6 w-full'>
+
+              <div className='relative my-6 w-full'>
+                <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Password'
-                variant='outlined'
-                id='password'
-                type={passwordType}
-                onChange={e => setPassword(e.target.value)}
-
-                />
-              </div>
-              <span className=' block  w-full'>
-              <input className='mr-4'
-                    type='checkbox'
-                    name='terms'
-                    id='terms'
-                    value={passwordType}
-                    onChange={(e) => isChecked(e)}
-                  />
-                  Show password
-              </span>
-
-              <div className="relative my-6 w-full">
-                <i className="fa-solid fa-lock absolute px-3.5 py-4 text-2xl"></i>
-                <TextField
-<<<<<<< HEAD
-                  className="border-2 border-black bg-[#F0F0F0] w-full px-12 py-4"
-                  label="Password"
-                  variant="outlined"
-                  id="password"
-                  type="password"
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label='Password'
+                  variant='outlined'
+                  id='password'
+                  type='password'
                   value={values.password}
                   onChange={handleChange}
-                  name="password"
+                  name='password'
                 />
               </div>
 
-              <div className="relative my-6 w-full">
-                <i className="fa-solid fa-lock absolute px-3.5 py-4 text-2xl"></i>
+              <div className='relative my-6 w-full'>
+                <i className='fa-solid fa-lock absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-                  className="border-2 border-black bg-[#F0F0F0] w-full px-12 py-4"
-                  label="Retype Password"
-                  variant="outlined"
-                  id="confirmPassword"
-                  type="password"
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label='Retype Password'
+                  variant='outlined'
+                  id='confirmPassword'
+                  type='password'
                   value={values.confirm_password}
                   onChange={handleChange}
-                  name="confirm_password"
-=======
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Retype Password'
-                variant='outlined'
-                id='confirmPassword'
-                type='password'
-                onChange={e => setConfirmPassword(e.target.value)}
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
+                  name='confirm_password'
                 />
               </div>
-              
 
               {/* Gender*/}
-              <div className="my-6 w-full">
+              <div className='my-6 w-full'>
                 <select
-                  id=""
-                  className=" bg-[#F0F0F0] w-full px-5 py-4"
+                  id=''
+                  className=' bg-[#F0F0F0] w-full px-5 py-4'
                   value={values.gender}
                   onChange={handleChange}
-                  name="gender"
+                  name='gender'
                 >
                   <option>Gender</option>
                   <option>Male</option>
@@ -404,112 +252,56 @@ const SignupPage = ({baseUrl}) => {
                 </select>
               </div>
 
-              <div className="relative my-6 w-full">
-                <i className="fa-solid fa-phone absolute px-3.5 py-4 text-2xl"></i>
+              <div className='relative my-6 w-full'>
+                <i className='fa-solid fa-phone absolute px-3.5 py-4 text-2xl'></i>
                 <TextField
-<<<<<<< HEAD
-                  className="border-2 border-black bg-[#F0F0F0] w-full px-12 py-4"
-                  label="Phone Number"
-                  variant="outlined"
-                  id="phone"
-                  type="number"
+                  className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
+                  label='Phone Number'
+                  variant='outlined'
+                  id='phone'
+                  type='number'
                   value={values.phone}
                   onChange={handleChange}
-                  name="phone"
+                  name='phone'
                 />
               </div>
 
-              <div className="w-full my-5">
-                <div className="flex items-center gap-1">
-                  <input
-                    type="checkbox"
-                    name="terms"
-                    id="terms"
-                    onChange={(e) => setTerms(e.target.checked)}
-=======
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Phone Number'
-                variant='outlined'
-                id='phone'
-                type='number'
-                onChange={e => setPhone(e.target.value)}
-                />
-              </div>
-
-              {/* <div className='relative my-6 w-full'>
-                <i className='fa-solid fa-location-dot absolute px-3.5 py-4 text-2xl'></i>
-                <TextField
-                className='border-2 border-black bg-[#F0F0F0] w-full px-12 py-4'
-                label='Address'
-                variant='outlined'
-                id='address'
-                type='text'
-                onChange={e => setA}
-                />
-              </div> */}
-               <SelectGender setGenderType={setGenderType}/>
-
-
-              <SelectAccount setAccountType={setAccountType}/>
-
-              <div className='flex justify-between mt-10'>
+              <div className='w-full my-5'>
                 <div className='flex items-center gap-1'>
                   <input
                     type='checkbox'
                     name='terms'
                     id='terms'
-                    value={check}
-                    onChange={e => setCheck(e.target.value)}
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
+                    onChange={(e) => setTerms(e.target.checked)}
                   />
-                  <span className="text-sm">
+                  <span className='text-sm'>
                     I accept all terms & conditions
                   </span>
                 </div>
               </div>
 
-<<<<<<< HEAD
               {/* <Link
                 to="/lendersDashboard"
                 className="flex justify-center align-middle my-10"
               > */}
               <Button
-                text={loading ? "loading..." : "Sign up"}
-                className="bg-[#003399] text-white  rounded-[10px] cursor-pointer "
-                size="lg"
+                text={loading ? 'loading...' : 'Sign up'}
+                className='bg-[#003399] text-white  rounded-[10px] cursor-pointer '
+                size='lg'
               />
               {/* </Link> */}
-=======
-
-           {/* <Link to='/account-type' className='flex justify-center align-middle my-10' size='lg'> */}
-           {loading ?
-            <Box sx={{ display: 'flex' }}>
-              <CircularProgress />
-            </Box>
-            :
-            <Button
-              text='Login'
-              type = "submit"
-              className='bg-[#003399] text-white  rounded-[10px] cursor-pointer' size="lg"
-            />
-            }
-
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
             </form>
 
-            <p className="font-bold text-xl text-center">
+            <p className='font-bold text-xl text-center'>
               Already have an account?
-              <Link to="/login" className="text-red-500 ml-2">
+              <Link to='/login' className='text-red-500 ml-2'>
                 Login
-              </Link>{" "}
+              </Link>{' '}
               here
             </p>
           </div>
         </div>
       </div>
-      {/* {errorMessage && 
-        <Alert errorMessage={errorMessage} setErrorMessage={setErrorMessage} alertType={alertType}/>
-      } */}
     </div>
   );
 };

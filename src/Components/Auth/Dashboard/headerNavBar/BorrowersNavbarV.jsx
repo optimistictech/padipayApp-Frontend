@@ -2,21 +2,20 @@ import React, { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Button from '../../../Button';
 
+const BorrowersNavbarV = () => {
+   // FUNCTIONALITY FOR USER NAME TO SHOW ON DASHBOARD
+   const user = JSON.parse(localStorage.getItem("user"))
+   console.log(user)
+   const navigate = useNavigate()
+ 
+   useEffect(() => {
+     if(!user){
+       navigate("/login")
+     }
+   },[])
 
-const BorrowersNavbarListing = () => {
-  // FUNCTIONALITY FOR USER NAME TO SHOW ON DASHBOARD
-  const user = JSON.parse(localStorage.getItem("user"))
-  console.log(user)
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if(!user){
-      navigate("/login")
-    }
-  },[])
-
-  return (
-    <main className='w-full mX-8 font-primaryFont flex flex-col '>
+    return (
+        <main className='w-full mX-8 font-primaryFont flex flex-col pr-12'>
           {/* LEFT CONTENT */}
           <header className='p-5 flex justify-between w-full items-center'>
             <div className=''>
@@ -118,7 +117,7 @@ const BorrowersNavbarListing = () => {
           {/*(SECTION MIDDLE) Card */}
           <section className='p-5 flex w-full justify-between items-center'>
             <h3 className=' text-xl'>
-             {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
+              {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
           <span className='font-bold'>{user && user.user.firstName}</span> {user && user.user.lastName}
             </h3>
             {/* Account ID */}
@@ -130,12 +129,6 @@ const BorrowersNavbarListing = () => {
             <p class=' text-primary border px-4 py-1 border-primary rounded'>
               Verified
             </p>
-
-            <div className=' hover:text-md'>
-              <Link to='/signup'>
-                <Button text={'Lender Listing'} />
-              </Link>
-            </div>
     
             {/* btn */}
             <div className=' hover:text-md'>
@@ -145,7 +138,7 @@ const BorrowersNavbarListing = () => {
             </div>
           </section>
         </main>
-  )
+      );
 }
 
-export default BorrowersNavbarListing
+export default BorrowersNavbarV

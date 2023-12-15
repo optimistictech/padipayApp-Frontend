@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AdminSideNav from '../../../Components/admin/AdminSideNav';
 import AdminNavbar from '../../../Components/admin/AdminNavbar';
 import BarGraph from '../../../Components/graph/BarGraph';
@@ -11,6 +12,16 @@ import TableThree from '../../../Components/admin-tables/TableThree';
 import { Link, Outlet } from 'react-router-dom';
 
 const AdminDashboard = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
   return (
     <div className='flex'>
       <AdminSideNav />

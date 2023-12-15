@@ -1,9 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Select, MenuItem } from '@mui/material';
 import { useNavigate } from 'react-router-dom/dist';
 
+<<<<<<< HEAD:src/Components/Auth/Dashboard/side-navbar/LendersSideNav.jsx
 const LendersSideNav = ({ user, loading }) => {
+=======
+const LendersSideNav = () => {
+  const user = JSON.parse(localStorage.getItem("user"))
+  console.log(user)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(!user){
+      navigate("/login")
+    }
+  },[])
+
+>>>>>>> 184c7c47226dffb067448114a8d3150e7930bc0d:src/Components/Auth/Dashboard/sideNavbar/LendersSideNav.jsx
   const [accountType, setAccountType] = useState('borrower');
   const navigate = useNavigate();
 
@@ -62,6 +77,7 @@ const LendersSideNav = ({ user, loading }) => {
               />
             </svg>
             <span>
+<<<<<<< HEAD:src/Components/Auth/Dashboard/side-navbar/LendersSideNav.jsx
               {accountType === 'borrower' ? (
                 <>
                   {loading ? (
@@ -75,6 +91,12 @@ const LendersSideNav = ({ user, loading }) => {
               ) : (
                 'Switch to a Borrower'
               )}
+=======
+              {accountType === 'borrower'
+                ?   `
+                <span className='font-bold'>{}</span> `
+                : 'Switch to a Borrower'}
+>>>>>>> 184c7c47226dffb067448114a8d3150e7930bc0d:src/Components/Auth/Dashboard/sideNavbar/LendersSideNav.jsx
             </span>
           </p>
           <svg
@@ -101,7 +123,10 @@ const LendersSideNav = ({ user, loading }) => {
           className='cursor-pointer'
           style={{ display: 'none' }}
         >
-          <MenuItem value='borrower'>Alfred Jimoh</MenuItem>
+          <MenuItem value='borrower'>
+            {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
+          <span className='font-bold'>{user && user.user.firstName}</span> 
+          </MenuItem>
           <MenuItem value='switch'>Switch to a Borrower</MenuItem>
         </Select>
         {/* <Link to='/'>Change Account Type</Link> */}

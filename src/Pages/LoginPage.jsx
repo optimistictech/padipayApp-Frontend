@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import LeftPartLogin from '../Components/LeftPartLogin';
@@ -79,57 +78,6 @@ const LoginPage = () => {
   if (authloading) return;
 
   //
-=======
-import {useState} from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import LeftPartLogin from '../Components/LeftPartLogin';
-import { TextField, CircularProgress } from '@mui/material';
-import Box from '@mui/material/Box';
-import Button from '../Components/Button';
-
-const LoginPage = ({baseUrl}) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-  const navigate = useNavigate()
-  const [showPassword, setShowPassword] = useState("");
-
-// response part 
-  async function handleSignin(e){
-    e.preventDefault()
-    setLoading(true)
-    console.log(JSON.stringify({email:email, password: password}))
-    const response = await fetch(`${baseUrl}/auth/login`,{
-      method: "POST",
-      headers: {
-        "Content-Type" : "application/json"
-      },
-      body : JSON.stringify({email:email, password: password})
-    })
-    // extract data from response object
-    const data = await response.json()
-    console.log(response, data)
-    if (response) setLoading(false)
-    if (!response.ok) {
-      setErrorMessage(data.message)
-      setTimeout(()=>{
-        setErrorMessage("")
-      },5000)
-    }
-    if (response.ok){
-      localStorage.setItem("user", JSON.stringify(data))
-      if(data.user.accountType === 1){
-        console.log("accounttype")
-        navigate("/borrowersDashboard")
-      }
-      if(data.user.accountType === 2){
-        navigate("/lendersDashboard")
-      }
-    }
-  }
-
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
   return (
     <div className='bg-[#003399] text-primaryFont h-full flex flex-col justify-center'>
       <div className='pt-10 flex justify-around gap-2 small-screen'>
@@ -138,7 +86,6 @@ const LoginPage = ({baseUrl}) => {
           <LeftPartLogin />
         </div>
         {/* RIGHT SIDE */}
-        
 
         <div className='bg-white rounded w-screen px-10 m-16 p-8'>
           <div className='text-center'>
@@ -159,16 +106,8 @@ const LoginPage = ({baseUrl}) => {
             <span>Login with Google</span>
           </button>
 
-          {errorMessage && 
-          <p className='text-red-600 text-center '>{errorMessage}</p>
-          }
-
           {/* LOGIN FORM */}
-<<<<<<< HEAD
           <form onSubmit={handleSubmit}>
-=======
-          <form name='loginForm' onSubmit={handleSignin}>
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
             <div className='relative my-6 w-full'>
               <i className='fa-solid fa-envelope absolute px-3.5 py-4 text-2xl'></i>
               <TextField
@@ -177,15 +116,10 @@ const LoginPage = ({baseUrl}) => {
                 variant='outlined'
                 id='lastName'
                 type='email'
-<<<<<<< HEAD
                 value={values.email}
                 name='email'
                 onChange={handleChange}
               />
-=======
-                onChange={(e) => setEmail(e.target.value)}
-                />
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
               <br />
             </div>
 
@@ -197,24 +131,10 @@ const LoginPage = ({baseUrl}) => {
                 variant='outlined'
                 id='password'
                 type='password'
-<<<<<<< HEAD
                 value={values.password}
                 name='password'
                 onChange={handleChange}
               />
-=======
-                onChange={(e) => setPassword(e.target.value)}
-                />
-                <span className=' block  w-full'>
-              <input className='mr-4'
-                    type='checkbox'
-                    name='terms'
-                    id='terms'
-                    value='terms'
-                  />
-                  Show password
-              </span>
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
             </div>
 
             <div className='w-full flex justify-between'>
@@ -231,29 +151,12 @@ const LoginPage = ({baseUrl}) => {
                 Forget your password?
               </Link>
             </div>
-<<<<<<< HEAD
 
             <Button
               text={loading ? 'loading...' : 'Login'}
               className='bg-[#003399] text-white  rounded-[10px] cursor-pointer'
               size='lg'
             />
-=======
-           
-            {/* <Link to='/account-type' className='flex justify-center align-middle my-10' size='lg'> */}
-            {loading ?
-            <Box sx={{ display: 'flex' }}>
-              <CircularProgress />
-            </Box>
-            :
-            <Button
-              text='Login'
-              type = "submit"
-              className='bg-[#003399] text-white  rounded-[10px] cursor-pointer' size="lg"
-            />
-            }
-            {/* </Link> */}
->>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2
           </form>
           <p className='text-xl font-bold text-center'>
             Don't have an account?

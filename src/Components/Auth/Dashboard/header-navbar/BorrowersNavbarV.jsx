@@ -6,6 +6,7 @@ import Button from '../../../Button';
 const BorrowersNavbarV = ({ user, loading }) => {
 =======
 const BorrowersNavbar = () => {
+  // FUNCTIONALITY FOR USER NAME TO SHOW ON DASHBOARD
   const user = JSON.parse(localStorage.getItem("user"))
   console.log(user)
   const navigate = useNavigate()
@@ -120,6 +121,7 @@ const BorrowersNavbar = () => {
       <section className='p-5 flex w-full justify-between items-center'>
         <h3 className=' text-xl'>
 <<<<<<< HEAD:src/Components/Auth/Dashboard/header-navbar/BorrowersNavbarV.jsx
+<<<<<<< HEAD:src/Components/Auth/Dashboard/header-navbar/BorrowersNavbarV.jsx
           {loading ? (
             'loading...'
           ) : (
@@ -128,6 +130,9 @@ const BorrowersNavbar = () => {
             </>
           )}
 =======
+=======
+          {/* APPLICATION OF USER'S NAME TO SHOW ON DASHBOARD */}
+>>>>>>> 184c7c47226dffb067448114a8d3150e7930bc0d:src/Components/Auth/Dashboard/headerNavBar/BorrowersNavbar.jsx
           <span className='font-bold'>{user && user.user.firstName}</span> {user && user.user.lastName}
           {/* <span className='font-bold'></span> */}
 >>>>>>> 96fa84f375af2d438cd046ca4ca84609eb2f91b2:src/Components/Auth/Dashboard/headerNavBar/BorrowersNavbar.jsx
