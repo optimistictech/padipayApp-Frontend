@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 // import { Link } from 'react-router-dom';
 import BorrowersNavBar from '../../../Components/Auth/Dashboard/header-navbar/BorrowersNavbarV';
@@ -46,3 +47,4 @@ const BorrowerDashboardSeven = () => {
 };
 
 export default BorrowerDashboardSeven;
+
